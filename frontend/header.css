@@ -30,16 +30,25 @@
   color: var(--black-1);
   transition: color 0.3s ease;
 }
-.notifiBtn input[type="checkbox"] {
+.headerBtn input[type="checkbox"] {
   display: none;
 }
-.notifiBtn label {
-  border: 1px solid var(--grey-4);
+.headerBtn{
+  height: fit-content !important;
 }
-.notifiBtn input[type="checkbox"]:checked ~ label {
+.headerBtn label {
+  border-radius: 50%;
+}
+.headerBtn input[type="checkbox"]:checked ~ label {
   background: var(--grey-4);
 }
 .headerBtns {
   margin-left: 2rem;
   height: fit-content;
+  display: flex;
+  gap: 0.865rem;
+}
+#profileBtn ~ label {
+  border: 1px solid var(--grey-4);
+  border-radius: 50%;
 }

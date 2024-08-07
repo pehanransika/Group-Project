@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./sidebar1.css" />
     <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./container.css" />
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
     />
@@ -100,11 +101,65 @@
         </label>
       </div>
       <div class="headerBtns">
-        <div class="notifiBtn">
+        <div class="headerBtn">
           <input type="checkbox" name="notifi" id="notificationBtn" />
           <label for="notificationBtn" class="btn">
             <i class="fa-solid fa-bell"></i>
           </label>
+        </div>
+        <div class="headerBtn">
+          <input type="checkbox" name="profile" id="profileBtn" />
+          <label for="profileBtn" class="btn">
+            <i class="fa-solid fa-user"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="pageTitles">
+        <h2 class="title">Home</h2>
+        <div class="subTitle">Political activities and Discussions</div>
+      </div>
+      <div class="topContent">
+        <div class="weeklySurvey post">
+          <div class="post-head small-title">
+            <div class="post-title">
+              weekly survey
+              <span class="btn round"><i class="fa-solid fa-info"></i></span>
+            </div>
+            <div class="survTime">
+              survey ends in :
+              <span class="time">
+                <span class="sur-end-day">5</span> days
+                <span class="sur-end-hour">12</span> hours
+              </span>
+            </div>
+          </div>
+          <div class="survey-title">
+            Who will be the next president of Sri Lanka?
+          </div>
+          <div class="surveyContent capitalize">
+            <span>
+              <input type="radio" name="week-survey" id="survey-1" />
+              <label for="survey-1">mahinda rajapakse</label>
+            </span>
+            <span>
+              <input type="radio" name="week-survey" id="survey-2" />
+              <label for="survey-2">ranil wickramasinghe</label>
+            </span>
+            <span>
+              <input type="radio" name="week-survey" id="survey-3" />
+              <label for="survey-3">anura kumara dissanayake</label>
+            </span>
+            <span>
+              <input type="radio" name="week-survey" id="survey-4" />
+              <label for="survey-4">sajith wickramasinghe</label>
+            </span>
+          </div>
+        </div>
+        <div class="btns">
+          button
+          <!-- add some necessory buttons over here. They must open with a popup -->
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@
     align-self: flex-end;
 }
 .sidebar{
+    z-index: 100;
     position: fixed;
     left: 0;
     top: 0;
@@ -21,6 +22,7 @@
     align-items: flex-start;
     background: var(--main-color);
     gap: 1.5rem;
+    border-right: 1px solid var(--grey-4);
 }
 #sideBarSearch{
     font-size: 1rem;

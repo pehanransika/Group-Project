@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 7rem 2rem 6rem 22rem;
+}
+.weeklySurvey {
+    padding: 2rem;
+    background: var(--main-color);
+    flex: 1;
+}
+.post-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.post-title{
+    color: var(--black-3);
+}
+.small-title{
+    font-size: 0.75rem;
+}
+.topContent{
+    display: flex;
+    gap: 1rem;
+}
+.topContent > div {
+    background: var(--main-color);
+    border-radius: 1.15rem;
+}
+.survTime {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.survTime span{
+    color: var(--grey-3);
+}
+.survey-title{
+    font-weight: 600;
+}
+.surveyContent{
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.btns{
+    flex: 1;
+    padding: 4rem;
+}

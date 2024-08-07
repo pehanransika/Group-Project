@@ -8,6 +8,7 @@
 :root{
     --black-1: #121212;
     --black-2: #4b4b4b;
+    --black-3: #323232;
     --grey-1: #f2f2f2;
     --grey-2: #FBFBFB;
     --grey-3: #8e8e8e;
@@ -37,6 +38,9 @@
 .header .btn{
     padding: 0.5rem 0.75rem;
 }
+label{
+    cursor: pointer;
+}
 input{
     font-family: inherit;
     font-size: 0.875rem !important;
@@ -44,4 +48,33 @@ input{
 body{
     font-family: "Poppins", sans-serif;
     background: var(--bg);
+    color: var(--black-1);
+}
+h2.title{
+    font-weight: 600;
+}
+.subTitle{
+    color: var(--grey-3);
+    font-size: 0.865rem;
+    font-weight: 500;
+}
+.post{
+    border-radius: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.btn.round{
+    border-radius: 50%;
+    font-size: 0.65rem;
+    padding: 0.3rem 0.65rem;
+    background: var(--grey-1);
+    margin-left: 0.5rem;
+}
+.btn.round:hover{
+    background: var(--black-2);
+    color: var(--main-color);
+}
+.capitalize{
+    text-transform: capitalize;
 }
