@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 19.625rem;
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+}
+#headerSearchBar {
+  background: var(--grey-2);
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  border: 1px solid #c9c9c9;
+  flex: 1;
+  border-radius: 0.5rem;
+  width: 40rem;
+}
+.headerSearchBar {
+  position: relative;
+  flex: 1;
+}
+.headerSearchBar label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: var(--disable-icon-color);
+}
+.headerSearchBar input:focus ~ label {
+  color: var(--black-1);
+  transition: color 0.3s ease;
+}
+.notifiBtn input[type="checkbox"] {
+  display: none;
+}
+.notifiBtn label {
+  border: 1px solid var(--grey-4);
+}
+.notifiBtn input[type="checkbox"]:checked ~ label {
+  background: var(--grey-4);
+}
+.headerBtns {
+  margin-left: 2rem;
+  height: fit-content;
+}

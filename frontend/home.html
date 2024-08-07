@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parlimate | Home</title>
+    <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./sidebar1.css" />
+    <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
     />
-    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div class="sidebar pd-1">
@@ -31,44 +32,79 @@
       <div class="navs">
         <ul>
           <li>
-            <input type="radio" name="nav" id="nav-Home" checked/>
+            <input type="radio" name="nav" id="nav-Home" checked />
             <label for="nav-Home"><i class="fa-solid fa-house"></i>Home</label>
           </li>
           <li>
             <input type="radio" name="nav" id="nav-announcements" />
-            <label for="nav-announcements"><i class="fa-solid fa-bullhorn"></i>announcements</label>
+            <label for="nav-announcements"
+              ><i class="fa-solid fa-bullhorn"></i>announcements</label
+            >
           </li>
           <li>
             <input type="radio" name="nav" id="nav-fundraise" />
-            <label for="nav-fundraise"><i class="fa-solid fa-coins"></i>fundraises</label>
+            <label for="nav-fundraise"
+              ><i class="fa-solid fa-coins"></i>fundraises</label
+            >
           </li>
           <li>
             <input type="radio" name="nav" id="nav-noti" />
-            <label for="nav-noti"><i class="fa-solid fa-bell"></i>notification</label>
+            <label for="nav-noti"
+              ><i class="fa-solid fa-bell"></i>notification</label
+            >
           </li>
           <li>
             <input type="radio" name="nav" id="nav-survey" />
-            <label for="nav-survey"><i class="fa-solid fa-clipboard"></i>surveys</label>
+            <label for="nav-survey"
+              ><i class="fa-solid fa-clipboard"></i>surveys</label
+            >
           </li>
           <li>
             <input type="radio" name="nav" id="nav-discusRoom" />
-            <label for="nav-discusRoom"><i class="fa-solid fa-people-group"></i>discussion Room</label>
+            <label for="nav-discusRoom"
+              ><i class="fa-solid fa-people-group"></i>discussion Room</label
+            >
           </li>
           <li>
             <input type="radio" name="nav" id="nav-help" />
-            <label for="nav-help"><i class="fa-solid fa-headset"></i>help/support</label>
+            <label for="nav-help"
+              ><i class="fa-solid fa-headset"></i>help/support</label
+            >
           </li>
           <li>
             <input type="radio" name="nav" id="nav-settings" />
-            <label for="nav-settings"><i class="fa-solid fa-gear"></i>settings</label>
+            <label for="nav-settings"
+              ><i class="fa-solid fa-gear"></i>settings</label
+            >
           </li>
         </ul>
       </div>
       <div class="profile">
         <div class="img"></div>
         <div class="profileCont">
-            <div class="name">Manju sri </div>
-            <div class="email">dsaNmMnThamai@gmail.com</div>
+          <div class="name">Manju sri</div>
+          <div class="email">dsaNmMnThamai@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="header pd-2">
+      <div class="headerSearchBar">
+        <input
+          type="search"
+          name="mainSearch"
+          id="headerSearchBar"
+          placeholder="Search politicians, Political parties...."
+        />
+        <label for="headerSearchBar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+      </div>
+      <div class="headerBtns">
+        <div class="notifiBtn">
+          <input type="checkbox" name="notifi" id="notificationBtn" />
+          <label for="notificationBtn" class="btn">
+            <i class="fa-solid fa-bell"></i>
+          </label>
         </div>
       </div>
     </div>
