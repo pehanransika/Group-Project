@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 7rem 2rem 6rem 22rem;
+}
+.weeklySurvey {
+    background: var(--main-color);
+    flex: 2;
+    min-width: 40rem;
+}
+.post-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.post-title{
+    color: var(--black-3);
+}
+.topContent{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.topContent > div {
+    background: var(--main-color);
+    border-radius: 1.15rem;
+}
+.survTime {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.survTime span{
+    color: var(--grey-3);
+}
+.survey-title{
+    font-weight: 600;
+}
+.surveyContent{
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.surveyContent span {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 400;
+}
+.surveyContent span input:checked ~ label {
+    color: var(--primary-color);
+    transition: color 0.2s ease; 
+}
+.btns,
+.last-surveys{
+    flex: 1;
+    padding: 1.5rem 2rem 4rem 2rem;
+    min-width: 20rem;
+    position: relative;
+}
+.past-surv-link{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--link-color-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    background: var(--link-color-bg);
+    transition: background 0.25s ease-in;
+    position: absolute;
+    left: 50%;
+    bottom: 0.5rem;
+    transform: translate(-50%, -50%);
+}
+.past-surv-link:hover{
+    background: var(--link-color-bg-dark);
+}
+.content{
+    height: 100%;
+}

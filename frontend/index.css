@@ -1,41 +1,132 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* add all primary properties to use here guys */
-:root{
-    --black-1: #121212;
-    --black-2: #4b4b4b;
-    --grey-1: #f2f2f2;
-    --grey-2: #FBFBFB;
-    --grey-3: #8e8e8e;
-    --main-color: #ffffff;
-    --bg: #ebedf5;
-    --disable-icon-color: #bebebe;
+:root {
+  --black-1: #121212;
+  --black-2: #4b4b4b;
+  --black-3: #323232;
+  --grey-1: #f2f2f2;
+  --grey-2: #fbfbfb;
+  --grey-3: #8e8e8e;
+  --grey-4: #dddddd;
+  --main-color: #ffffff;
+  --bg: #ebedf5;
+  --disable-icon-color: #bebebe;
+  --primary-color: rgb(104, 104, 224);
+  --link-color-text: rgb(63, 63, 218);
+  --link-color-bg: rgb(233, 233, 255);
+  --link-color-bg-dark: rgb(220, 220, 255);
 }
 
-.pd-1{
-    padding: 1.5rem 2rem 2.5rem 4rem;
+.pd-1 {
+  padding: 1.5rem 2rem 2.5rem;
 }
-.btn{
-    cursor: pointer;
-    padding: 0.75rem 0.75rem;
-    background: var(--grey-2);
-    border-radius: 0.75rem;
-    width: fit-content;
-    transition: background 0.3s ease;
+.pd-2 {
+  padding: 1rem 1.75rem;
 }
-.btn:hover{
-    background: var(--grey-1);
+.bold{
+  font-weight: 600;
+  color: var(--black-2);
 }
-
-input{
-    font-family: inherit;
-    font-size: 0.875rem !important;
+.btn {
+  cursor: pointer;
+  padding: 0.75rem 0.75rem;
+  background: var(--grey-2);
+  border-radius: 0.75rem;
+  width: fit-content;
+  transition: background 0.3s ease;
 }
-body{
-    font-family: "Poppins", sans-serif;
-    background: var(--bg);
+.btn:hover {
+  background: var(--grey-1);
+}
+.header .btn {
+  padding: 0.5rem 0.75rem;
+}
+label {
+  cursor: pointer;
+}
+input {
+  font-family: inherit;
+  font-size: 0.875rem !important;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--black-1);
+}
+h2.title {
+  font-weight: 600;
+}
+.subTitle {
+  color: var(--grey-3);
+  font-size: 0.865rem;
+  font-weight: 500;
+}
+.small-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.medium-title{
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.small-text {
+    font-size: 0.75rem;
+}
+.medium-text {
+    font-size: 0.85rem;
+}
+.post {
+  border-radius: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.reactable {
+  padding-bottom: 3rem;
+}
+.btn.round {
+  border-radius: 50%;
+  font-size: 0.65rem;
+  padding: 0.3rem 0.65rem;
+  background: var(--grey-1);
+  margin-left: 0.5rem;
+}
+.btn.round:hover {
+  background: var(--black-2);
+  color: var(--main-color);
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.reactions {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  left: 0;
+  bottom: 0;
+}
+.reactions > button {
+  color: rgb(83, 83, 83);
+  border-radius: 0;
+  border: 0px;
+  padding: 0.45rem;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  flex: 1;
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
