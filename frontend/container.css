@@ -5,9 +5,9 @@
     margin: 7rem 2rem 6rem 22rem;
 }
 .weeklySurvey {
-    padding: 2rem;
     background: var(--main-color);
-    flex: 1;
+    flex: 2;
+    min-width: 40rem;
 }
 .post-head{
     display: flex;
@@ -19,12 +19,10 @@
 .post-title{
     color: var(--black-3);
 }
-.small-title{
-    font-size: 0.75rem;
-}
 .topContent{
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 .topContent > div {
     background: var(--main-color);
@@ -48,7 +46,38 @@
     flex-direction: column;
     align-items: flex-start;
 }
-.btns{
+.surveyContent span {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+.surveyContent span input:checked ~ label {
+    color: var(--primary-color);
+    transition: color 0.2s ease; 
+}
+.btns,
+.last-surveys{
     flex: 1;
-    padding: 4rem;
+    padding: 1.5rem 2rem 4rem 2rem;
+    min-width: 20rem;
+    position: relative;
+}
+.past-surv-link{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--link-color-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    background: var(--link-color-bg);
+    transition: background 0.25s ease-in;
+    position: absolute;
+    left: 50%;
+    bottom: 0.5rem;
+    transform: translate(-50%, -50%);
+}
+.past-surv-link:hover{
+    background: var(--link-color-bg-dark);
+}
+.content{
+    height: 100%;
 }
