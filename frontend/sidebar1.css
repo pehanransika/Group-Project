@@ -16,7 +16,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: fit-content;
+    width: fit-content; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -32,11 +32,9 @@
     border-radius: 0.5rem;
     height: 2.5rem;
     width: 100%;
-    margin-left: -1rem;
 }
 .searchBar{
     position: relative;
-    margin-bottom: rem;
     font-size: 0.875rem;
 }
 .searchBar label {
@@ -51,20 +49,20 @@
     transition: color 0.3s ease;
 }
 .navs{
+    margin-top: 1rem;
     width: 100%;
 }
-.nav ul {
+.navs ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    list-style: none;
+    gap: 1rem;
 }
 .navs li {
-    list-style: none;
     width: 100%;
     display: flex;
     height: max-content;
-    margin-top: 1rem;
-    margin-left: -1rem;
 }
 .navs li label {
     padding: 0.5rem 1.5rem 0.5rem 3rem;

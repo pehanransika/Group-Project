@@ -3,7 +3,7 @@
   z-index: 1;
   top: 0;
   right: 0;
-  left: 19.625rem;
+  left: 18rem;
   background: var(--main-color);
   display: flex;
   align-items: center;
@@ -102,6 +102,7 @@
   gap: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  transition: background 0.25s ease;
 }
 .profile a:hover{
   background: var(--grey-1);
