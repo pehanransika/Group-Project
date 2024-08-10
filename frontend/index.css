@@ -28,7 +28,7 @@
 .pd-2 {
   padding: 1rem 1.75rem;
 }
-.bold{
+.bold {
   font-weight: 600;
   color: var(--black-2);
 }
@@ -53,6 +53,43 @@ input {
   font-family: inherit;
   font-size: 0.875rem !important;
 }
+div:has(> span.tip) {
+  position: relative;
+}
+div:has(> span.tip):hover span.tip {
+  opacity: 1;
+}
+div:has(> span.tip) input[type="checkbox"]:checked ~ span.tip {
+  opacity: 0;
+  transition-delay: 0s;
+  
+}
+span.tip {
+  --bg-color: var(--grey-3);
+  position: absolute;
+  right: 0.15rem;
+  text-transform: capitalize;
+  bottom: -3.5rem;
+  transform: translateY(-50%);
+  background: var(--bg-color);
+  padding: 0.25rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  color: var(--main-color);
+  transition: opacity 0.3s ease 0.25s ;
+}
+span.tip::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 0.5rem;
+  height: 1rem;
+  top: -0.25rem;
+  right: 0.75rem;
+  background: var(--bg-color);
+  transform: rotate(45deg);
+}
 body {
   font-family: "Poppins", sans-serif;
   background: var(--bg);
@@ -70,15 +107,15 @@ h2.title {
   font-size: 0.75rem;
   font-weight: 600;
 }
-.medium-title{
+.medium-title {
   font-weight: 600;
   font-size: 0.85rem;
 }
 .small-text {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 .medium-text {
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 .post {
   border-radius: 1.15rem;
