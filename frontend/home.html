@@ -1,288 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Parlimate</title>
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./sidebar1.css" />
-    <link rel="stylesheet" href="./header.css" />
-    <link rel="stylesheet" href="./container.css" />
-    <!-- <link rel="stylesheet"
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home | Parlimate</title>
+		<link rel="stylesheet" href="./index.css" />
+		<link rel="stylesheet" href="./sidebar1.css" />
+		<link rel="stylesheet" href="./header.css" />
+		<link rel="stylesheet" href="./container.css" />
+		<!-- <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
     /> -->
 
-    <!-- icons -->
-    <link
-      rel="stylesheet"
-      data-purpose="Layout StyleSheet"
-      title="Web Awesome"
-      href="/css/app-wa-09b459cf485d4b1f3304947240314c05.css?vsn=d"
-    />
+		<!-- icons -->
+		<link
+			rel="stylesheet"
+			data-purpose="Layout StyleSheet"
+			title="Web Awesome"
+			href="/css/app-wa-09b459cf485d4b1f3304947240314c05.css?vsn=d"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
-    />
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
-    />
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
-    />
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
-    />
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
-    />
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
-    />
-  </head>
-  <body>
-    <div class="sidebar pd-1">
-      <div class="sideMenuBtn btn">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-      </div>
-      <div class="searchBar">
-      <input
-        type="search"
-        name="sideBarSearch"
-        id="sideBarSearch"
-        placeholder="Search..."
-      />
-      <label for="sideBarSearch">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </label>
-      </div>
-      <div class="navs">
-      <ul>
-        <li>
-        <input type="radio" name="nav" id="nav-Home" checked />
-        <label for="nav-Home"><i class="fa-solid fa-house"></i>Home</label>
-        </li>
-        <li>
-        <input type="radio" name="nav" id="nav-announcements" />
-        <label for="nav-announcements"
-          ><i class="fa-solid fa-bullhorn"></i>announcements</label
-        >
-        </li>
-        <li>
-        <input type="radio" name="nav" id="nav-fundraise" />
-        <label for="nav-fundraise"
-          ><i class="fa-solid fa-coins"></i>fundraises</label
-        >
-        </li>
-        <li>
-        <input type="radio" name="nav" id="nav-noti" />
-        <label for="nav-noti"
-          ><i class="fa-solid fa-bell"></i>notification</label
-        >
-        </li>
-        <li>
-        <input type="radio" name="nav" id="nav-survey" />
-        <label for="nav-survey"
-          ><i class="fa-solid fa-clipboard"></i>surveys</label
-        >
-        </li>
-        <li>
-        <input type="radio" name="nav" id="nav-discusRoom" />
-        <label for="nav-discusRoom"
-          ><i class="fa-solid fa-people-group"></i>discussion Room</label
-        >
-        </li>
-        <li>
-        <input type="radio" name="nav" id="nav-help" />
-        <label for="nav-help"
-          ><i class="fa-solid fa-headset"></i>help/support</label
-        >
-        </li>
-        <li>
-        <input type="radio" name="nav" id="nav-settings" />
-        <label for="nav-settings"
-          ><i class="fa-solid fa-gear"></i>settings</label
-        >
-        </li>
-      </ul>
-      </div>
-      <div class="logoutBtn capitalize">
-      <div class="cont">
-        <input type="checkbox" name="logoutBtn" id="logoutBtn" />
-        <label for="logoutBtn">
-        <i class="fa-solid fa-sign-out"></i>
-        <span>logout</span>
-        </label>
-      </div>
-      </div>
-    </div>
-    <div class="header pd-2">
-      <div class="headerSearchBar">
-        <input
-          type="search"
-          name="mainSearch"
-          id="headerSearchBar"
-          placeholder="Search politicians, Political parties...."
-        />
-        <label for="headerSearchBar">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </label>
-      </div>
-      <div class="headerBtns">
-        <div class="headerBtn">
-          <input type="checkbox" name="notifi" id="notificationBtn" />
-          <label for="notificationBtn" class="btn">
-            <i class="fa-solid fa-bell"></i>
-          </label>
-          <span class="tip">notifications</span>
-        </div>
-        <div class="headerBtn">
-          <input type="checkbox" name="profile" id="profileBtn" />
-          <label for="profileBtn" class="btn">
-            <i class="fa-solid fa-user"></i>
-          </label>
-          <span class="tip">profile</span>
-          <div class="dropDownMenu">
-            <div class="profile">
-              <a href="#">
-                <div class="img"></div>
-                <div class="details">
-                  <div class="name medium-text bold">Naleeka Kumarasinghe</div>
-                  <div class="email small-text">knaleeka845@gmail.com</div>
-                </div>
-              </a>
-            </div>
-            <ul class="capitalize">
-              <li>
-                <a href="#">
-                  <span>
-                    <i class="fa-regular fa-user"></i>
-                  </span>
-                  <span>profile</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>
-                    <i class="fa-regular fa-gear"></i>
-                  </span>
-                  <span> account settings </span>
-                </a>
-              </li>
-              <div class="sep-line"></div>
-              <li>
-                <a href="#">
-                  <span>
-                    <i class="fa-regular fa-circle-question"></i>
-                  </span>
-                  <span> help center </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>
-                    <i class="fa-regular fa-star"></i>
-                  </span>
-                  <span> upgrade plan </span>
-                </a>
-              </li>
-              <div class="sep-line"></div>
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+		/>
+	</head>
+	<body>
+		<div class="sidebar pd-1">
+			<div class="sideMenuBtn btn">
+				<div class="line line1"></div>
+				<div class="line line2"></div>
+				<div class="line line3"></div>
+			</div>
+			<div class="searchBar">
+				<input
+					type="search"
+					name="sideBarSearch"
+					id="sideBarSearch"
+					placeholder="Search..."
+				/>
+				<label for="sideBarSearch">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</label>
+			</div>
+			<div class="navs">
+				<ul>
+					<li>
+						<input type="radio" name="nav" id="nav-Home" checked />
+						<label for="nav-Home"
+							><i class="fa-solid fa-house"></i>Home</label
+						>
+					</li>
+					<li>
+						<input type="radio" name="nav" id="nav-announcements" />
+						<label for="nav-announcements"
+							><i class="fa-solid fa-bullhorn"></i
+							>announcements</label
+						>
+					</li>
+					<li>
+						<input type="radio" name="nav" id="nav-fundraise" />
+						<label for="nav-fundraise"
+							><i class="fa-solid fa-coins"></i>fundraises</label
+						>
+					</li>
+					<li>
+						<input type="radio" name="nav" id="nav-noti" />
+						<label for="nav-noti"
+							><i class="fa-solid fa-bell"></i>notification</label
+						>
+					</li>
+					<li>
+						<input type="radio" name="nav" id="nav-survey" />
+						<label for="nav-survey"
+							><i class="fa-solid fa-clipboard"></i>surveys</label
+						>
+					</li>
+					<li>
+						<input type="radio" name="nav" id="nav-discusRoom" />
+						<label for="nav-discusRoom"
+							><i class="fa-solid fa-people-group"></i>discussion
+							Room</label
+						>
+					</li>
+					<li>
+						<input type="radio" name="nav" id="nav-help" />
+						<label for="nav-help"
+							><i class="fa-solid fa-headset"></i
+							>help/support</label
+						>
+					</li>
+					<li>
+						<input type="radio" name="nav" id="nav-settings" />
+						<label for="nav-settings"
+							><i class="fa-solid fa-gear"></i>settings</label
+						>
+					</li>
+				</ul>
+			</div>
+			<div class="logoutBtn capitalize">
+				<div class="cont">
+					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
+					<label for="logoutBtn">
+						<i class="fa-solid fa-sign-out"></i>
+						<span>logout</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="header pd-2">
+			<div class="headerSearchBar">
+				<input
+					type="search"
+					name="mainSearch"
+					id="headerSearchBar"
+					placeholder="Search politicians, Political parties...."
+				/>
+				<label for="headerSearchBar">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</label>
+			</div>
+			<div class="headerBtns">
+				<div class="headerBtn">
+					<input type="checkbox" name="notifi" id="notificationBtn" />
+					<label for="notificationBtn" class="btn">
+						<i class="fa-solid fa-bell"></i>
+					</label>
+					<span class="tip">notifications</span>
+				</div>
+				<div class="headerBtn">
+					<input type="checkbox" name="profile" id="profileBtn" />
+					<label for="profileBtn" class="btn">
+						<i class="fa-solid fa-user"></i>
+					</label>
+					<span class="tip">profile</span>
+					<div class="dropDownMenu">
+						<div class="profile">
+							<a href="#">
+								<div class="img"></div>
+								<div class="details">
+									<div class="name medium-text bold">
+										Naleeka Kumarasinghe
+									</div>
+									<div class="email small-text">
+										knaleeka845@gmail.com
+									</div>
+								</div>
+							</a>
+						</div>
+						<ul class="capitalize">
+							<li>
+								<a href="#">
+									<span>
+										<i class="fa-regular fa-user"></i>
+									</span>
+									<span>profile</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>
+										<i class="fa-regular fa-gear"></i>
+									</span>
+									<span> account settings </span>
+								</a>
+							</li>
+							<div class="sep-line"></div>
+							<li>
+								<a href="#">
+									<span>
+										<i
+											class="fa-regular fa-circle-question"
+										></i>
+									</span>
+									<span> help center </span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>
+										<i class="fa-regular fa-star"></i>
+									</span>
+									<span> upgrade plan </span>
+								</a>
+							</li>
+							<div class="sep-line"></div>
 
-              <li>
-                <div class="logoutBtn capitalize">
-                  <div class="cont">
-                    <input type="checkbox" name="logoutBtn" id="logoutBtn" />
-                    <label for="logoutBtn">
-                      <i class="fa-solid fa-sign-out"></i>
-                      <span>logout</span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="pageTitles">
-        <h2 class="title">Home</h2>
-        <div class="subTitle">Political activities and Discussions</div>
-      </div>
-      <div class="topContent">
-        <div class="weeklySurvey post reactable">
-          <div class="post-head small-title">
-            <div class="post-title">
-              weekly survey
-              <span class="btn round"><i class="fa-solid fa-info"></i></span>
-            </div>
-            <div class="survTime">
-              survey ends in :
-              <span class="time">
-                <span class="sur-end-day">5</span> days
-                <span class="sur-end-hour">12</span> hours
-              </span>
-            </div>
-          </div>
-          <div class="survey-title">
-            Who will be the next president of Sri Lanka?
-          </div>
-          <div class="surveyContent capitalize">
-            <span>
-              <input type="radio" name="week-survey" id="survey-1" />
-              <label for="survey-1">mahinda rajapakse</label>
-            </span>
-            <span>
-              <input type="radio" name="week-survey" id="survey-2" />
-              <label for="survey-2">ranil wickramasinghe</label>
-            </span>
-            <span>
-              <input type="radio" name="week-survey" id="survey-3" />
-              <label for="survey-3">anura kumara dissanayake</label>
-            </span>
-            <span>
-              <input type="radio" name="week-survey" id="survey-4" />
-              <label for="survey-4">sajith wickramasinghe</label>
-            </span>
-          </div>
-          <div class="reactions">
-            <button class="comment btn">
-              <span>comment</span>
-              <span class="reactIcon"><i class="fa-solid fa-message"></i></span>
-            </button>
-            <button class="share btn">
-              <span>share</span>
-              <span class="reactIcon"
-                ><i class="fa-duotone fa-solid fa-share-all"></i
-              ></span>
-            </button>
-          </div>
-        </div>
-        <div class="last-surveys">
-          <div class="post-head medium-title">Last surevy results</div>
-          <div class="content">
-            fill this content with the last survey results
-          </div>
-          <a href="#" class="past-surv-link small-text">See past surevys</a>
-        </div>
-        <div class="btns">
-          button
-          <!-- add some necessory buttons over here. They must open with a popup -->
-        </div>
-      </div>
-    </div>
-  </body>
+							<li>
+								<div class="logoutBtn capitalize">
+									<div class="cont">
+										<input
+											type="checkbox"
+											name="logoutBtn"
+											id="logoutBtn"
+										/>
+										<label for="logoutBtn">
+											<i class="fa-solid fa-sign-out"></i>
+											<span>logout</span>
+										</label>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="pageTitles">
+				<h2 class="title">Home</h2>
+				<div class="subTitle">Political activities and Discussions</div>
+			</div>
+			<div class="topContent">
+				<div class="weeklySurvey post reactable">
+					<div class="post-head small-title">
+						<div class="post-title">
+							weekly survey
+							<span class="btn round"
+								><i class="fa-solid fa-info"></i
+							></span>
+						</div>
+						<div class="survTime">
+							survey ends in :
+							<span class="time">
+								<span class="sur-end-day">5</span> days
+								<span class="sur-end-hour">12</span> hours
+							</span>
+						</div>
+					</div>
+					<div class="survey-title">
+						Who will be the next president of Sri Lanka?
+					</div>
+					<div class="surveyContent capitalize">
+						<span>
+							<input
+								type="radio"
+								name="week-survey"
+								id="survey-1"
+							/>
+							<label for="survey-1">mahinda rajapakse</label>
+						</span>
+						<span>
+							<input
+								type="radio"
+								name="week-survey"
+								id="survey-2"
+							/>
+							<label for="survey-2">ranil wickramasinghe</label>
+						</span>
+						<span>
+							<input
+								type="radio"
+								name="week-survey"
+								id="survey-3"
+							/>
+							<label for="survey-3"
+								>anura kumara dissanayake</label
+							>
+						</span>
+						<span>
+							<input
+								type="radio"
+								name="week-survey"
+								id="survey-4"
+							/>
+							<label for="survey-4">sajith wickramasinghe</label>
+						</span>
+					</div>
+					<div class="reactions">
+						<button class="comment btn">
+							<span class="reactIcon"
+								><i class="fa-solid fa-message"></i
+							></span>
+							<span>comment</span>
+						</button>
+						<button class="share btn">
+							<span class="reactIcon">
+								<i class="fa-duotone fa-solid fa-share-all"></i>
+							</span>
+							<span>share</span>
+						</button>
+					</div>
+				</div>
+				<div class="last-surveys">
+					<div class="post-head medium-title">
+						Last surevy results
+					</div>
+					<div class="content">
+						fill this content with the last survey results
+					</div>
+					<a href="#" class="past-surv-link small-text"
+						>See past surevys</a
+					>
+				</div>
+				<div class="btns">
+					button
+					<!-- add some necessory buttons over here. They must open with a popup -->
+				</div>
+			</div>
+			<div class="post">
+				<div class="top">
+					<div class="post-details">
+						<div class="img"></div>
+						<div class="details">
+							<div class="name">Himasha Chinthani</div>
+							<div class="posted-date">
+								<i class="fa-light fa-clock"></i>
+								<div class="time">
+									<span class="value">30</span>
+									<span class="unit">minutes ago</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="post-menu"
+							id="postMenu"
+							class="menuBtn"
+						/>
+						<label for="postMenu" class="btn-2">
+							<i class="fa-regular fa-ellipsis-vertical"></i>
+						</label>
+                        <div class="post-dropDownMenu">
+                            <ul>
+                                <li><a href="#">report</a></li>
+                                <li><a href="#">copy link</a></li>
+                            </ul>
+                        </div>
+					</div>
+				</div>
+				<div class="content">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					Alias qui omnis enim eius pariatur eligendi tenetur unde et
+					exercitationem adipisci, dicta quam facere vitae, fugit hic
+					voluptatum? Veniam, exercitationem tenetur? Eveniet libero
+					suscipit laborum, odio soluta accusamus recusandae inventore
+					velit eum quam quis omnis enim ducimus expedita ab
+					reprehenderit sunt explicabo commodi dolorem rem iusto!
+					Labore autem recusandae atque expedita. Excepturi deleniti
+					exercitationem rem ullam magnam iure quis nesciunt nemo
+					mollitia quo atque, facilis sapiente id saepe voluptatibus
+					corrupti maxime molestias aliquam libero ad fuga soluta
+					dolore dolorum corporis? Iure? Ab voluptas et nam sed rem
+					quos quasi neque aut possimus ducimus, voluptatibus ex totam
+					adipisci est voluptate officiis tempore optio sint eum!
+					Autem nesciunt repellendus nulla exercitationem hic ad!
+					Eligendi ullam, quae fugiat voluptatem, ut nulla sed
+					exercitationem odio quod, expedita mollitia corporis
+					veritatis eum tempora nisi vitae repellendus vel natus
+					facilis dignissimos. Exercitationem distinctio eveniet
+					perspiciatis dolores enim!
+					<div class="hashtags">
+						<span>#politics</span>
+						<span>#discussion</span>
+						<span>#parliment</span>
+					</div>
+				</div>
+				<div class="reactions">
+					<button class="like btn">
+						<span class="reactIcon">
+							<i class="fa-solid fa-thumbs-up"></i>
+						</span>
+						<span>like</span>
+						<span class="count"> 32k </span>
+					</button>
+					<button class="comment btn">
+						<span class="reactIcon">
+							<i class="fa-solid fa-message"></i>
+						</span>
+						<span>comment</span>
+						<span class="count">1k</span>
+					</button>
+					<button class="share btn">
+						<span class="reactIcon">
+							<i class="fa-duotone fa-solid fa-share-all"></i>
+						</span>
+						<span>share</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
-

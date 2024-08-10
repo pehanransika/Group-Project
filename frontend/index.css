@@ -10,6 +10,7 @@
   --black-2: #4b4b4b;
   --black-3: #323232;
   --grey-1: #f2f2f2;
+  --grey-5: #e2e2e2;
   --grey-2: #fbfbfb;
   --grey-3: #8e8e8e;
   --grey-4: #dddddd;
@@ -39,6 +40,16 @@
   border-radius: 0.75rem;
   width: fit-content;
   transition: background 0.3s ease;
+}
+.btn-2{
+  cursor: pointer;
+  background: var(--grey-2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+.btn-2:hover {
+  background: var(--grey-1);
 }
 .btn:hover {
   background: var(--grey-1);
@@ -162,8 +173,7 @@ h2.title {
   font-weight: 600;
   flex: 1;
   display: flex;
-  /* flex-direction: row-reverse; */
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
