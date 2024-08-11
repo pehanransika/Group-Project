@@ -50,12 +50,13 @@
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
 		/>
 	</head>
-	<body>
+	<body class="sidebar-deactive">
+		<div class="sidebar-toggle-btn sideMenuBtn btn">
+			<i class="fa-solid fa-bars-sort"></i>
+		</div>
 		<div class="sidebar pd-1">
 			<div class="sideMenuBtn btn">
-				<div class="line line1"></div>
-				<div class="line line2"></div>
-				<div class="line line3"></div>
+				<i class="fa-sharp fa-solid fa-bars"></i>
 			</div>
 			<div class="searchBar">
 				<input
@@ -465,4 +466,18 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		let sideMenuBtns = document.querySelectorAll(".sideMenuBtn")
+		const body = document.querySelector("body")
+
+		sideMenuBtns.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				if(body.classList.contains("sidebar-deactive")){
+					body.classList.remove("sidebar-deactive")
+				} else {
+					body.classList.add("sidebar-deactive")
+				}
+			})
+		})
+	</script>
 </html>

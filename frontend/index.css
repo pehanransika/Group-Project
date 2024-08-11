@@ -181,3 +181,24 @@ h2.title {
   justify-content: center;
   gap: 0.5rem;
 }
+.sidebar-deactive .header{
+  left: 0;
+}
+.sidebar-deactive .sidebar{
+  left: -18.55rem;
+  transition-delay: 0s !important;
+}
+.sidebar-deactive .container{
+  margin-left: 2.5rem;
+}
+.sidebar-deactive .sidebar-toggle-btn{
+  opacity: 1;
+  left: 0;
+}
+.sidebar-toggle-btn{
+  position: fixed;
+  left: 19rem;
+  top: 4.25rem;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out, left 0.35s ease-in-out;
+}

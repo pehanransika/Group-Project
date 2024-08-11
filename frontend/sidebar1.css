@@ -23,6 +23,7 @@
     background: var(--main-color);
     gap: 1.5rem;
     border-right: 1px solid var(--grey-4);
+    transition: left 0.35s ease 0.25s;
 }
 #sideBarSearch{
     font-size: 1rem;
