@@ -3,6 +3,7 @@
 	flex-direction: column;
 	gap: 1.5rem;
 	margin: 7rem 2rem 6rem 21rem;
+	transition: margin-left 0.35s ease;
 }
 .weeklySurvey {
 	background: var(--main-color);
@@ -87,8 +88,9 @@
 	width: 70%;
 	gap: 1rem;
 	padding-bottom: 4rem;
-	outline: 0px;
+	outline: 0px solid var(--grey-5);
 	overflow: hidden;
+	transition: filter 0.5s ease, outline 0.25s ease;
 }
 .top {
 	display: flex;
@@ -142,8 +144,7 @@ button .count {
 }
 .post:has(#postMenu:checked) {
 	outline: 1px solid var(--grey-5);
-	filter: contrast(0.95);
-	transition: filter 0.5s ease, border 0.5s ease;
+	filter: contrast(0.96);
 }
 div:has(.post-dropDownMenu) {
 	position: relative;
@@ -160,9 +161,14 @@ div:has(.post-dropDownMenu) {
 	overflow: hidden;
     width: max-content;
 }
+.post-dropDownMenu ul{
+    position: relative;
+    z-index: 1;
+}
 .post-dropDownMenu li {
 	list-style: none;
 	text-transform: capitalize;
+    font-size: 0.85rem;
 }
 .post-dropDownMenu li a {
 	display: block;

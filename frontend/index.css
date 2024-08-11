@@ -13,6 +13,7 @@
   --grey-5: #e2e2e2;
   --grey-2: #fbfbfb;
   --grey-3: #8e8e8e;
+  --tip-color: #5a5a5a;
   --grey-4: #dddddd;
   --main-color: #ffffff;
   --bg: #ebedf5;
@@ -64,6 +65,10 @@ input {
   font-family: inherit;
   font-size: 0.875rem !important;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 div:has(> span.tip) {
   position: relative;
 }
@@ -73,10 +78,9 @@ div:has(> span.tip):hover span.tip {
 div:has(> span.tip) input[type="checkbox"]:checked ~ span.tip {
   opacity: 0;
   transition-delay: 0s;
-  
 }
 span.tip {
-  --bg-color: var(--grey-3);
+  --bg-color: var(--tip-color);
   position: absolute;
   right: 0.15rem;
   text-transform: capitalize;
@@ -176,4 +180,25 @@ h2.title {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+.sidebar-deactive .header{
+  left: 0;
+}
+.sidebar-deactive .sidebar{
+  left: -18.55rem;
+  transition-delay: 0s !important;
+}
+.sidebar-deactive .container{
+  margin-left: 2.5rem;
+}
+.sidebar-deactive .sidebar-toggle-btn{
+  opacity: 1;
+  left: 0;
+}
+.sidebar-toggle-btn{
+  position: fixed;
+  left: 19rem;
+  top: 4.25rem;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out, left 0.35s ease-in-out;
 }
