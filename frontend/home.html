@@ -50,7 +50,18 @@
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
 		/>
 	</head>
-	<body class="sidebar-deactive">
+	<body class="">
+		<div class="popup-modal">
+			<div class="popup">
+				<div class="title">
+					New Post
+					<div class="close-btn btn" id="popup-close-btn">
+						<i class="fa-solid fa-times"></i>
+					</div>
+				</div>
+				<div class="breakLine"></div>
+			</div>
+		</div>
 		<div class="sidebar-toggle-btn sideMenuBtn btn">
 			<i class="fa-solid fa-bars-sort"></i>
 		</div>
@@ -290,6 +301,15 @@
 				<div class="subTitle">Political activities and Discussions</div>
 			</div>
 			<div class="topContent">
+				<div class="addPost-btn">
+					<div class="prof-img"></div>
+					<div class="content">
+						<div class="greeting">
+							Hello <span class="userName">Naleeka</span>
+						</div>
+						<div>Got something to share?</div>
+					</div>
+				</div>
 				<div class="weeklySurvey post reactable">
 					<div class="post-head small-title">
 						<div class="post-title">
@@ -370,10 +390,6 @@
 					<a href="#" class="past-surv-link small-text"
 						>See past surevys</a
 					>
-				</div>
-				<div class="btns">
-					button
-					<!-- add some necessory buttons over here. They must open with a popup -->
 				</div>
 			</div>
 			<div class="post">
@@ -459,19 +475,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="./script.js"></script>
 	</body>
-	<script>
-		let sideMenuBtns = document.querySelectorAll(".sideMenuBtn");
-		const body = document.querySelector("body");
-
-		sideMenuBtns.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				if (body.classList.contains("sidebar-deactive")) {
-					body.classList.remove("sidebar-deactive");
-				} else {
-					body.classList.add("sidebar-deactive");
-				}
-			});
-		});
-	</script>
 </html>
