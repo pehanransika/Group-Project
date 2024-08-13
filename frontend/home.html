@@ -50,7 +50,62 @@
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
 		/>
 	</head>
-	<body class="sidebar-deactive">
+	<body class="overlay-active">
+		<div class="popup-modal">
+			<div class="popup">
+				<div class="title">
+					New Post
+					<div class="close-btn btn" id="popup-close-btn">
+						<i class="fa-solid fa-times"></i>
+					</div>
+					<div class="breakLine"></div>
+				</div>
+				<div class="content">
+					<div class="account row">
+						<div class="user-profile">
+							<div class="prof-img"></div>
+							<div class="user-name">Naleeka Kumarasinghe</div>
+						</div>
+						<div class="switch-btn capitalize">
+							<a href="#" >switch account <i class="fa-regular fa-chevron-down"></i></a>
+						</div>
+					</div>
+					<div class="caption-box col content-pd">
+						<div class="title capitalize">caption</div>
+						<textarea name="capirion" id="add-post-caption"></textarea>
+					</div>
+					<div class="tags-box col content-pd">
+						<div class="title capitalize">tags</div>
+						<input type="text" name="hashtags" id="addost-hashtags">
+						<div class="recomended-tags">
+							Try :
+							<span>
+								<input type="checkbox" name="hashtags" id="hashtag-1">
+								<label for="hashtag-1">GoHomeGota</label>
+							</span>
+							<span>
+								<input type="checkbox" name="hashtags" id="hashtag-2">
+								<label for="hashtag-2">PresidentialElection2024</label>
+							</span>
+							<span>
+								<input type="checkbox" name="hashtags" id="hashtag-3">
+								<label for="hashtag-3">PoliticalNews</label>
+							</span>
+						</div>
+					</div>
+					<div class="popbtns capitalize">
+						<div class="clear-btn" id="popup-clear-btn">
+							Clear
+							<i class="fa-sharp fa-solid fa-rotate-left"></i>
+						</div>
+						<div class="post-btn">
+							post discussion
+							<i class="fa-duotone fa-solid fa-check"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="sidebar-toggle-btn sideMenuBtn btn">
 			<i class="fa-solid fa-bars-sort"></i>
 		</div>
@@ -290,6 +345,15 @@
 				<div class="subTitle">Political activities and Discussions</div>
 			</div>
 			<div class="topContent">
+				<div class="addPost-btn">
+					<div class="prof-img"></div>
+					<div class="content">
+						<div class="greeting">
+							Hello <span class="userName">Naleeka</span>
+						</div>
+						<div>Got something to share?</div>
+					</div>
+				</div>
 				<div class="weeklySurvey post reactable">
 					<div class="post-head small-title">
 						<div class="post-title">
@@ -370,10 +434,6 @@
 					<a href="#" class="past-surv-link small-text"
 						>See past surevys</a
 					>
-				</div>
-				<div class="btns">
-					button
-					<!-- add some necessory buttons over here. They must open with a popup -->
 				</div>
 			</div>
 			<div class="post">
@@ -459,19 +519,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="./script.js"></script>
 	</body>
-	<script>
-		let sideMenuBtns = document.querySelectorAll(".sideMenuBtn");
-		const body = document.querySelector("body");
-
-		sideMenuBtns.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				if (body.classList.contains("sidebar-deactive")) {
-					body.classList.remove("sidebar-deactive");
-				} else {
-					body.classList.add("sidebar-deactive");
-				}
-			});
-		});
-	</script>
 </html>
