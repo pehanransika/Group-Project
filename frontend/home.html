@@ -127,58 +127,40 @@
 			<div class="navs">
 				<ul>
 					<li>
-						<input type="radio" name="nav" id="nav-Home" checked />
-						<label for="nav-Home"
-							><i class="fa-solid fa-house"></i>Home</label
-						>
+						<input type="radio" name="nav" id="nav-Home" value="home.html" checked />
+						<label for="nav-Home"><i class="fa-solid fa-house"></i>Home</label>
 					</li>
 					<li>
-						<input type="radio" name="nav" id="nav-announcements" />
-						<label for="nav-announcements"
-							><i class="fa-solid fa-bullhorn"></i
-							>announcements</label
-						>
+						<input type="radio" name="nav" id="nav-announcements" value="./Announcements/announcements.html" />
+						<label for="nav-announcements"><i class="fa-solid fa-bullhorn"></i>Announcements</label>
 					</li>
 					<li>
-						<input type="radio" name="nav" id="nav-fundraise" />
-						<label for="nav-fundraise"
-							><i class="fa-solid fa-coins"></i>fundraises</label
-						>
+						<input type="radio" name="nav" id="nav-fundraise" value="./Fundraising/fundraising.html" />
+						<label for="nav-fundraise"><i class="fa-solid fa-coins"></i>Fundraises</label>
 					</li>
 					<li>
-						<input type="radio" name="nav" id="nav-noti" />
-						<label for="nav-noti"
-							><i class="fa-solid fa-bell"></i>notification</label
-						>
+						<input type="radio" name="nav" id="nav-noti" value="notifications.html" />
+						<label for="nav-noti"><i class="fa-solid fa-bell"></i>Notifications</label>
 					</li>
 					<li>
-						<input type="radio" name="nav" id="nav-survey" />
-						<label for="nav-survey"
-							><i class="fa-solid fa-clipboard"></i>surveys</label
-						>
+						<input type="radio" name="nav" id="nav-survey" value="surveys.html" />
+						<label for="nav-survey"><i class="fa-solid fa-clipboard"></i>Surveys</label>
 					</li>
 					<li>
-						<input type="radio" name="nav" id="nav-discusRoom" />
-						<label for="nav-discusRoom"
-							><i class="fa-solid fa-people-group"></i>discussion
-							Room</label
-						>
+						<input type="radio" name="nav" id="nav-discusRoom" value="discussion-room.html" />
+						<label for="nav-discusRoom"><i class="fa-solid fa-people-group"></i>Discussion Room</label>
 					</li>
 					<li>
-						<input type="radio" name="nav" id="nav-help" />
-						<label for="nav-help"
-							><i class="fa-solid fa-headset"></i
-							>help/support</label
-						>
+						<input type="radio" name="nav" id="nav-help" value="help.html" />
+						<label for="nav-help"><i class="fa-solid fa-headset"></i>Help/Support</label>
 					</li>
 					<li>
-						<input type="radio" name="nav" id="nav-settings" />
-						<label for="nav-settings"
-							><i class="fa-solid fa-gear"></i>settings</label
-						>
+						<input type="radio" name="nav" id="nav-settings" value="settings.html" />
+						<label for="nav-settings"><i class="fa-solid fa-gear"></i>Settings</label>
 					</li>
 				</ul>
 			</div>
+			
 			<div class="logoutBtn capitalize">
 				<div class="cont">
 					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
@@ -256,7 +238,7 @@
 								</a>
 							</li>
 						</ul>
-						<a href="#" class="bottom-btn small-text capitalize">
+						<a href="./Announcements/announcements.html" class="bottom-btn small-text capitalize">
 							see all notifications
 						</a>
 					</div>
@@ -521,4 +503,30 @@
 		</div>
 		<script src="./script.js"></script>
 	</body>
+	<script>
+		let sideMenuBtns = document.querySelectorAll(".sideMenuBtn");
+		const body = document.querySelector("body");
+
+		sideMenuBtns.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				if (body.classList.contains("sidebar-deactive")) {
+					body.classList.remove("sidebar-deactive");
+				} else {
+					body.classList.add("sidebar-deactive");
+				}
+			});
+		});
+
+		const navRadios = document.querySelectorAll('input[name="nav"]');
+
+    // Add event listener for change event on each radio button
+    navRadios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            const selectedValue = event.target.value;
+            if (selectedValue) {
+                window.location.href = selectedValue; // Redirect to the selected page
+            }
+        });
+    });
+	</script>
 </html>
