@@ -50,6 +50,7 @@
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
 		/>
 	</head>
+	
 	<body class="">
 		<div class="popup-modal">
 			<div class="popup">
@@ -503,30 +504,5 @@
 		</div>
 		<script src="./script.js"></script>
 	</body>
-	<script>
-		let sideMenuBtns = document.querySelectorAll(".sideMenuBtn");
-		const body = document.querySelector("body");
 
-		sideMenuBtns.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				if (body.classList.contains("sidebar-deactive")) {
-					body.classList.remove("sidebar-deactive");
-				} else {
-					body.classList.add("sidebar-deactive");
-				}
-			});
-		});
-
-		const navRadios = document.querySelectorAll('input[name="nav"]');
-
-    // Add event listener for change event on each radio button
-    navRadios.forEach(radio => {
-        radio.addEventListener('change', (event) => {
-            const selectedValue = event.target.value;
-            if (selectedValue) {
-                window.location.href = selectedValue; // Redirect to the selected page
-            }
-        });
-    });
-	</script>
 </html>
