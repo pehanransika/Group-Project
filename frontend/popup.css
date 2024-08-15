@@ -33,9 +33,9 @@ body.overlay-active > .popup-modal .popup {
 	padding: 1.25rem 2rem 2.5rem;
 	border-radius: 1rem;
 	border: 1px solid var(--grey-1);
-	transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	background: var(--main-color);
 	min-width: 40rem;
+	transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .popup .title {
 	font-size: 1.25rem;

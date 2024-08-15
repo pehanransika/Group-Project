@@ -180,3 +180,25 @@ h2.title {
 	background: white;
 	border-radius: 50%;
 }
+
+/* notification message that appears on the bottom of screen */
+.notification-msg{
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -3rem;
+	background: var(--black-3);
+	font-weight: 500;
+	color: var(--main-color);
+	padding: 0.5rem 1.5rem;
+	border-radius: 0.75rem;
+	opacity: 0;
+	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
+	opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.noti-active .notification-msg{
+	opacity: 1;
+	bottom: 2rem;
+	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
+	opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

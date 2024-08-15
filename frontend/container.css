@@ -257,3 +257,7 @@ div:has(.post-dropDownMenu) {
 .post.reactable {
 	padding-bottom: 3rem !important;
 }
+.post.reacted .like,
+.post.reacted .like .count{
+	color: var(--primary-color);
+}
