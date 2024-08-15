@@ -51,6 +51,7 @@
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
 		/>
 	</head>
+	
 	<body class="">
 		<div class="notification-msg capitalize">
 		</div>
@@ -594,26 +595,8 @@
 				</div>
 			</div>
 		</div>
+		<script src="./script.js"></script>
 	</body>
 	<script src="./script.js"></script>
-	<script>
-		sideMenuBtns.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				if (body.classList.contains("sidebar-deactive")) {
-					body.classList.remove("sidebar-deactive");
-				} else {
-					body.classList.add("sidebar-deactive");
-				}
-			});
-		});
 
-		navRadios.forEach((radio) => {
-			radio.addEventListener("change", (event) => {
-				const selectedValue = event.target.value;
-				if (selectedValue) {
-					window.location.href = selectedValue; // Redirect to the selected page
-				}
-			});
-		});
-	</script>
 </html>
