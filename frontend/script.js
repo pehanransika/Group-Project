@@ -20,7 +20,7 @@ sideMenuBtns.forEach((btn) => {
 });
 
 addPostBtn.addEventListener("click", () => {
-    if(body.classList.contains("overlay-active")){
+    if (body.classList.contains("overlay-active")) {
         body.classList.remove("overlay-active")
     } else {
         body.classList.add("overlay-active")
@@ -58,7 +58,25 @@ navRadios.forEach(radio => {
 
 popuppostBtn.addEventListener("click", () => {
     // implement validation here
-    let validity = true
+    let validity = false
+    const addPostTitle = body.querySelector(".popup #add-post-title")
+    const addPostCaption = body.querySelector(".popup #add-post-caption")
+    if (addPostTitle.value && addPostCaption.value) {
+        validity = true
+    } else {
+        if (!addPostTitle.value) {
+            addPostTitle.parentElement.classList.add("error")
+        }
+        if (!addPostCaption.value) {
+            addPostCaption.parentElement.classList.add("error")
+        }
+        addPostTitle.addEventListener("input", () => {
+            addPostTitle.parentElement.classList.remove("error")
+        })
+        addPostCaption.addEventListener("input", () => {
+            addPostCaption.parentElement.classList.remove("error")
+        })
+    }
     if (validity) {
         notificationMsgContent = "Your post has been successfully added !"
         notificationMsg.innerHTML = notificationMsgContent;
@@ -68,6 +86,8 @@ popuppostBtn.addEventListener("click", () => {
             body.classList.remove("noti-active")
         }, 3000)
     }
+
+
 })
 
 postLikeBtns.forEach(likeBtn => {
