@@ -7,6 +7,7 @@ const popuppostBtn = document.getElementById("popup-post-btn")
 const navRadios = document.querySelectorAll('input[name="nav"]');
 const notificationMsg = document.querySelector(".notification-msg");
 const postLikeBtns = document.querySelectorAll(".post .like");
+const voteSubmissionBtn = document.getElementById("vote-btn");
 let notificationMsgContent = "Your vote has been successfully added !";
 
 sideMenuBtns.forEach((btn) => {
@@ -79,15 +80,9 @@ popuppostBtn.addEventListener("click", () => {
     }
     if (validity) {
         notificationMsgContent = "Your post has been successfully added !"
-        notificationMsg.innerHTML = notificationMsgContent;
         body.classList.remove("overlay-active")
-        body.classList.add("noti-active")
-        setTimeout(() => {
-            body.classList.remove("noti-active")
-        }, 3000)
+        displayNotification(notificationMsgContent)
     }
-
-
 })
 
 postLikeBtns.forEach(likeBtn => {
@@ -95,3 +90,28 @@ postLikeBtns.forEach(likeBtn => {
         likeBtn.closest(".post").classList.toggle("reacted")
     })
 })
+
+voteSubmissionBtn.addEventListener("click", () => {
+    let validation = true
+    // valaidation required here
+    if (!voteSubmissionBtn.classList.contains("submitted")) {
+        voteSubmissionBtn.classList.add("submitted")
+        voteSubmissionBtn.innerHTML = `<i class="fa-duotone fa-solid fa-check"></i> Voted`
+        voteSubmissionBtn.closest(".votelist").classList.add("voted")
+        notificationMsgContent = "Your vote has been successfully added !"
+        displayNotification(notificationMsgContent, 2000)
+    } else {
+        voteSubmissionBtn.classList.remove("submitted")
+        voteSubmissionBtn.innerHTML = `submit my Vote`
+        voteSubmissionBtn.closest(".votelist").classList.remove("voted")
+    }
+
+})
+
+function displayNotification(msg, timeout = 3000) {
+    notificationMsg.innerHTML = msg
+    body.classList.add("noti-active")
+    setTimeout(() => {
+        body.classList.remove("noti-active")
+    }, timeout)
+}

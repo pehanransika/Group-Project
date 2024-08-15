@@ -261,3 +261,9 @@ div:has(.post-dropDownMenu) {
 .post.reacted .like .count{
 	color: var(--primary-color);
 }
+#vote-btn{
+	background: var(--black-2);
+	color: white;
+	font-weight: 600;
+	letter-spacing: 0.25px;
+}

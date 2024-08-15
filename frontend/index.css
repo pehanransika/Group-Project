@@ -203,3 +203,9 @@ h2.title {
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
 	opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.votelist.voted{
+	/* add style here */
+}
+#vote-btn.submitted {
+	background: #5490FF;
+}
