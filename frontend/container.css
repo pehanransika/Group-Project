@@ -222,3 +222,48 @@ div:has(.post-dropDownMenu) {
 .content div:not(.greeting){
 	font-size: 0.875rem;
 }
+.reactions {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	left: 0;
+	bottom: 0;
+}
+.reactions > button {
+	color: rgb(83, 83, 83);
+	border-radius: 0;
+	border: 0px;
+	padding: 0.45rem;
+	font-size: 0.85rem;
+	text-transform: capitalize;
+	font-weight: 600;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+.post {
+	border-radius: 1.15rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1.5rem 2rem;
+	position: relative;
+	overflow: hidden;
+}
+.post.reactable {
+	padding-bottom: 3rem !important;
+}
+.post.reacted .like,
+.post.reacted .like .count{
+	color: var(--primary-color);
+}
+#vote-btn{
+	background: var(--black-2);
+	color: white;
+	font-weight: 600;
+	letter-spacing: 0.25px;
+}

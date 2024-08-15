@@ -3,7 +3,12 @@ const addPostBtn = document.querySelector(".addPost-btn")
 const body = document.querySelector("body");
 const popupCloseBtn = document.getElementById("popup-close-btn")
 const popupClearBtn = document.getElementById("popup-clear-btn")
+const popuppostBtn = document.getElementById("popup-post-btn")
 const navRadios = document.querySelectorAll('input[name="nav"]');
+const notificationMsg = document.querySelector(".notification-msg");
+const postLikeBtns = document.querySelectorAll(".post .like");
+const voteSubmissionBtn = document.getElementById("vote-btn");
+let notificationMsgContent = "Your vote has been successfully added !";
 
 sideMenuBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -16,7 +21,7 @@ sideMenuBtns.forEach((btn) => {
 });
 
 addPostBtn.addEventListener("click", () => {
-    if(body.classList.contains("overlay-active")){
+    if (body.classList.contains("overlay-active")) {
         body.classList.remove("overlay-active")
     } else {
         body.classList.add("overlay-active")
@@ -52,3 +57,61 @@ navRadios.forEach(radio => {
     });
 });
 
+popuppostBtn.addEventListener("click", () => {
+    // implement validation here
+    let validity = false
+    const addPostTitle = body.querySelector(".popup #add-post-title")
+    const addPostCaption = body.querySelector(".popup #add-post-caption")
+    if (addPostTitle.value && addPostCaption.value) {
+        validity = true
+    } else {
+        if (!addPostTitle.value) {
+            addPostTitle.parentElement.classList.add("error")
+        }
+        if (!addPostCaption.value) {
+            addPostCaption.parentElement.classList.add("error")
+        }
+        addPostTitle.addEventListener("input", () => {
+            addPostTitle.parentElement.classList.remove("error")
+        })
+        addPostCaption.addEventListener("input", () => {
+            addPostCaption.parentElement.classList.remove("error")
+        })
+    }
+    if (validity) {
+        notificationMsgContent = "Your post has been successfully added !"
+        body.classList.remove("overlay-active")
+        displayNotification(notificationMsgContent)
+    }
+})
+
+postLikeBtns.forEach(likeBtn => {
+    likeBtn.addEventListener("click", () => {
+        likeBtn.closest(".post").classList.toggle("reacted")
+    })
+})
+
+voteSubmissionBtn.addEventListener("click", () => {
+    let validation = true
+    // valaidation required here
+    if (!voteSubmissionBtn.classList.contains("submitted")) {
+        voteSubmissionBtn.classList.add("submitted")
+        voteSubmissionBtn.innerHTML = `<i class="fa-duotone fa-solid fa-check"></i> Voted`
+        voteSubmissionBtn.closest(".votelist").classList.add("voted")
+        notificationMsgContent = "Your vote has been successfully added !"
+        displayNotification(notificationMsgContent, 2000)
+    } else {
+        voteSubmissionBtn.classList.remove("submitted")
+        voteSubmissionBtn.innerHTML = `submit my Vote`
+        voteSubmissionBtn.closest(".votelist").classList.remove("voted")
+    }
+
+})
+
+function displayNotification(msg, timeout = 3000) {
+    notificationMsg.innerHTML = msg
+    body.classList.add("noti-active")
+    setTimeout(() => {
+        body.classList.remove("noti-active")
+    }, timeout)
+}
