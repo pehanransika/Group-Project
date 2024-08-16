@@ -37,17 +37,6 @@ popupClearBtn.addEventListener("click", () => {
     body.querySelector(".popup input[type='text']").value = ""
 })
 
-
-sideMenuBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        if (body.classList.contains("sidebar-deactive")) {
-            body.classList.remove("sidebar-deactive");
-        } else {
-            body.classList.add("sidebar-deactive");
-        }
-    });
-});
-
 navRadios.forEach(radio => {
     radio.addEventListener('change', (event) => {
         const selectedValue = event.target.value;

@@ -61,6 +61,10 @@
 label {
 	cursor: pointer;
 }
+.col {
+	display: flex;
+	flex-direction: column;
+}
 textarea{
 	outline: 0;
 	border: 1px solid black;
@@ -202,10 +206,4 @@ h2.title {
 	bottom: 2rem;
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
 	opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.votelist.voted{
-	/* add style here */
-}
-#vote-btn.submitted {
-	background: #5490FF;
 }
