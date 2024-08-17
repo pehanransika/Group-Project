@@ -8,7 +8,9 @@ const navRadios = document.querySelectorAll('input[name="nav"]');
 const notificationMsg = document.querySelector(".notification-msg");
 const postLikeBtns = document.querySelectorAll(".post .like");
 const voteSubmissionBtn = document.getElementById("vote-btn");
+const weeklySirveyRadios = document.querySelectorAll(`.weeklySurvey input[name="week-survey"]`);
 let notificationMsgContent = "Your vote has been successfully added !";
+let weeklySurveyVoted = false;
 
 sideMenuBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -81,9 +83,9 @@ postLikeBtns.forEach(likeBtn => {
 })
 
 voteSubmissionBtn.addEventListener("click", () => {
-    let validation = true
+    checkIfWeeklySurveyVoted()
     // valaidation required here
-    if (!voteSubmissionBtn.classList.contains("submitted")) {
+    if (!voteSubmissionBtn.classList.contains("submitted") && weeklySurveyVoted) {
         voteSubmissionBtn.classList.add("submitted")
         voteSubmissionBtn.innerHTML = `<i class="fa-duotone fa-solid fa-check"></i> Voted`
         voteSubmissionBtn.closest(".votelist").classList.add("voted")
@@ -96,6 +98,15 @@ voteSubmissionBtn.addEventListener("click", () => {
     }
 
 })
+
+function checkIfWeeklySurveyVoted() {
+    weeklySirveyRadios.forEach(radio => {
+        if(radio.checked){
+            weeklySurveyVoted = true
+        }
+    })
+}
+
 
 function displayNotification(msg, timeout = 3000) {
     notificationMsg.innerHTML = msg
