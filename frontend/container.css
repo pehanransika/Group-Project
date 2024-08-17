@@ -275,25 +275,41 @@ div:has(.post-dropDownMenu) {
 	scale: 0.96;
 }
 .req-fundraising {
-	width: inherit;
-	text-align: center;
 	flex: 1;
 	padding: 1.5rem 2rem;
-	background: #5490ff;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
+	background: linear-gradient(180deg, #5490FF 50%, #61a5ff 100%);
 	align-items: center;
+	gap: 2rem;
 	justify-content: center;
+	position: relative;
+	color: var(--main-color);
 }
 .req-fundraising .title {
-	color: var(--main-color);
 	font-weight: 600;
-	max-width: 20rem;
+	font-size: 1.45rem;
+	margin-top: -4.5rem;
+}
+.req-fun-img{
+	position: absolute;
+	max-width: 8rem;
+	left: 50%;
+	bottom: -4rem;
+	transform: translate(-50%, -50%);
 }
 .votelist.voted{
 	/* add style here */
 }
 #vote-btn.submitted {
 	background: #5490FF;
+}
+@media screen and (max-width: 1349px) {
+	.addPost-btn{
+		flex: 1;
+	}
+	
+}
+.addPost-btn .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
