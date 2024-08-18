@@ -91,7 +91,7 @@
     background-color: #f5f5f5;
 }
 
-/* Detail Grid Styling */
+
 .detail-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -99,7 +99,7 @@
     margin-bottom: 20px;
 }
 
-/* Detail Item Styling */
+
 .detail-item {
     display: flex;
     flex-direction: column;
