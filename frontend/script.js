@@ -91,10 +91,12 @@ voteSubmissionBtn.addEventListener("click", () => {
         voteSubmissionBtn.closest(".votelist").classList.add("voted")
         notificationMsgContent = "Your vote has been successfully added !"
         displayNotification(notificationMsgContent, 2000)
+        disableRadioButtons(true)
     } else {
         voteSubmissionBtn.classList.remove("submitted")
         voteSubmissionBtn.innerHTML = `submit my Vote`
         voteSubmissionBtn.closest(".votelist").classList.remove("voted")
+        disableRadioButtons(false)
     }
 
 })
@@ -106,7 +108,12 @@ function checkIfWeeklySurveyVoted() {
         }
     })
 }
-
+function disableRadioButtons(bool) {
+    const radioButtons = document.querySelectorAll('input[name="week-survey"]');
+    radioButtons.forEach(radio => {
+        radio.disabled = bool;
+    });
+}
 
 function displayNotification(msg, timeout = 3000) {
     notificationMsg.innerHTML = msg
