@@ -32,7 +32,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -89,4 +89,112 @@ body {
 .location {
     font-size: 0.9em;
     color: #888;
+}
+/* Politician Container */
+.politician-container {
+    position: fixed;
+    right: 0;
+    top: 100px; /* Align with the top margin of the container */
+    bottom: 0;
+    width: 20%; /* Default width when sidebar is active */
+    background-color: #f4f4f4; /* Match with body background */
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5px;
+}
+
+/* Politician Card */
+.politician-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 35px;+
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    width: 90%; /* Adjust width to fit within the container */
+    max-width: 300px; /* Optional: set a max-width for larger cards */
+    height: 22rem; /* Height greater than width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image Styling */
+.politician-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-color: #ddd; /* Fallback for no image */
+}
+
+/* Politician Details */
+.politician-details {
+    text-align: center;
+}
+
+.politician-details h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.politician-details p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Hover Effect */
+.politician-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Adjustments when sidebar is deactivated */
+.sidebar-deactive .politician-container {
+    width: 35%; /* Adjust width to reduce gap when sidebar is deactivated */
+}
+
+.sidebar-deactive .politician-card {
+    width: 90%; /* Adjust width to fit within the larger container */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .politician-container {
+        width: 25%; /* Adjust width on smaller screens */
+    }
+
+    .sidebar-deactive .politician-container {
+        width: 30%; /* Adjust width when sidebar is deactivated */
+    }
+}
+
+@media (max-width: 992px) {
+    .politician-container {
+        width: 30%; /* Adjust width on medium screens */
+    }
+
+    .sidebar-deactive .politician-container {
+        width: 35%; /* Adjust width when sidebar is deactivated */
+    }
+}
+
+@media (max-width: 768px) {
+    .politician-container {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sidebar-deactive .politician-container {
+        width: 100%; /* Full width on smaller screens when sidebar is deactivated */
+    }
+
+    .politician-card {
+        height: auto; /* Make height flexible on smaller screens */
+    }
 }
