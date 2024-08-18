@@ -56,16 +56,16 @@
 	padding: 0.25rem 0.5rem;
 	font-weight: 400;
 }
-.surveyContent span:hover{
+.surveyContent span:hover {
 	background: var(--grey-1);
 	transition: color 0.2s ease;
 }
-.surveyContent span:has( input:checked){
+.surveyContent span:has(input:checked) {
 	background: #ecf2ff;
 	color: #3c6ac0;
 	font-weight: 500;
 }
-.surveyContent span label{
+.surveyContent span label {
 	flex: 1;
 }
 .btns,
@@ -96,7 +96,7 @@
 }
 .post {
 	background: var(--main-color);
-	width: 70%;
+	width: 73.5%;
 	gap: 1rem;
 	padding-bottom: 4rem;
 	outline: 0px solid var(--grey-5);
@@ -170,16 +170,16 @@ div:has(.post-dropDownMenu) {
 	outline: 1px solid var(--grey-5);
 	border-radius: 0.75rem;
 	overflow: hidden;
-    width: max-content;
+	width: max-content;
 }
-.post-dropDownMenu ul{
-    position: relative;
-    z-index: 1;
+.post-dropDownMenu ul {
+	position: relative;
+	z-index: 1;
 }
 .post-dropDownMenu li {
 	list-style: none;
 	text-transform: capitalize;
-    font-size: 0.85rem;
+	font-size: 0.85rem;
 }
 .post-dropDownMenu li a {
 	display: block;
@@ -187,7 +187,7 @@ div:has(.post-dropDownMenu) {
 	padding: 0.5rem 1rem;
 	color: inherit;
 	text-decoration: none;
-    width: 100%;
+	width: 100%;
 }
 .post-dropDownMenu li a:hover {
 	background: var(--grey-5);
@@ -195,30 +195,121 @@ div:has(.post-dropDownMenu) {
 #postMenu:checked ~ .post-dropDownMenu {
 	display: block;
 }
-.topContent .addPost-btn{
-	cursor: pointer;
+.topContent .addPost-btn {
 	display: flex;
 	align-items: center;
 	gap: 1.5rem;
-	padding: 1.5rem 2rem;
 	justify-content: center;
-	background: #5490FF;
+	background: #5490ff;
 	height: fit-content;
 	color: var(--main-color);
-	user-select: none;
-	font-weight: 500;
 	outline: 0px solid var(--border-color);
-	transition: scale 0.25s ease;
-}
-.addPost-btn:hover{
-	scale: 0.98;
-}
-.addPost-btn:active{
-	scale: 0.96;
 }
 .greeting {
 	font-size: 1.25rem;
 }
-.content div:not(.greeting){
+.content div:not(.greeting) {
 	font-size: 0.875rem;
+}
+.reactions {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	left: 0;
+	bottom: 0;
+}
+.reactions > button {
+	color: rgb(83, 83, 83);
+	border-radius: 0;
+	border: 0px;
+	padding: 0.45rem;
+	font-size: 0.85rem;
+	text-transform: capitalize;
+	font-weight: 600;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+.post {
+	border-radius: 1.15rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1.5rem 2rem;
+	position: relative;
+	overflow: hidden;
+}
+.post.reactable {
+	padding-bottom: 3rem !important;
+}
+.post.reacted .like,
+.post.reacted .like .count {
+	color: var(--primary-color);
+}
+#vote-btn {
+	background: var(--black-2);
+	color: white;
+	font-weight: 600;
+	letter-spacing: 0.25px;
+}
+.social-btns {
+	background: transparent !important;
+	gap: 1rem;
+}
+.social-btns > div {
+	cursor: pointer;
+	padding: 1.5rem 2rem;
+	user-select: none;
+	font-weight: 500;
+	transition: scale 0.25s ease;
+	border-radius: 1.15rem;
+}
+.social-btns > div:hover {
+	scale: 0.98;
+}
+.social-btns > div:hover {
+	scale: 0.96;
+}
+.req-fundraising {
+	flex: 1;
+	padding: 1.5rem 2rem;
+	background: linear-gradient(180deg, #5490FF 50%, #61a5ff 100%);
+	align-items: center;
+	gap: 2rem;
+	justify-content: center;
+	position: relative;
+	color: var(--main-color);
+}
+.req-fundraising .title {
+	font-weight: 600;
+	font-size: 1.45rem;
+	margin-top: -4.5rem;
+}
+.req-fun-img{
+	position: absolute;
+	max-width: 8rem;
+	left: 50%;
+	bottom: -4rem;
+	transform: translate(-50%, -50%);
+}
+.votelist.voted{
+	/* add style here */
+}
+#vote-btn.submitted {
+	background: #5490FF;
+}
+@media screen and (max-width: 1349px) {
+	.addPost-btn{
+		flex: 1;
+	}
+	
+}
+.addPost-btn .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
