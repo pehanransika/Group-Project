@@ -7,8 +7,10 @@ const popuppostBtn = document.getElementById("popup-post-btn")
 const navRadios = document.querySelectorAll('input[name="nav"]');
 const notificationMsg = document.querySelector(".notification-msg");
 const postLikeBtns = document.querySelectorAll(".post .like");
+const postCmntBtns = document.querySelectorAll(".post button.comment");
 const voteSubmissionBtn = document.getElementById("vote-btn");
 const weeklySirveyRadios = document.querySelectorAll(`.weeklySurvey input[name="week-survey"]`);
+const cmntVoteBtns = document.querySelectorAll(".cmnt .upvote");
 let notificationMsgContent = "Your vote has been successfully added !";
 let weeklySurveyVoted = false;
 
@@ -47,7 +49,17 @@ navRadios.forEach(radio => {
         }
     });
 });
+// close popup on click outside
+document.addEventListener('click', function(event) {
+    const popup = document.querySelector('.comment-popup');
+    const container = document.querySelector('.comment-container');
+    const isClickInsidePopup = popup.contains(event.target);
+    const isClickInsideContainer = container.contains(event.target);
 
+    if (isClickInsidePopup && !isClickInsideContainer) {
+        body.classList.remove("cmnt-visible")
+    }
+});
 popuppostBtn.addEventListener("click", () => {
     // implement validation here
     let validity = false
@@ -81,6 +93,18 @@ postLikeBtns.forEach(likeBtn => {
         likeBtn.closest(".post").classList.toggle("reacted")
     })
 })
+postCmntBtns.forEach(cmntBtn => {
+    cmntBtn.addEventListener("click", () => {
+        body.classList.add("cmnt-visible")
+    })
+})
+cmntVoteBtns.forEach(voteBtn => {
+    voteBtn.addEventListener("click", () => {
+        console.log(voteBtn.closest(".cmnt").classList)
+        voteBtn.closest(".cmnt").classList.toggle("upvoted")
+    })
+    // increase/ decrease like count on click
+})
 
 voteSubmissionBtn.addEventListener("click", () => {
     checkIfWeeklySurveyVoted()
@@ -100,6 +124,7 @@ voteSubmissionBtn.addEventListener("click", () => {
     }
 
 })
+
 
 function checkIfWeeklySurveyVoted() {
     weeklySirveyRadios.forEach(radio => {
