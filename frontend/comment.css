@@ -2,6 +2,9 @@ body .comment-popup{
     display: none;
     transition: opacity 0.25s ease;
 }
+body.cmnt-visible{
+    overflow-y: hidden;
+}
 body.cmnt-visible > *:not(.comment-popup) {
 	filter: blur(0.08rem);
 }
@@ -27,7 +30,7 @@ body.cmnt-visible > *:not(.comment-popup) {
 	background: white;
 	border-top-left-radius: 1.25rem;
 	border-top-right-radius: 1.25rem;
-	padding: 3rem 2rem 2rem;
+	padding: 3rem 2rem 1rem;
 	max-width: 75%;
 	justify-content: space-between;
 	position: relative;;
@@ -37,7 +40,9 @@ body.cmnt-visible > *:not(.comment-popup) {
 }
 .comment-container .post {
 	width: 100%;
+    height: max-content;
 	gap: 2rem;
+    overflow: visible !important;
 	border: 1px solid rgba(0, 0, 0, 0.171);
 }
 .drop-cmnt {
@@ -88,11 +93,11 @@ body.cmnt-visible > *:not(.comment-popup) {
 }
 .prev-cmnts {
 	border: 1px solid rgba(0, 0, 0, 0.281);
-	min-height: 5rem;
+	min-height: 0;
 	padding: 0.5rem;
 	border-radius: 1.25rem;
 	font-size: 0.9rem;
-    max-height: 25rem;
+    max-height: 18rem;
     overflow-y: scroll;
     flex-wrap: nowrap;
 }
