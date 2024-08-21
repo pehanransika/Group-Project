@@ -100,8 +100,14 @@ postCmntBtns.forEach(cmntBtn => {
 })
 cmntVoteBtns.forEach(voteBtn => {
     voteBtn.addEventListener("click", () => {
-        console.log(voteBtn.closest(".cmnt").classList)
-        voteBtn.closest(".cmnt").classList.toggle("upvoted")
+        const currPost = voteBtn.closest(".cmnt")
+        const count = currPost.querySelector(".upvote span")
+        if(currPost.classList.contains("upvoted")){
+            count.innerHTML = parseInt(count.innerHTML) - 1
+        } else {
+            count.innerHTML = parseInt(count.innerHTML) + 1
+        }
+        currPost.classList.toggle("upvoted")
     })
     // increase/ decrease like count on click
 })
