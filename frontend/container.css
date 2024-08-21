@@ -296,9 +296,6 @@ div:has(.post-dropDownMenu) {
 	bottom: -4rem;
 	transform: translate(-50%, -50%);
 }
-.votelist.voted{
-	/* add style here */
-}
 #vote-btn.submitted {
 	background: #5490FF;
 }
