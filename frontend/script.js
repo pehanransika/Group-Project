@@ -103,8 +103,12 @@ cmntVoteBtns.forEach(voteBtn => {
         const currPost = voteBtn.closest(".cmnt")
         const count = currPost.querySelector(".upvote span")
         if(currPost.classList.contains("upvoted")){
+            voteBtn.querySelector("i").classList.remove("fa-solid")
+            voteBtn.querySelector("i").classList.add("fa-light")
             count.innerHTML = parseInt(count.innerHTML) - 1
         } else {
+            voteBtn.querySelector("i").classList.remove("fa-light")
+            voteBtn.querySelector("i").classList.add("fa-solid")
             count.innerHTML = parseInt(count.innerHTML) + 1
         }
         currPost.classList.toggle("upvoted")
