@@ -1,0 +1,91 @@
+.cmnt-visible .comment-popup{
+	position: fixed;
+	top: 0;
+	z-index: 1001;
+	background: rgba(0, 0, 0, 0.205);
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+    align-items: end;
+	padding-top: 8rem;
+}
+body.cmnt-visible *:not(.comment-popup) {
+	/* pointer-events: none; */
+}
+.comment-container {
+	background: white;
+	border-top-left-radius: 1.25rem;
+	border-top-right-radius: 1.25rem;
+	padding: 3rem 2rem 2rem ;
+	max-width: 95%;
+	min-width: 70%;
+    /* animation: movein-bottom 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
+    justify-content: space-between;
+    position: relative;
+    max-height: 55rem;
+    min-height: 35rem;
+}
+.comment-container .post{
+    width: 100%;
+    gap: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+}
+.drop-cmnt{
+    width: 8rem;
+    height: 0.75rem;
+    background: var(--grey-4);
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cmnt-section {
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+.add-cmnt {
+    gap: 1rem;
+    background: var(--grey-2);
+    padding: 1rem;
+    border-radius: 1.25rem;
+}
+.add-cmnt .curr-user{
+    gap: 1rem;
+    font-weight: 500;
+}
+.add-cmnt textarea {
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    min-height: 5rem;
+    resize: none;
+}
+.comment-popup .prof-img {
+    background: var(--grey-1);
+    width: 3rem;
+    height: 3rem;
+}
+.comment-popup .switch-btn a {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.65rem;
+}
+.comment-popup .post-btn{
+    display: block;
+    background: var(--black-1);
+    color: var(--bg);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    align-items: end !important;
+}
+
+/* animations */
+@keyframes movein-bottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

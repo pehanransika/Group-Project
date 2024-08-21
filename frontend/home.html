@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="./header.css" />
 		<link rel="stylesheet" href="./popup.css" />
 		<link rel="stylesheet" href="./container.css" />
+		<link rel="stylesheet" href="./comment.css" />
 		<!-- <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
     /> -->
@@ -52,7 +53,7 @@
 		/>
 	</head>
 
-	<body class="">
+	<body class="cmnt-visible">
 		<div class="notification-msg capitalize"></div>
 		<div class="popup-modal">
 			<div class="popup">
@@ -142,6 +143,104 @@
 							post discussion
 							<i class="fa-duotone fa-solid fa-check"></i>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="comment-popup">
+			<div class="comment-container">
+				<div class="drop-cmnt"></div>
+				<div class="post reactable reacted">
+					<div class="top">
+						<div class="post-details">
+							<a href="#" class="img"></a>
+							<div class="details">
+								<a href="#" class="name">Himasha Chinthani</a>
+								<div class="posted-date">
+									<i class="fa-light fa-clock"></i>
+									<div class="time">
+										<span class="value">30</span>
+										<span class="unit">minutes ago</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<input
+								type="checkbox"
+								name="post-menu"
+								id="postMenu"
+								class="menuBtn"
+							/>
+							<span class="tip">options</span>
+							<label for="postMenu" class="btn-2">
+								<i class="fa-regular fa-ellipsis-vertical"></i>
+							</label>
+							<div class="post-dropDownMenu">
+								<ul>
+									<li><a href="#">report</a></li>
+									<li><a href="#">copy link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="content">
+						Sri Lankan politics is the gift that keeps on giving—if
+						by "gift" you mean a never-ending circus of
+						incompetence, corruption, and sheer absurdity. As a
+						university student, it's genuinely inspiring to watch
+						our leaders navigate the complexities of mismanagement
+						with such ease. I mean, who needs to study political
+						science when you can just observe the daily antics of
+						our elected officials? From budget proposals that defy
+						logic to development projects that never see the light
+						of day, it's a masterclass in how to turn a
+						resource-rich nation into a hotbed of inefficiency. And
+						let's not forget the high-octane drama of party
+						defections, last-minute coalitions, and the occasional
+						parliamentary brawl—because what's governance without a
+						little theatrics? Honestly, if there was a degree in
+						Political Satire, I'd be graduating with honors thanks
+						to the endless content provided by our esteemed
+						politicians.
+						<div class="hashtags">
+							<span>#PoliticalCircus</span>
+							<span>#LearnFromTheWorst </span>
+							<span>#IslandOfIrony </span>
+							<span>#UniLife </span>
+							<span>#SriLankaRealityShow </span>
+						</div>
+					</div>
+					<div class="reactions">
+						<button class="like btn">
+							<span class="reactIcon">
+								<i class="fa-solid fa-thumbs-up"></i>
+							</span>
+							<span>like</span>
+							<span class="count"> 32k </span>
+						</button>
+						<button class="share btn">
+							<span class="reactIcon">
+								<i class="fa-duotone fa-solid fa-share-all"></i>
+							</span>
+							<span>share</span>
+						</button>
+					</div>
+				</div>
+				<div class="cmnt-section col">
+					<div class="prev-cmnts"></div>
+					<div class="add-cmnt col">
+						<div class="curr-user row">
+							<div class="name">Naleeka Kumarasinghe</div>
+							<div class="switch-btn row capitalize">
+								<a href="#"
+									>switch account
+									<i class="fa-regular fa-chevron-down"></i>
+								</a>
+							</div>
+						</div>
+						<textarea name="add comment" id="add-cmnt"></textarea>
+						<button class="post-btn row btn capitalize">post</button>
 					</div>
 				</div>
 			</div>
