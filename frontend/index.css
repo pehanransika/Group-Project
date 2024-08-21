@@ -40,7 +40,10 @@
 	background: var(--grey-2);
 	border-radius: 0.75rem;
 	width: fit-content;
-	transition: background 0.3s ease;
+	transition: background 0.3s ease, scale 0.25s ease;
+}
+.btn:active{
+	scale: 0.9;
 }
 .btn-2 {
 	cursor: pointer;
@@ -121,6 +124,7 @@ span.tip {
 	background: var(--bg-color);
 	padding: 0.25rem 1rem;
 	font-size: 0.75rem;
+	user-select: none;
 	border-radius: 0.5rem;
 	opacity: 0;
 	color: var(--main-color);
@@ -229,4 +233,8 @@ h2.title {
 	bottom: 2rem;
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
 		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.col-u{
+	display: flex;
+	flex-direction: column;
 }
