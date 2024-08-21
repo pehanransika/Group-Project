@@ -293,7 +293,7 @@ div:has(.post-dropDownMenu) {
 	position: absolute;
 	max-width: 8rem;
 	left: 50%;
-	bottom: -4rem;
+	bottom: -5rem;
 	transform: translate(-50%, -50%);
 }
 #vote-btn.submitted {
@@ -303,7 +303,6 @@ div:has(.post-dropDownMenu) {
 	.addPost-btn{
 		flex: 1;
 	}
-	
 }
 .addPost-btn .content {
 	display: flex;
