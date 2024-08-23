@@ -50,7 +50,7 @@ navRadios.forEach(radio => {
     });
 });
 // close popup on click outside
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const popup = document.querySelector('.comment-popup');
     const container = document.querySelector('.comment-container');
     const isClickInsidePopup = popup.contains(event.target);
@@ -102,7 +102,7 @@ cmntVoteBtns.forEach(voteBtn => {
     voteBtn.addEventListener("click", () => {
         const currPost = voteBtn.closest(".cmnt")
         const count = currPost.querySelector(".upvote span")
-        if(currPost.classList.contains("upvoted")){
+        if (currPost.classList.contains("upvoted")) {
             voteBtn.querySelector("i").classList.remove("fa-solid")
             voteBtn.querySelector("i").classList.add("fa-light")
             count.innerHTML = parseInt(count.innerHTML) - 1
@@ -138,7 +138,7 @@ voteSubmissionBtn.addEventListener("click", () => {
 
 function checkIfWeeklySurveyVoted() {
     weeklySirveyRadios.forEach(radio => {
-        if(radio.checked){
+        if (radio.checked) {
             weeklySurveyVoted = true
         }
     })

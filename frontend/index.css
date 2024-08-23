@@ -23,6 +23,10 @@
 	--link-color-bg: rgb(233, 233, 255);
 	--link-color-bg-dark: rgb(220, 220, 255);
 }
+html {
+	scroll-behavior: smooth;
+}
+
 
 .pd-1 {
 	padding: 1.5rem 1.5rem 2.5rem 1.5rem;
@@ -42,7 +46,7 @@
 	width: fit-content;
 	transition: background 0.3s ease, scale 0.25s ease;
 }
-.btn:active{
+.btn:active {
 	scale: 0.9;
 }
 .btn-2 {
@@ -234,7 +238,7 @@ h2.title {
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
 		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.col-u{
+.col-u {
 	display: flex;
 	flex-direction: column;
 }
