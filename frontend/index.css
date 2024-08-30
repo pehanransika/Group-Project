@@ -176,15 +176,7 @@ h2.title {
 .sidebar-deactive .container {
 	margin-left: 2.5rem;
 }
-.sidebar-deactive .sidebar-toggle-btn {
-	opacity: 1;
-	left: 0;
-}
 .sidebar-toggle-btn {
-	position: fixed;
-	left: 19rem;
-	top: 4.25rem;
-	opacity: 0;
 	transition: opacity 0.35s ease-in-out, left 0.35s ease-in-out;
 }
 .prof-img {
