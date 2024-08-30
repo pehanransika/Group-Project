@@ -27,7 +27,7 @@ main {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -35,12 +35,6 @@ main {
     text-align: center;
 }
 
-.fundraiser-card img {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
 
 .fundraiser-card h3 {
     margin: 15px 0;
@@ -49,9 +43,12 @@ main {
 }
 
 .fundraiser-card p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #666;
+    background-color: #f4f5f7;
+    width: 100%;
+    padding: 12px 0;
+    margin-top: auto;
+    font-size: 15px;
+    color: #333;
 }
 
 .donation-amount {
@@ -70,11 +67,12 @@ main {
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     margin-top: 15px;
     transition: background-color 0.3s ease;
 }
+
 
 .view-more:hover {
     background-color: #b5179e;
@@ -85,40 +83,35 @@ main {
     text-align: center;
 }
 
-.more-donations-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.more-donations,
-.donate,
-.report {
+.donate{
     background-color: #9d4edd;
     color: white;
     border: none;
-    border-radius: 50px;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
     cursor: pointer;
-    margin: 10px;
+    margin-top: 15px;
     transition: background-color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-}
 
-.more-donations i {
-    font-size: 24px;
-    margin-right: 10px;
 }
-
-.more-donations:hover,
-.donate:hover,
+.donate:hover {
+    background-color: #b5179e;
+}
+.report{
+    background-color: #9d4edd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
 .report:hover {
     background-color: #b5179e;
 }
-
-
 
 
 
