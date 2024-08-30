@@ -73,24 +73,6 @@ label {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
-@media screen and (max-width: 1349px) {
-	.col {
-		flex-direction: row;
-	}
-	.req-fundraising {
-		justify-content: start !important;
-		position: relative;
-		flex: 1;
-		padding-right: 8rem !important;
-	}
-	.req-fundraising .title {
-		margin-top: 0 !important;
-	}
-	.req-fundraising .req-fun-img {
-		left: 80%;
-		top: 50%;
-	}
-}
 textarea {
 	outline: 0;
 	border: 1px solid black;
@@ -237,4 +219,9 @@ h2.title {
 .col-u{
 	display: flex;
 	flex-direction: column;
+}
+@media screen and (max-width: 1349px) {
+	.col {
+		flex-direction: row;
+	}
 }

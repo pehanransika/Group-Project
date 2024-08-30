@@ -8,7 +8,7 @@
 .weeklySurvey {
 	background: var(--main-color);
 	flex: 2;
-	min-width: 40rem;
+	
 }
 .post-head {
 	display: flex;
@@ -96,7 +96,6 @@
 }
 .post {
 	background: var(--main-color);
-	width: 73.5%;
 	gap: 1rem;
 	padding-bottom: 4rem;
 	outline: 0px solid var(--grey-5);
@@ -278,30 +277,56 @@ div:has(.post-dropDownMenu) {
 	flex: 1;
 	padding: 1.5rem 2rem;
 	background: linear-gradient(180deg, #5490FF 50%, #61a5ff 100%);
-	align-items: center;
-	gap: 2rem;
-	justify-content: center;
 	position: relative;
+	align-items: center;
+	justify-content: center;
 	color: var(--main-color);
 }
 .req-fundraising .title {
 	font-weight: 600;
 	font-size: 1.45rem;
-	margin-top: -4.5rem;
-}
-.req-fun-img{
-	position: absolute;
-	max-width: 8rem;
-	left: 50%;
-	bottom: -5rem;
-	transform: translate(-50%, -50%);
 }
 #vote-btn.submitted {
 	background: #5490FF;
 }
 @media screen and (max-width: 1349px) {
+	.social-btns{
+		width: 100%;
+	}
 	.addPost-btn{
+		width: 100%;
 		flex: 1;
+	}
+	.req-fundraising{
+		width: 50%;
+		flex: 1;
+	}
+	.weeklySurvey{
+		flex: 1;
+	}
+	.weeklySurvey{
+		flex: 1;
+	}
+}
+@media screen and (max-width: 1280px) {
+	.weeklySurvey{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1040px){
+	.weeklySurvey{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 960px){
+	html{
+		font-size: 1.25rem;
+	}
+	.topContent{
+		flex-direction: column;
+	}
+	.addPost-btn{
+		width: 100%;
 	}
 }
 .addPost-btn .content {

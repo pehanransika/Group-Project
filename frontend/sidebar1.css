@@ -126,3 +126,17 @@
 .logoutBtn .cont label:hover {
     background: var(--grey-4);
 }
+@media(max-width:400px){
+     .sidebar{
+         left: 0;
+         right: 0;
+         width: 100vw;
+     }
+     .container{
+        display: none ;
+     }
+     body:not(:has(.sidebar-deactive)) ~ .container{
+        display: flex !important;
+     }
+     
+}
