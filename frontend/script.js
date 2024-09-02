@@ -11,6 +11,7 @@ const postCmntBtns = document.querySelectorAll(".post button.comment");
 const voteSubmissionBtn = document.getElementById("vote-btn");
 const weeklySirveyRadios = document.querySelectorAll(`.weeklySurvey input[name="week-survey"]`);
 const cmntVoteBtns = document.querySelectorAll(".cmnt .upvote");
+const headerBtns = document.querySelectorAll(".headerBtns .headerBtn label")
 let notificationMsgContent = "Your vote has been successfully added !";
 let weeklySurveyVoted = false;
 
@@ -50,7 +51,7 @@ navRadios.forEach(radio => {
     });
 });
 // close popup on click outside
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const popup = document.querySelector('.comment-popup');
     const container = document.querySelector('.comment-container');
     const isClickInsidePopup = popup.contains(event.target);
@@ -102,7 +103,7 @@ cmntVoteBtns.forEach(voteBtn => {
     voteBtn.addEventListener("click", () => {
         const currPost = voteBtn.closest(".cmnt")
         const count = currPost.querySelector(".upvote span")
-        if(currPost.classList.contains("upvoted")){
+        if (currPost.classList.contains("upvoted")) {
             voteBtn.querySelector("i").classList.remove("fa-solid")
             voteBtn.querySelector("i").classList.add("fa-light")
             count.innerHTML = parseInt(count.innerHTML) - 1
@@ -134,11 +135,17 @@ voteSubmissionBtn.addEventListener("click", () => {
     }
 
 })
+headerBtns.forEach((headerBtn) => {
+    headerBtn.addEventListener("click", () => {
+        console.log(headerBtn.parentElement.querySelector("input[type='checkbox']").checked)
+    })
+})
+
 
 
 function checkIfWeeklySurveyVoted() {
     weeklySirveyRadios.forEach(radio => {
-        if(radio.checked){
+        if (radio.checked) {
             weeklySurveyVoted = true
         }
     })

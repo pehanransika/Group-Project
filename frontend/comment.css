@@ -1,16 +1,16 @@
-body .comment-popup{
-    display: none;
-    transition: opacity 0.25s ease;
+body .comment-popup {
+	display: none;
+	transition: opacity 0.25s ease;
 }
-body.cmnt-visible{
-    overflow-y: hidden;
+body.cmnt-visible {
+	overflow-y: hidden;
 }
 body.cmnt-visible > *:not(.comment-popup) {
 	filter: blur(0.08rem);
 }
 .cmnt-visible .comment-popup {
 	position: fixed;
-    opacity: 1;
+	opacity: 1;
 	top: 0;
 	z-index: 1001;
 	background: rgba(0, 0, 0, 0.205);
@@ -33,16 +33,15 @@ body.cmnt-visible > *:not(.comment-popup) {
 	padding: 3rem 2rem 1rem;
 	max-width: 65%;
 	justify-content: space-between;
-	position: relative;;
-    max-height: 58rem;
+	position: relative;
+	max-height: 58rem;
 	min-height: 25rem;
 	animation: movein-bottom 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .comment-container .post {
 	width: 100%;
-    height: max-content;
+	max-height: 20rem;
 	gap: 2rem;
-    overflow: visible !important;
 	border: 1px solid rgba(0, 0, 0, 0.171);
 }
 .drop-cmnt {
@@ -79,10 +78,11 @@ body.cmnt-visible > *:not(.comment-popup) {
 	width: 48px;
 	height: 48px;
 	display: block;
-    border: 1px solid rgb(187, 187, 187);
+	border: 1px solid rgb(187, 187, 187);
 }
 .comment-popup .post-btn {
-	background: var(--black-1);
+	background: #007bff;
+	/* background: var(--black-1); */
 	color: var(--bg);
 	border: none;
 	font-weight: 600;
@@ -97,9 +97,9 @@ body.cmnt-visible > *:not(.comment-popup) {
 	padding: 0.5rem;
 	border-radius: 1.25rem;
 	font-size: 0.9rem;
-    max-height: 18rem;
-    overflow-y: scroll;
-    flex-wrap: nowrap;
+	max-height: 18rem;
+	overflow-y: scroll;
+	flex-wrap: nowrap;
 }
 .prev-cmnt .name {
 	font-weight: 500;
@@ -111,13 +111,13 @@ body.cmnt-visible > *:not(.comment-popup) {
 }
 .prev-cmnt {
 	align-items: flex-start;
-    padding: 0.5rem;
-    padding-right: 1rem;
-    transition: background 0.25s ease;
-    border-radius: 0.75rem;
+	padding: 0.5rem;
+	padding-right: 1rem;
+	transition: background 0.25s ease;
+	border-radius: 0.75rem;
 }
-.prev-cmnt:hover{
-    background: rgba(0, 0, 0, 0.035);
+.prev-cmnt:hover {
+	background: rgba(0, 0, 0, 0.035);
 }
 .comment-container .upvote {
 	cursor: pointer;
@@ -137,10 +137,10 @@ body.cmnt-visible > *:not(.comment-popup) {
 .upvote:active {
 	scale: 0.9;
 }
-.comment-container  .upvoted .upvote {
+.comment-container .upvoted .upvote {
 	background: var(--link-color-bg);
 	color: var(--primary-color);
-    font-weight: 500;
+	font-weight: 500;
 }
 
 /* animations */
