@@ -11,6 +11,7 @@ const postCmntBtns = document.querySelectorAll(".post button.comment");
 const voteSubmissionBtn = document.getElementById("vote-btn");
 const weeklySirveyRadios = document.querySelectorAll(`.weeklySurvey input[name="week-survey"]`);
 const cmntVoteBtns = document.querySelectorAll(".cmnt .upvote");
+const headerBtns = document.querySelectorAll(".headerBtn input[type='checkbox']")
 let notificationMsgContent = "Your vote has been successfully added !";
 let weeklySurveyVoted = false;
 
@@ -87,6 +88,18 @@ popuppostBtn.addEventListener("click", () => {
         displayNotification(notificationMsgContent)
     }
 })
+headerBtns.forEach(selectedBtn => {
+    selectedBtn.addEventListener('change', function() {
+        if (this.checked) {
+            headerBtns.forEach(otherBtn => {
+                if (otherBtn !== this) {
+                    otherBtn.checked = false;
+                }
+            });
+        }
+    });
+});
+
 
 postLikeBtns.forEach(likeBtn => {
     likeBtn.addEventListener("click", () => {

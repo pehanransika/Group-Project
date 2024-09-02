@@ -23,7 +23,9 @@
 	--link-color-bg: rgb(233, 233, 255);
 	--link-color-bg-dark: rgb(220, 220, 255);
 }
-
+html{
+	font-size: 13px;
+}
 .pd-1 {
 	padding: 1.5rem 1.5rem 2.5rem 1.5rem;
 }
@@ -165,9 +167,6 @@ h2.title {
 }
 .capitalize {
 	text-transform: capitalize;
-}
-.sidebar-deactive .header {
-	left: 0;
 }
 .sidebar-deactive .sidebar {
 	left: -18.55rem;
