@@ -148,12 +148,6 @@
 .hashtags {
 	color: var(--primary-color);
 }
-.hashtags span{
-	cursor: pointer;
-}
-.hashtags span:before{
-	content: '#';
-}
 button .count {
 	margin-right: -0.75rem;
 	color: var(--grey-3);
