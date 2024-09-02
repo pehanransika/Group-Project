@@ -77,24 +77,6 @@ label {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
-@media screen and (max-width: 1349px) {
-	.col {
-		flex-direction: row;
-	}
-	.req-fundraising {
-		justify-content: start !important;
-		position: relative;
-		flex: 1;
-		padding-right: 8rem !important;
-	}
-	.req-fundraising .title {
-		margin-top: 0 !important;
-	}
-	.req-fundraising .req-fun-img {
-		left: 80%;
-		top: 50%;
-	}
-}
 textarea {
 	outline: 0;
 	border: 1px solid black;
@@ -197,18 +179,6 @@ h2.title {
 }
 .sidebar-deactive .container {
 	margin-left: 2.5rem;
-}
-.sidebar-deactive .sidebar-toggle-btn {
-	opacity: 1;
-	left: 0;
-}
-.sidebar-toggle-btn {
-	position: fixed;
-	left: 19rem;
-	top: 4.25rem;
-	
-	opacity: 0;
-	transition: opacity 0.35s ease-in-out, left 0.35s ease-in-out;
 }
 .prof-img {
 	width: 64px;
