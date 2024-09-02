@@ -11,6 +11,7 @@ const postCmntBtns = document.querySelectorAll(".post button.comment");
 const voteSubmissionBtn = document.getElementById("vote-btn");
 const weeklySirveyRadios = document.querySelectorAll(`.weeklySurvey input[name="week-survey"]`);
 const cmntVoteBtns = document.querySelectorAll(".cmnt .upvote");
+const headerBtns = document.querySelectorAll(".headerBtns .headerBtn label")
 let notificationMsgContent = "Your vote has been successfully added !";
 let weeklySurveyVoted = false;
 
@@ -134,6 +135,12 @@ voteSubmissionBtn.addEventListener("click", () => {
     }
 
 })
+headerBtns.forEach((headerBtn) => {
+    headerBtn.addEventListener("click", () => {
+        console.log(headerBtn.parentElement.querySelector("input[type='checkbox']").checked)
+    })
+})
+
 
 
 function checkIfWeeklySurveyVoted() {
