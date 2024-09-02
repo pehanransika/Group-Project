@@ -57,9 +57,6 @@
 			<i class="fa-solid fa-bars-sort"></i>
 		</div>
 		<div class="sidebar pd-1">
-			<div class="sideMenuBtn btn">
-				<i class="fa-sharp fa-solid fa-bars"></i>
-			</div>
 			<div class="searchBar">
 				<input
 					type="search"
@@ -118,6 +115,9 @@
 			</div>
 		</div>
 		<div class="header pd-2">
+			<div class="sidebar-toggle-btn sideMenuBtn btn">
+				<i class="fa-sharp fa-solid fa-bars"></i>
+			</div>
 			<div class="headerSearchBar">
 				<input
 					type="search"
@@ -402,28 +402,27 @@
 
 		  
 </body>
- <script>
-        let sideMenuBtns = document.querySelectorAll(".sideMenuBtn");
-        const body = document.querySelector("body");
-        const navRadios = document.querySelectorAll('input[name="nav"]');
+<script src="../script.js"></script>
+<script>
 
-        sideMenuBtns.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                if (body.classList.contains("sidebar-deactive")) {
-                    body.classList.remove("sidebar-deactive");
-                } else {
-                    body.classList.add("sidebar-deactive");
-                }
-            });
-        });
 
-        navRadios.forEach(radio => {
-            radio.addEventListener('change', (event) => {
-                const selectedValue = event.target.value;
-                if (selectedValue) {
-                    window.location.href = selectedValue; // Redirect to the selected page
-                }
-            });
-        });
-    </script>
+	sideMenuBtns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			if (body.classList.contains("sidebar-deactive")) {
+				body.classList.remove("sidebar-deactive");
+			} else {
+				body.classList.add("sidebar-deactive");
+			}
+		});
+	});
+	navRadios.forEach(radio => {
+		radio.addEventListener('change', (event) => {
+			const selectedValue = event.target.value;
+			if (selectedValue) {
+				window.location.href = selectedValue; // Redirect to the selected page
+			}
+		});
+	});
+</script>	
+
 </html>
