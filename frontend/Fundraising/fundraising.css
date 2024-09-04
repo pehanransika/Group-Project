@@ -15,7 +15,7 @@ main {
 
 .fundraisers-table {
     width: 100%;
-    border-spacing: 20px; /* Adds spacing between table cells */
+    border-spacing: 20px; 
     table-layout: fixed;
 }
 
