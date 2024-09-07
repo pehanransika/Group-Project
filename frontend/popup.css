@@ -15,6 +15,9 @@ body.overlay-active > .popup-modal {
 body.overlay-active > .popup-modal .popup {
 	top: 50%;
 }
+body.overlay-active .popup-modal{
+	cursor: pointer;
+}
 .popup-modal {
 	position: fixed;
 	top: 0;
@@ -26,6 +29,7 @@ body.overlay-active > .popup-modal .popup {
 	transition: background 0.35s ease;
 }
 .popup {
+	cursor: auto;
 	position: fixed;
 	top: 150%;
 	left: 50%;

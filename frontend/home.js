@@ -31,13 +31,20 @@ popupClearBtn.addEventListener("click", () => {
 
 // close popup on click outside
 document.addEventListener('click', function(event) {
-    const popup = document.querySelector('.comment-popup');
+    const cmntPopup = document.querySelector('.comment-popup');
     const container = document.querySelector('.comment-container');
-    const isClickInsidePopup = popup.contains(event.target);
-    const isClickInsideContainer = container.contains(event.target);
+    const isClickInsideCmntPopup = cmntPopup.contains(event.target);
+    const isClickInsideCmntContainer = container.contains(event.target);
+    const addPostPopup = document.querySelector('.popup-modal');
+    const isClickInsideAddPostPopup = addPostPopup.contains(event.target);
+    const addPostContainer = document.querySelector('.popup');
+    const isClickInsideAddPostContainer = addPostContainer.contains(event.target);
 
-    if (isClickInsidePopup && !isClickInsideContainer) {
-        body.classList.remove("cmnt-visible")
+    if (isClickInsideCmntPopup && !isClickInsideCmntContainer) {
+            body.classList.remove("cmnt-visible")
+    }
+    if (isClickInsideAddPostPopup && !isClickInsideAddPostContainer) {
+            this.body.classList.remove("overlay-active")
     }
 });
 popuppostBtn.addEventListener("click", () => {
