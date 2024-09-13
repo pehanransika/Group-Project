@@ -3,16 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Announcements | Parlimate</title>
-		<link rel="stylesheet" href="../index.css" />
+		<title>Discussion Room | Parlimate</title>
 		<link rel="stylesheet" href="../sidebar1.css" />
 		<link rel="stylesheet" href="../header.css" />
-		<link rel="stylesheet" href="../container.css" />
-		<link rel="stylesheet" href="./announcements.css" />
-		<!-- <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
-    /> -->
-
+		<link rel="stylesheet" href="../index.css" />
 		<!-- icons -->
 		<link
 			rel="stylesheet"
@@ -25,33 +19,12 @@
 			rel="stylesheet"
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
 		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
-		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
-		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
-		/>
-
 		<link
 			rel="stylesheet"
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
 		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
-		/>
 	</head>
-	<body class="">
+	<body>
 		<div class="sidebar pd-1">
 			<div class="searchBar">
 				<input
@@ -72,6 +45,7 @@
 							name="nav"
 							id="nav-Home"
 							value="../index.html"
+							
 						/>
 						<label for="nav-Home"
 							><i class="fa-solid fa-house"></i>Home</label
@@ -82,8 +56,7 @@
 							type="radio"
 							name="nav"
 							id="nav-announcements"
-							value="./announcements.html"
-							checked
+							value="../Announcements/announcements.html"
 						/>
 						<label for="nav-announcements"
 							><i class="fa-solid fa-bullhorn"></i
@@ -106,19 +79,18 @@
 							type="radio"
 							name="nav"
 							id="nav-noti"
-							value="notifications.html"
+							value="../notifications.html"
 						/>
-						<label for="nav-noti"
-							><i class="fa-solid fa-bell"></i
-							>Notifications</label
-						>
+						<label for="nav-noti">
+							<i class="fa-solid fa-bell"></i>Notifications
+						</label>
 					</li>
 					<li>
 						<input
 							type="radio"
 							name="nav"
 							id="nav-survey"
-							value="surveys.html"
+							value="../Surveys/surveys.html"
 						/>
 						<label for="nav-survey"
 							><i class="fa-solid fa-clipboard"></i>Surveys</label
@@ -130,6 +102,7 @@
 							name="nav"
 							id="nav-discusRoom"
 							value="../DiscussionRoom/discussion-room.html"
+                            checked
 						/>
 						<label for="nav-discusRoom"
 							><i class="fa-solid fa-people-group"></i>Discussion
@@ -161,6 +134,7 @@
 					</li>
 				</ul>
 			</div>
+
 			<div class="logoutBtn capitalize">
 				<div class="cont">
 					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
@@ -178,9 +152,7 @@
 				</div>
 
 				<div class="logo">
-					<a href="../index.html">
-						PARLIMATE
-					</a>
+					<a href="./index.html"> PARLIMATE </a>
 				</div>
 			</div>
 			<div class="headerSearchBar row">
@@ -250,7 +222,7 @@
 							</li>
 						</ul>
 						<a
-							href="./announcements.html"
+							href="./Announcements/announcements.html"
 							class="bottom-btn small-text capitalize"
 						>
 							see all notifications
@@ -335,158 +307,9 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="container col">
-			<div class="pageTitles">
-				<h2 class="title">Announcements</h2>
-				<div class="subTitle">
-					Politicians and political parties announcements
-				</div>
-			</div>
-			<div class="row">
-				<div class="announcements col">
-					<!-- Announcement Card 1 -->
-					<div class="post announcement-card">
-						<div class="post-head">
-							<div class="post-details row">
-								<div class="img"></div>
-								<div class="user-details col">
-									<div class="name">Himasha Chinthani</div>
-									<div class="posted-date row">
-										<span class="date"
-											>August 10, 2024</span
-										>
-										<span class="time">10:00 AM</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content col">
-							<h2 class="post-title">Team Meeting Update</h2>
-							<p>
-								There will be a team meeting next week to
-								discuss the project progress. Please be prepared
-								with your updates and reports.
-							</p>
-							<div class="location">
-								<span>Location: Conference Room 2</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Announcement Card 2 -->
-					<div class="post announcement-card">
-						<div class="post-head">
-							<div class="post-details row">
-								<div class="img"></div>
-								<div class="user-details col">
-									<div class="name">Naleeka Kumarasinghe</div>
-									<div class="posted-date row">
-										<span class="date"
-											>August 11, 2024</span
-										>
-										<span class="time">2:00 PM</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content col">
-							<h2 class="post-title">New Policy Announcement</h2>
-							<p>
-								A new company policy has been introduced
-								regarding remote work. All employees are
-								required to follow the new guidelines starting
-								from next month.
-							</p>
-							<div class="location">
-								<span>Location: HR Office</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Add more cards as needed -->
-					<div class="post announcement-card">
-						<div class="post-head">
-							<div class="post-details">
-								<div class="img"></div>
-								<div>
-									<div class="name">Pehan Ransika</div>
-									<div class="posted-date">
-										<span>August 11, 2024</span>
-										<span>2:00 PM</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content">
-							<h2 class="post-title">New Policy Announcement</h2>
-							<p>
-								A new company policy has been introduced
-								regarding remote work. All employees are
-								required to follow the new guidelines starting
-								from next month. A new company policy has been
-								introduced regarding remote work. All employees
-								are required to follow the new guidelines
-								starting from next month. A new company policy
-								has been introduced regarding remote work. All
-								employees are required to follow the new
-								guidelines starting from next month. A new
-								company policy has been introduced regarding
-								remote work. All employees are required to
-								follow the new guidelines starting from next
-								month. A new company policy has been introduced
-								regarding remote work. All employees are
-								required to follow the new guidelines starting
-								from next month.
-							</p>
-							<div class="location">
-								<span>Location: HR Office</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Politicians container -->
-				<div class="politician-container">
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-					<!-- More politician cards go here -->
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<script src="../script.js"></script>
+        <div class="container">
+            <h2 class="title">Discussion room</h2>
+        </div>
 	</body>
+    <script src="../script.js"></script>
 </html>

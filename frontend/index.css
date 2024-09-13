@@ -132,6 +132,13 @@ body {
 	position: relative;
 	overflow: auto;
 }
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin: 7rem 2rem 6rem 21rem;
+	transition: margin-left 0.35s ease;
+}
 h2.title {
 	font-weight: 600;
 }
