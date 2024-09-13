@@ -1,0 +1,118 @@
+.discussions{
+    align-items: center;
+    gap: 1rem;
+}
+.navigations {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: var(--main-color);
+    width: fit-content;
+    gap: 0rem;
+}
+.nav-btn button {
+    border-radius: 0.5rem;
+    background: var(--main-color);
+    border: 0;
+    padding-inline: 3rem;
+}
+button.nav-active{
+    background: var(--primary-color);
+    color: var(--main-color);
+    transition: background 0.25s ease;
+}
+.nav-body{
+    width: 100%;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    gap: 1rem;
+}
+.nav-body .title {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.nav-body .item{
+    padding: 1rem 2rem;
+    background: var(--main-color);
+    border: 1px solid rgb(231, 231, 231);
+    width: fit-content;
+    align-items: center;
+    border-radius: 0.5rem;
+    animation: fade-in 1s ease;
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.pImgs{
+    gap: 0.5rem;
+}
+.prof-img{
+    width: fit-content;
+    height: fit-content;
+}
+.prof-img img{
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.item{
+    gap: 2rem;
+    transition: background 0.25s ease;
+}
+.item:hover{
+    background: rgb(250, 250, 250);
+}
+.time-period{
+    color: grey;
+    gap: 0.25rem;
+}
+.item-content{
+    gap: 1rem;
+}
+.item-yt::before{
+    content: "";
+}
+.item-interactive{
+    gap: 1rem;
+}
+.item-interactive > *{
+    padding: 0.25rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: filter 0.25s ease;
+}
+.item-interactive > *:hover{
+    filter: brightness(0.98);
+}
+.item-interactive > * > i {
+    margin-right: 0.25rem;
+}
+.item-yt{
+    background: rgb(255, 210, 210);
+}
+.item-sp{
+    background: rgb(210, 255, 210);
+}
+.body-top{
+    justify-content: space-between;
+}
+.sort-btn{
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.25rem 1rem;
+    background: rgb(241, 241, 241);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+.sort-btn:hover{
+    background: rgb(231, 231, 231);
+}
