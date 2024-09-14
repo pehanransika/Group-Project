@@ -27,6 +27,12 @@
 html{
 	font-size: 13px;
 }
+button{
+	transition: transform 0.25s ease;
+}
+button:active{
+	transform: scale(0.95);
+}
 .pd-1 {
 	padding: 1.5rem 1.5rem 2.5rem 1.5rem;
 }
