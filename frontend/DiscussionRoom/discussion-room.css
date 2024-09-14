@@ -11,7 +11,7 @@
 	background: var(--main-color);
 	width: fit-content;
 	gap: 0rem;
-    z-index: 0;
+    z-index: 1;
     border: 1px solid rgb(231, 231, 231);
 }
 .nav-btn button {
@@ -27,7 +27,7 @@ button.nav-active {
 	transition: background 0.25s ease;
 }
 .nav-body {
-    z-index: -1;
+    z-index: 0;
 	width: 100%;
 	background: var(--main-color);
 	border-radius: 0.5rem;
