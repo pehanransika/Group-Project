@@ -67,6 +67,7 @@
 	top: 4rem;
 	width: max-content;
 	border: 1px solid var(--grey-4);
+	z-index: 11;
 }
 .headerBtn input[type="checkbox"]:checked ~ .dropDownMenu {
 	display: block;
