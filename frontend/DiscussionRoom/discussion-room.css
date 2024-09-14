@@ -11,6 +11,7 @@
 	background: var(--main-color);
 	width: fit-content;
 	gap: 0rem;
+    z-index: 10;
     border: 1px solid rgb(231, 231, 231);
 }
 .nav-btn button {
