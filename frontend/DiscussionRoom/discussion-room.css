@@ -11,6 +11,7 @@
 	background: var(--main-color);
 	width: fit-content;
 	gap: 0rem;
+    border: 1px solid rgb(231, 231, 231);
 }
 .nav-btn button {
 	border-radius: 0.5rem;
@@ -48,9 +49,10 @@ button.nav-active {
     display: flex;
 	align-items: flex-start;
 	border-radius: 0.5rem;
+    opacity: 0;
 	gap: 2rem;
 	transition: background 0.25s ease, border-color 0.25s ease;
-	animation: fade-in 1s ease;
+	animation: fade-in 1s ease-in-out forwards;
 }
 .item:hover {
 	border-color: rgb(200, 214, 255);
@@ -58,12 +60,16 @@ button.nav-active {
 }
 .item .title{
     font-weight: 600;
+    max-width: 45rem;
+}
+.item .title::first-letter{
+    text-transform: capitalize;
 }
 @keyframes fade-in {
-	0% {
+	from {
 		opacity: 0;
 	}
-	100% {
+	to {
 		opacity: 1;
 	}
 }
