@@ -1,0 +1,177 @@
+.discussions {
+	align-items: center;
+	gap: 1rem;
+}
+.navigations {
+    position: sticky;
+    top: 5rem;
+	margin-top: 2rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	background: var(--main-color);
+	width: fit-content;
+	gap: 0rem;
+    z-index: 1;
+    border: 1px solid rgb(231, 231, 231);
+}
+.nav-btn button {
+	border-radius: 0.5rem;
+	background: var(--main-color);
+	border: 0;
+    font-weight: 500;
+	padding-inline: 3rem;
+}
+button.nav-active {
+	background: var(--primary-color);
+	color: var(--main-color);
+	transition: background 0.25s ease;
+}
+.nav-body {
+    z-index: 0;
+	width: 100%;
+	background: var(--main-color);
+	border-radius: 0.5rem;
+	padding: 2rem 3rem;
+	gap: 1rem;
+}
+.body-top > .title {
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+.nav-body .items{
+    flex-wrap: wrap;
+    gap:  1rem;
+}
+.nav-body .item {
+	padding: 1rem 2rem;
+	background: rgb(246, 246, 246);
+	border: 1px solid rgb(231, 231, 231);
+	width: 100%;
+    height: 100%;
+    display: flex;
+	align-items: flex-start;
+	border-radius: 0.5rem;
+    opacity: 0;
+	gap: 2rem;
+	transition: background 0.25s ease, border-color 0.25s ease;
+	animation: fade-in 1s ease-in-out forwards;
+}
+.item:hover {
+	border-color: rgb(200, 214, 255);
+	background: rgb(247, 249, 255);
+}
+.item .title{
+    font-weight: 600;
+    max-width: 45rem;
+}
+.item .title::first-letter{
+    text-transform: capitalize;
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.pImgs {
+	gap: 0.5rem;
+}
+.prof-img {
+	width: fit-content;
+	height: fit-content;
+}
+.prof-img img {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.time-period {
+	color: grey;
+	gap: 0.25rem;
+}
+.time-period i{
+    margin-top: 0.1rem;
+    margin-right: 0.1rem;
+}
+.item-content {
+	gap: 1rem;
+}
+.item-yt::before {
+	content: "";
+}
+.item-interactive {
+	gap: 1rem;
+}
+.item-interactive > * {
+	padding: 0.25rem 1rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: filter 0.25s ease, transform 0.25s ease;
+}
+.item-interactive > *:hover {
+	filter: brightness(0.95);
+}
+.item-interactive > * > i {
+	margin-right: 0.25rem;
+}
+.item-interactive > *:active{
+	transform: scale(0.95);
+}
+.item-yt {
+	background: rgb(255, 210, 210);
+}
+.item-sp {
+	background: rgb(210, 255, 210);
+}
+.body-top {
+	justify-content: space-between;
+}
+.sort-btn {
+	gap: 0.5rem;
+	font-weight: 600;
+	font-size: 0.75rem;
+	padding: 0.25rem 1rem;
+	background: rgb(241, 241, 241);
+	border-radius: 0.25rem;
+	cursor: pointer;
+	transition: background 0.25s ease;
+}
+.sort-btn:hover {
+	background: rgb(231, 231, 231);
+}
+.items{
+    padding: 1rem ;
+}
+.post-options{
+    min-height: 5rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex: 1;
+}
+.post-options .status{
+    align-items: start;
+    gap: 0.25rem;
+    flex: 1;
+}
+.status span {
+    background: rgb(233, 233, 233);
+    color: rgb(49, 49, 49);
+    border: 1px solid rgb(225, 225, 225);
+    font-weight: 600;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.75rem;
+} 
+.post-options .share {
+    background: black;
+    border: 0px;
+    color: white;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Discussion Room | Parlimate</title>
+		<link rel="stylesheet" href="../sidebar1.css" />
+		<link rel="stylesheet" href="../header.css" />
+		<link rel="stylesheet" href="../index.css" />
+		<link rel="stylesheet" href="./discussion-room.css" />
+		<!-- icons -->
+		<link
+			rel="stylesheet"
+			data-purpose="Layout StyleSheet"
+			title="Web Awesome"
+			href="/css/app-wa-09b459cf485d4b1f3304947240314c05.css?vsn=d"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+		/>
+	</head>
+	<body>
+		<div class="sidebar pd-1">
+			<div class="searchBar">
+				<input
+					type="search"
+					name="sideBarSearch"
+					id="sideBarSearch"
+					placeholder="Search..."
+				/>
+				<label for="sideBarSearch">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</label>
+			</div>
+			<div class="navs">
+				<ul>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-Home"
+							value="../index.html"
+						/>
+						<label for="nav-Home"
+							><i class="fa-solid fa-house"></i>Home</label
+						>
+					</li>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-announcements"
+							value="../Announcements/announcements.html"
+						/>
+						<label for="nav-announcements"
+							><i class="fa-solid fa-bullhorn"></i
+							>Announcements</label
+						>
+					</li>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-fundraise"
+							value="../Fundraising/fundraising.html"
+						/>
+						<label for="nav-fundraise"
+							><i class="fa-solid fa-coins"></i>Fundraises</label
+						>
+					</li>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-noti"
+							value="../notifications.html"
+						/>
+						<label for="nav-noti">
+							<i class="fa-solid fa-bell"></i>Notifications
+						</label>
+					</li>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-survey"
+							value="../Surveys/surveys.html"
+						/>
+						<label for="nav-survey"
+							><i class="fa-solid fa-clipboard"></i>Surveys</label
+						>
+					</li>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-discusRoom"
+							value="../DiscussionRoom/discussion-room.html"
+							checked
+						/>
+						<label for="nav-discusRoom"
+							><i class="fa-solid fa-people-group"></i>Discussion
+							Room</label
+						>
+					</li>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-help"
+							value="help.html"
+						/>
+						<label for="nav-help"
+							><i class="fa-solid fa-headset"></i
+							>Help/Support</label
+						>
+					</li>
+					<li>
+						<input
+							type="radio"
+							name="nav"
+							id="nav-settings"
+							value="settings.html"
+						/>
+						<label for="nav-settings"
+							><i class="fa-solid fa-gear"></i>Settings</label
+						>
+					</li>
+				</ul>
+			</div>
+
+			<div class="logoutBtn capitalize">
+				<div class="cont">
+					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
+					<label for="logoutBtn">
+						<i class="fa-solid fa-sign-out"></i>
+						<span>logout</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="header pd-2">
+			<div class="start row">
+				<div class="sidebar-toggle-btn sideMenuBtn btn">
+					<i class="fa-sharp fa-solid fa-bars"></i>
+				</div>
+
+				<div class="logo">
+					<a href="./index.html"> PARLIMATE </a>
+				</div>
+			</div>
+			<div class="headerSearchBar row">
+				<input
+					type="search"
+					name="mainSearch"
+					id="headerSearchBar"
+					placeholder="Search politicians, Political parties...."
+				/>
+				<label for="headerSearchBar">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</label>
+			</div>
+			<div class="headerBtns">
+				<div class="headerBtn">
+					<input type="checkbox" name="notifi" id="notificationBtn" />
+					<label for="notificationBtn" class="btn">
+						<i class="fa-solid fa-bell"></i>
+					</label>
+					<span class="tip">notifications</span>
+					<div class="dropDownMenu">
+						<ul>
+							<li>
+								<a href="#" class="notification">
+									<div class="noti-img"></div>
+									<div class="noti-title">
+										<div class="notification-from">
+											Ranil wickramasinghe
+										</div>
+										<span
+											>Lorem, ipsum dolor sit amet
+											consectetur adipisicing elit. Qui,
+											ullam. Quos aperiam in re</span
+										>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="notification">
+									<div class="noti-img"></div>
+									<div class="noti-title">
+										<div class="notification-from">
+											Ranil wickramasinghe
+										</div>
+										<span
+											>Lorem, ipsum dolor sit amet
+											consectetur adipisicing elit. Qui,
+											ullam. Quos aperiam in re</span
+										>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="notification">
+									<div class="noti-img"></div>
+									<div class="noti-title">
+										<div class="notification-from">
+											Ranil wickramasinghe
+										</div>
+										<span
+											>Lorem, ipsum dolor sit amet
+											consectetur adipisicing elit. Qui,
+											ullam. Quos aperiam in re</span
+										>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a
+							href="./Announcements/announcements.html"
+							class="bottom-btn small-text capitalize"
+						>
+							see all notifications
+						</a>
+					</div>
+				</div>
+				<div class="headerBtn">
+					<input type="checkbox" name="profile" id="profileBtn" />
+					<label for="profileBtn" class="btn">
+						<i class="fa-solid fa-user"></i>
+					</label>
+					<span class="tip">profile</span>
+					<div class="dropDownMenu">
+						<div class="profile">
+							<a href="#">
+								<div class="img"></div>
+								<div class="details">
+									<div class="name medium-text bold">
+										Naleeka Kumarasinghe
+									</div>
+									<div class="email small-text">
+										knaleeka845@gmail.com
+									</div>
+								</div>
+							</a>
+						</div>
+						<ul class="capitalize">
+							<li>
+								<a href="#">
+									<span>
+										<i class="fa-regular fa-user"></i>
+									</span>
+									<span>profile</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>
+										<i class="fa-regular fa-gear"></i>
+									</span>
+									<span> account settings </span>
+								</a>
+							</li>
+							<div class="sep-line"></div>
+							<li>
+								<a href="#">
+									<span>
+										<i
+											class="fa-regular fa-circle-question"
+										></i>
+									</span>
+									<span> help center </span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>
+										<i class="fa-regular fa-star"></i>
+									</span>
+									<span> upgrade plan </span>
+								</a>
+							</li>
+							<div class="sep-line"></div>
+
+							<li>
+								<div class="logoutBtn capitalize">
+									<div class="cont">
+										<input
+											type="checkbox"
+											name="logoutBtn"
+											id="logoutBtn"
+										/>
+										<label for="logoutBtn">
+											<i class="fa-solid fa-sign-out"></i>
+											<span>logout</span>
+										</label>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container col">
+			<div class="pageTitles">
+				<h2 class="title">Discussion room</h2>
+				<div class="subTitle">
+					engage with ongoing live video discussions
+				</div>
+			</div>
+			<div class="discussions col">
+				<div class="navigations row">
+					<div class="nav-btn">
+						<button value="recent" class="capitalize nav-active">
+							recent
+						</button>
+					</div>
+					<div class="nav-btn">
+						<button value="today" class="capitalize">today</button>
+					</div>
+					<div class="nav-btn">
+						<button value="upcoming" class="capitalize">
+							upcoming
+						</button>
+					</div>
+				</div>
+				<div class="nav-body col">
+					<div class="body-top row">
+						<div class="title">Recent</div>
+						<div class="sort-btn row capitalize">
+							<i class="fa-regular fa-bars-filter"></i>
+							<span class="sort-type">newest first</span>
+						</div>
+					</div>
+					<div class="items col">
+						<div class="item row" style="animation-delay: 0.25s;">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img
+											src="../assets/AKD.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										Post-Presidential election
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Sept 15</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Anura kumara dissanayake</span>
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span>
+										copy link
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 0.5s;">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img
+											src="../assets/AKD.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/ranil.jpg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										Post-Presidential election
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Sept 16</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Anura kumara dissanayake</span>
+									<span>sajith premadasa</span>
+									<span>ranil wockramasinghe</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span>
+										copy link
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 0.75s;">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										How to Improve the Education System with the Help of Sajith Premadasa’s ‘Cake-Cutting’ Strategies!
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">1.00 AM</div>
+										>
+										<div class="end">5.00 AM</div>
+										<div class="date">Feb 30</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span>
+										copy link
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 1s;">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img
+											src="../assets/AKD.jpg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										Why should we change the current currupted political system ?
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Sept 16</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Anura kumara dissanayake</span>
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span>
+										copy link
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 1.25s;">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img
+											src="../assets/ranil.jpg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										72 years in Politics 
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Oct 15</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Ranil wickramasinghe</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span>
+										copy link
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 1.5s;">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img
+											src="../assets/ranil.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										who is the best among two of us ?
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">7.00 PM</div>
+										>
+										<div class="end">9.00 PM</div>
+										<div class="date">Sept 14</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>ranil wickramasinghe</span>
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span>
+										copy link
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../script.js"></script>
+	<script>
+		const navBtns = document.querySelectorAll(".nav-btn button");
+
+		navBtns.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				navBtns.forEach((btn) => {
+					btn.classList.remove("nav-active");
+				});
+				btn.classList.add("nav-active");
+			});
+		});
+	</script>
+</html>
