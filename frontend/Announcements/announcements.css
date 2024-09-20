@@ -10,7 +10,7 @@ html{
 }
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #f4f4f4;
+    background: var(--bg);
     margin: 0;
     padding: 0;
 }
@@ -86,7 +86,7 @@ body {
     flex-direction: column;
 }
 .politician-card {
-    min-width: 10rem;
+    min-width: 15rem;
     background-color: #fff;
     border-radius: 0.75rem;
     padding: 1.5rem;

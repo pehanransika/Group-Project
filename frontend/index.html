@@ -8,12 +8,9 @@
 	<link rel="stylesheet" href="./index.css" />
 	<link rel="stylesheet" href="./sidebar1.css" />
 	<link rel="stylesheet" href="./header.css" />
-	<link rel="stylesheet" href="./popup.css" />
 	<link rel="stylesheet" href="./container.css" />
+	<link rel="stylesheet" href="./popup.css" />
 	<link rel="stylesheet" href="./comment.css" />
-	<!-- <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
-    /> -->
 
 	<!-- icons -->
 	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
@@ -305,7 +302,7 @@
 					<label for="nav-survey"><i class="fa-solid fa-clipboard"></i>Surveys</label>
 				</li>
 				<li>
-					<input type="radio" name="nav" id="nav-discusRoom" value="discussion-room.html" />
+					<input type="radio" name="nav" id="nav-discusRoom" value="./DiscussionRoom/discussion-room.html" />
 					<label for="nav-discusRoom"><i class="fa-solid fa-people-group"></i>Discussion
 						Room</label>
 				</li>
@@ -331,8 +328,16 @@
 		</div>
 	</div>
 	<div class="header pd-2">
-		<div class="sidebar-toggle-btn sideMenuBtn btn">
-			<i class="fa-sharp fa-solid fa-bars"></i>
+		<div class="start row">
+			<div class="sidebar-toggle-btn sideMenuBtn btn">
+				<i class="fa-sharp fa-solid fa-bars"></i>
+			</div>
+
+			<div class="logo">
+				<a href="./index.html">
+					PARLIMATE
+				</a>
+			</div>
 		</div>
 		<div class="headerSearchBar row">
 			<input type="search" name="mainSearch" id="headerSearchBar"
@@ -620,5 +625,6 @@
 	</div>
 </body>
 <script src="./script.js"></script>
+<script src="./home.js"></script>
 
 </html>

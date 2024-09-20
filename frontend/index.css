@@ -16,6 +16,7 @@
 	--tip-color: #5a5a5a;
 	--grey-4: #dddddd;
 	--main-color: #ffffff;
+	--main-color-1: #f5f5f5;
 	--bg: #ebedf5;
 	--disable-icon-color: #bebebe;
 	--primary-color: rgb(104, 104, 224);
@@ -25,6 +26,12 @@
 }
 html{
 	font-size: 13px;
+}
+button{
+	transition: transform 0.25s ease;
+}
+button:active{
+	transform: scale(0.95);
 }
 .pd-1 {
 	padding: 1.5rem 1.5rem 2.5rem 1.5rem;
@@ -132,6 +139,13 @@ body {
 	position: relative;
 	overflow: auto;
 }
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin: 7rem 2rem 6rem 21rem;
+	transition: margin-left 0.35s ease;
+}
 h2.title {
 	font-weight: 600;
 }
@@ -139,6 +153,9 @@ h2.title {
 	color: var(--grey-3);
 	font-size: 0.865rem;
 	font-weight: 500;
+}
+.subTitle::first-letter{
+	text-transform: capitalize;
 }
 .small-title {
 	font-size: 0.75rem;
@@ -179,12 +196,16 @@ h2.title {
 	transition: opacity 0.35s ease-in-out, left 0.35s ease-in-out;
 }
 .prof-img {
-	width: 64px;
-	height: 64px;
+	width: 4rem;
+	height: 4rem;
 	background: white;
 	border-radius: 50%;
 }
-
+button{
+	cursor: pointer;
+	padding: 0.25rem 1.75rem;
+	font-family: inherit;
+}
 /* notification message that appears on the bottom of screen */
 .notification-msg {
 	position: fixed;
