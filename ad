@@ -1,0 +1,618 @@
+[1mdiff --git a/frontend/Announcements/announcements.css b/frontend/Announcements/announcements.css[m
+[1mindex 2694838..ee741ae 100644[m
+[1m--- a/frontend/Announcements/announcements.css[m
+[1m+++ b/frontend/Announcements/announcements.css[m
+[36m@@ -86,7 +86,7 @@[m [mbody {[m
+     flex-direction: column;[m
+ }[m
+ .politician-card {[m
+[31m-    min-width: 10rem;[m
+[32m+[m[32m    min-width: 15rem;[m
+     background-color: #fff;[m
+     border-radius: 0.75rem;[m
+     padding: 1.5rem;[m
+[36m@@ -122,4 +122,4 @@[m [mbody {[m
+ .politician-details p {[m
+     font-size: 0.8rem;[m
+     color: #555;[m
+[31m-}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/frontend/Announcements/announcements.html b/frontend/Announcements/announcements.html[m
+[1mindex 5042821..dc77d40 100644[m
+[1m--- a/frontend/Announcements/announcements.html[m
+[1m+++ b/frontend/Announcements/announcements.html[m
+[36m@@ -1,14 +1,14 @@[m
+ <!DOCTYPE html>[m
+ <html lang="en">[m
+[31m-<head>[m
+[31m-    <meta charset="UTF-8" />[m
+[32m+[m	[32m<head>[m
+[32m+[m		[32m<meta charset="UTF-8" />[m
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+ 		<title>Announcements | Parlimate</title>[m
+ 		<link rel="stylesheet" href="../index.css" />[m
+ 		<link rel="stylesheet" href="../sidebar1.css" />[m
+ 		<link rel="stylesheet" href="../header.css" />[m
+ 		<link rel="stylesheet" href="../container.css" />[m
+[31m-        <link rel="stylesheet" href="./announcements.css"/>[m
+[32m+[m		[32m<link rel="stylesheet" href="./announcements.css" />[m
+ 		<!-- <link rel="stylesheet"[m
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""[m
+     /> -->[m
+[36m@@ -50,10 +50,8 @@[m
+ 			rel="stylesheet"[m
+ 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"[m
+ 		/>[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-    <body class="">[m
+[31m-		[m
+[32m+[m	[32m</head>[m
+[32m+[m	[32m<body class="">[m
+ 		<div class="sidebar pd-1">[m
+ 			<div class="searchBar">[m
+ 				<input[m
+[36m@@ -69,36 +67,97 @@[m
+ 			<div class="navs">[m
+ 				<ul>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-Home" value="../index.html"/>[m
+[31m-						<label for="nav-Home"><i class="fa-solid fa-house"></i>Home</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-Home"[m
+[32m+[m							[32mvalue="../index.html"[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-Home"[m
+[32m+[m							[32m><i class="fa-solid fa-house"></i>Home</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-announcements" value="./announcements.html"  checked  />[m
+[31m-						<label for="nav-announcements"><i class="fa-solid fa-bullhorn"></i>Announcements</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-announcements"[m
+[32m+[m							[32mvalue="./announcements.html"[m
+[32m+[m							[32mchecked[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-announcements"[m
+[32m+[m							[32m><i class="fa-solid fa-bullhorn"></i[m
+[32m+[m							[32m>Announcements</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-fundraise" value="../Fundraising/fundraising.html" />[m
+[31m-						<label for="nav-fundraise"><i class="fa-solid fa-coins"></i>Fundraises</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-fundraise"[m
+[32m+[m							[32mvalue="../Fundraising/fundraising.html"[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-fundraise"[m
+[32m+[m							[32m><i class="fa-solid fa-coins"></i>Fundraises</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-noti" value="notifications.html" />[m
+[31m-						<label for="nav-noti"><i class="fa-solid fa-bell"></i>Notifications</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-noti"[m
+[32m+[m							[32mvalue="notifications.html"[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-noti"[m
+[32m+[m							[32m><i class="fa-solid fa-bell"></i[m
+[32m+[m							[32m>Notifications</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-survey" value="surveys.html" />[m
+[31m-						<label for="nav-survey"><i class="fa-solid fa-clipboard"></i>Surveys</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-survey"[m
+[32m+[m							[32mvalue="surveys.html"[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-survey"[m
+[32m+[m							[32m><i class="fa-solid fa-clipboard"></i>Surveys</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-discusRoom" value="discussion-room.html" />[m
+[31m-						<label for="nav-discusRoom"><i class="fa-solid fa-people-group"></i>Discussion Room</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-discusRoom"[m
+[32m+[m							[32mvalue="discussion-room.html"[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-discusRoom"[m
+[32m+[m							[32m><i class="fa-solid fa-people-group"></i>Discussion[m
+[32m+[m							[32mRoom</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-help" value="help.html" />[m
+[31m-						<label for="nav-help"><i class="fa-solid fa-headset"></i>Help/Support</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-help"[m
+[32m+[m							[32mvalue="help.html"[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-help"[m
+[32m+[m							[32m><i class="fa-solid fa-headset"></i[m
+[32m+[m							[32m>Help/Support</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 					<li>[m
+[31m-						<input type="radio" name="nav" id="nav-settings" value="settings.html" />[m
+[31m-						<label for="nav-settings"><i class="fa-solid fa-gear"></i>Settings</label>[m
+[32m+[m						[32m<input[m
+[32m+[m							[32mtype="radio"[m
+[32m+[m							[32mname="nav"[m
+[32m+[m							[32mid="nav-settings"[m
+[32m+[m							[32mvalue="settings.html"[m
+[32m+[m						[32m/>[m
+[32m+[m						[32m<label for="nav-settings"[m
+[32m+[m							[32m><i class="fa-solid fa-gear"></i>Settings</label[m
+[32m+[m						[32m>[m
+ 					</li>[m
+ 				</ul>[m
+ 			</div>[m
+[36m@@ -113,8 +172,16 @@[m
+ 			</div>[m
+ 		</div>[m
+ 		<div class="header pd-2">[m
+[31m-			<div class="sidebar-toggle-btn sideMenuBtn btn">[m
+[31m-				<i class="fa-sharp fa-solid fa-bars"></i>[m
+[32m+[m			[32m<div class="start row">[m
+[32m+[m				[32m<div class="sidebar-toggle-btn sideMenuBtn btn">[m
+[32m+[m					[32m<i class="fa-sharp fa-solid fa-bars"></i>[m
+[32m+[m				[32m</div>[m
+[32m+[m
+[32m+[m				[32m<div class="logo">[m
+[32m+[m					[32m<a href="../index.html">[m
+[32m+[m						[32mPARLIMATE[m
+[32m+[m					[32m</a>[m
+[32m+[m				[32m</div>[m
+ 			</div>[m
+ 			<div class="headerSearchBar row">[m
+ 				<input[m
+[36m@@ -182,7 +249,10 @@[m
+ 								</a>[m
+ 							</li>[m
+ 						</ul>[m
+[31m-						<a href="./announcements.html" class="bottom-btn small-text capitalize">[m
+[32m+[m						[32m<a[m
+[32m+[m							[32mhref="./announcements.html"[m
+[32m+[m							[32mclass="bottom-btn small-text capitalize"[m
+[32m+[m						[32m>[m
+ 							see all notifications[m
+ 						</a>[m
+ 					</div>[m
+[36m@@ -266,22 +336,26 @@[m
+ 			</div>[m
+ 		</div>[m
+ [m
+[31m-        <div class="container col">[m
+[32m+[m		[32m<div class="container col">[m
+ 			<div class="pageTitles">[m
+ 				<h2 class="title">Announcements</h2>[m
+[31m-				<div class="subTitle">Politicians and political parties announcements</div>[m
+[32m+[m				[32m<div class="subTitle">[m
+[32m+[m					[32mPoliticians and political parties announcements[m
+[32m+[m				[32m</div>[m
+ 			</div>[m
+ 			<div class="row">[m
+ 				<div class="announcements col">[m
+ 					<!-- Announcement Card 1 -->[m
+[31m-					<div class="post announcement-card ">[m
+[32m+[m					[32m<div class="post announcement-card">[m
+ 						<div class="post-head">[m
+ 							<div class="post-details row">[m
+ 								<div class="img"></div>[m
+ 								<div class="user-details col">[m
+ 									<div class="name">Himasha Chinthani</div>[m
+ 									<div class="posted-date row">[m
+[31m-										<span class="date">August 10, 2024</span>[m
+[32m+[m										[32m<span class="date"[m
+[32m+[m											[32m>August 10, 2024</span[m
+[32m+[m										[32m>[m
+ 										<span class="time">10:00 AM</span>[m
+ 									</div>[m
+ 								</div>[m
+[36m@@ -290,14 +364,16 @@[m
+ 						<div class="content col">[m
+ 							<h2 class="post-title">Team Meeting Update</h2>[m
+ 							<p>[m
+[31m-								There will be a team meeting next week to discuss the project progress. Please be prepared with your updates and reports.[m
+[32m+[m								[32mThere will be a team meeting next week to[m
+[32m+[m								[32mdiscuss the project progress. Please be prepared[m
+[32m+[m								[32mwith your updates and reports.[m
+ 							</p>[m
+ 							<div class="location">[m
+ 								<span>Location: Conference Room 2</span>[m
+ 							</div>[m
+ 						</div>[m
+ 					</div>[m
+[31m-		[m
+[32m+[m
+ 					<!-- Announcement Card 2 -->[m
+ 					<div class="post announcement-card">[m
+ 						<div class="post-head">[m
+[36m@@ -306,7 +382,9 @@[m
+ 								<div class="user-details col">[m
+ 									<div class="name">Naleeka Kumarasinghe</div>[m
+ 									<div class="posted-date row">[m
+[31m-										<span class="date">August 11, 2024</span>[m
+[32m+[m										[32m<span class="date"[m
+[32m+[m											[32m>August 11, 2024</span[m
+[32m+[m										[32m>[m
+ 										<span class="time">2:00 PM</span>[m
+ 									</div>[m
+ 								</div>[m
+[36m@@ -315,15 +393,17 @@[m
+ 						<div class="content col">[m
+ 							<h2 class="post-title">New Policy Announcement</h2>[m
+ 							<p>[m
+[31m-								A new company policy has been introduced regarding remote work. All employees are required to follow the new guidelines starting from next month.[m
+[32m+[m								[32mA new company policy has been introduced[m
+[32m+[m								[32mregarding remote work. All employees are[m
+[32m+[m								[32mrequired to follow the new guidelines starting[m
+[32m+[m								[32mfrom next month.[m
+ 							</p>[m
+ 							<div class="location">[m
+ 								<span>Location: HR Office</span>[m
+ 							</div>[m
+ 						</div>[m
+ 					</div>[m
+[31m-	[m
+[31m-	[m
+[32m+[m
+ 					<!-- Add more cards as needed -->[m
+ 					<div class="post announcement-card">[m
+ 						<div class="post-head">[m
+[36m@@ -341,11 +421,23 @@[m
+ 						<div class="content">[m
+ 							<h2 class="post-title">New Policy Announcement</h2>[m
+ 							<p>[m
+[31m-								A new company policy has been introduced regarding remote work. All employees are required to follow the new guidelines starting from next month.[m
+[31m-								A new company policy has been introduced regarding remote work. All employees are required to follow the new guidelines starting from next month.[m
+[31m-								A new company policy has been introduced regarding remote work. All employees are required to follow the new guidelines starting from next month.[m
+[31m-								A new company policy has been introduced regarding remote work. All employees are required to follow the new guidelines starting from next month.[m
+[31m-								A new company policy has been introduced regarding remote work. All employees are required to follow the new guidelines starting from next month.[m
+[32m+[m								[32mA new company policy has been introduced[m
+[32m+[m								[32mregarding remote work. All employees are[m
+[32m+[m								[32mrequired to follow the new guidelines starting[m
+[32m+[m								[32mfrom next month. A new company policy has been[m
+[32m+[m								[32mintroduced regarding remote work. All employees[m
+[32m+[m								[32mare required to follow the new guidelines[m
+[32m+[m								[32mstarting from next month. A new company policy[m
+[32m+[m								[32mhas been introduced regarding remote work. All[m
+[32m+[m								[32memployees are required to follow the new[m
+[32m+[m								[32mguidelines starting from next month. A new[m
+[32m+[m								[32mcompany policy has been introduced regarding[m
+[32m+[m								[32mremote work. All employees are required to[m
+[32m+[m								[32mfollow the new guidelines starting from next[m
+[32m+[m								[32mmonth. A new company policy has been introduced[m
+[32m+[m								[32mregarding remote work. All employees are[m
+[32m+[m								[32mrequired to follow the new guidelines starting[m
+[32m+[m								[32mfrom next month.[m
+ 							</p>[m
+ 							<div class="location">[m
+ 								<span>Location: HR Office</span>[m
+[36m@@ -353,12 +445,11 @@[m
+ 						</div>[m
+ 					</div>[m
+ 				</div>[m
+[31m-	[m
+[31m-	[m
+[32m+[m
+ 				<!-- Politicians container -->[m
+[31m-				<div class="politician-container ">[m
+[32m+[m				[32m<div class="politician-container">[m
+ 					<div class="politician-card">[m
+[31m-						<img src="path/to/photo.jpg" alt="Politician Photo">[m
+[32m+[m						[32m<img src="path/to/photo.jpg" alt="Politician Photo" />[m
+ 						<div class="politician-details">[m
+ 							<h3>Politician Name</h3>[m
+ 							<p>Political Party</p>[m
+[36m@@ -367,25 +458,25 @@[m
+ 					</div>[m
+ 					<!-- More politician cards go here -->[m
+ 					<div class="politician-card">[m
+[31m-						<img src="path/to/photo.jpg" alt="Politician Photo">[m
+[32m+[m						[32m<img src="path/to/photo.jpg" alt="Politician Photo" />[m
+ 						<div class="politician-details">[m
+ 							<h3>Politician Name</h3>[m
+ 							<p>Political Party</p>[m
+ 							<p>District</p>[m
+ 						</div>[m
+ 					</div>[m
+[31m-		[m
+[32m+[m
+ 					<div class="politician-card">[m
+[31m-						<img src="path/to/photo.jpg" alt="Politician Photo">[m
+[32m+[m						[32m<img src="path/to/photo.jpg" alt="Politician Photo" />[m
+ 						<div class="politician-details">[m
+ 							<h3>Politician Name</h3>[m
+ 							<p>Political Party</p>[m
+ 							<p>District</p>[m
+ 						</div>[m
+ 					</div>[m
+[31m-		[m
+[32m+[m
+ 					<div class="politician-card">[m
+[31m-						<img src="path/to/photo.jpg" alt="Politician Photo">[m
+[32m+[m						[32m<img src="path/to/photo.jpg" alt="Politician Photo" />[m
+ 						<div class="politician-details">[m
+ 							<h3>Politician Name</h3>[m
+ 							<p>Political Party</p>[m
+[36m@@ -393,35 +484,9 @@[m
+ 						</div>[m
+ 					</div>[m
+ 				</div>[m
+[31m-[m
+ 			</div>[m
+[32m+[m		[32m</div>[m
+ [m
+[31m-        </div>[m
+[31m-[m
+[31m-		  [m
+[31m-</body>[m
+[31m- <script>[m
+[31m-        let sideMenuBtns = document.querySelectorAll(".sideMenuBtn");[m
+[31m-        const body = document.querySelector("body");[m
+[31m-        const navRadios = document.querySelectorAll('input[name="nav"]');[m
+[31m-[m
+[31m-        sideMenuBtns.forEach((btn) => {[m
+[31m-            btn.addEventListener("click", () => {[m
+[31m-                if (body.classList.contains("sidebar-deactive")) {[m
+[31m-                    body.classList.remove("sidebar-deactive");[m
+[31m-                } else {[m
+[31m-                    body.classList.add("sidebar-deactive");[m
+[31m-                }[m
+[31m-            });[m
+[31m-        });[m
+[31m-[m
+[31m-        navRadios.forEach(radio => {[m
+[31m-            radio.addEventListener('change', (event) => {[m
+[31m-                const selectedValue = event.target.value;[m
+[31m-                if (selectedValue) {[m
+[31m-                    window.location.href = selectedValue; // Redirect to the selected page[m
+[31m-                }[m
+[31m-            });[m
+[31m-        });[m
+[31m-    </script>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m		[32m<script src="../script.js"></script>[m
+[32m+[m	[32m</body>[m
+[32m+[m[32m</html>[m
+[1mdiff --git a/frontend/header.css b/frontend/header.css[m
+[1mindex 0669626..de8adca 100644[m
+[1m--- a/frontend/header.css[m
+[1m+++ b/frontend/header.css[m
+[36m@@ -178,6 +178,14 @@[m [ma.notification .notification-from {[m
+ .noti-title {[m
+ 	flex: 1;[m
+ }[m
+[32m+[m[32m.header .logo {[m
+[32m+[m[32m    font-weight: 500;[m
+[32m+[m[32m    letter-spacing: 1px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.header .start {[m
+[32m+[m	[32mgap: 0.5rem;[m
+[32m+[m[32m}[m
+[32m+[m
+ @media screen and (max-width: 600px){[m
+ 	.headerSearchBar{[m
+ 		display: none;[m
+[1mdiff --git a/frontend/index.html b/frontend/index.html[m
+[1mindex b080e31..6cdfeb3 100644[m
+[1m--- a/frontend/index.html[m
+[1m+++ b/frontend/index.html[m
+[36m@@ -331,8 +331,16 @@[m
+ 		</div>[m
+ 	</div>[m
+ 	<div class="header pd-2">[m
+[31m-		<div class="sidebar-toggle-btn sideMenuBtn btn">[m
+[31m-			<i class="fa-sharp fa-solid fa-bars"></i>[m
+[32m+[m		[32m<div class="start row">[m
+[32m+[m			[32m<div class="sidebar-toggle-btn sideMenuBtn btn">[m
+[32m+[m				[32m<i class="fa-sharp fa-solid fa-bars"></i>[m
+[32m+[m			[32m</div>[m
+[32m+[m
+[32m+[m			[32m<div class="logo">[m
+[32m+[m				[32m<a href="../index.html">[m
+[32m+[m					[32mPARLIMATE[m
+[32m+[m				[32m</a>[m
+[32m+[m			[32m</div>[m
+ 		</div>[m
+ 		<div class="headerSearchBar row">[m
+ 			<input type="search" name="mainSearch" id="headerSearchBar"[m
+[36m@@ -620,5 +628,6 @@[m
+ 	</div>[m
+ </body>[m
+ <script src="./script.js"></script>[m
+[32m+[m[32m<script src="./home.js"></script>[m
+ [m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/frontend/script.js b/frontend/script.js[m
+[1mindex e836127..0b13ad6 100644[m
+[1m--- a/frontend/script.js[m
+[1m+++ b/frontend/script.js[m
+[36m@@ -1,19 +1,7 @@[m
+ let sideMenuBtns = document.querySelectorAll(".sideMenuBtn");[m
+[31m-const addPostBtn = document.querySelector(".addPost-btn")[m
+[31m-const body = document.querySelector("body");[m
+[31m-const popupCloseBtn = document.getElementById("popup-close-btn")[m
+[31m-const popupClearBtn = document.getElementById("popup-clear-btn")[m
+[31m-const popuppostBtn = document.getElementById("popup-post-btn")[m
+[31m-const navRadios = document.querySelectorAll('input[name="nav"]');[m
+[32m+[m[32mconst body = document.querySelector("body");const navRadios = document.querySelectorAll('input[name="nav"]');[m
+ const notificationMsg = document.querySelector(".notification-msg");[m
+[31m-const postLikeBtns = document.querySelectorAll(".post .like");[m
+[31m-const postCmntBtns = document.querySelectorAll(".post button.comment");[m
+[31m-const voteSubmissionBtn = document.getElementById("vote-btn");[m
+[31m-const weeklySirveyRadios = document.querySelectorAll(`.weeklySurvey input[name="week-survey"]`);[m
+[31m-const cmntVoteBtns = document.querySelectorAll(".cmnt .upvote");[m
+ const headerBtns = document.querySelectorAll(".headerBtn input[type='checkbox']")[m
+[31m-let notificationMsgContent = "Your vote has been successfully added !";[m
+[31m-let weeklySurveyVoted = false;[m
+ [m
+ sideMenuBtns.forEach((btn) => {[m
+     btn.addEventListener("click", () => {[m
+[36m@@ -25,23 +13,6 @@[m [msideMenuBtns.forEach((btn) => {[m
+     });[m
+ });[m
+ [m
+[31m-addPostBtn.addEventListener("click", () => {[m
+[31m-    if (body.classList.contains("overlay-active")) {[m
+[31m-        body.classList.remove("overlay-active")[m
+[31m-    } else {[m
+[31m-        body.classList.add("overlay-active")[m
+[31m-    }[m
+[31m-})[m
+[31m-[m
+[31m-popupCloseBtn.addEventListener("click", () => {[m
+[31m-    body.classList.remove("overlay-active")[m
+[31m-})[m
+[31m-[m
+[31m-popupClearBtn.addEventListener("click", () => {[m
+[31m-    body.querySelector(".popup textarea").value = ""[m
+[31m-    body.querySelector(".popup input[type='text']").value = ""[m
+[31m-})[m
+[31m-[m
+ navRadios.forEach(radio => {[m
+     radio.addEventListener('change', (event) => {[m
+         const selectedValue = event.target.value;[m
+[36m@@ -50,44 +21,6 @@[m [mnavRadios.forEach(radio => {[m
+         }[m
+     });[m
+ });[m
+[31m-// close popup on click outside[m
+[31m-document.addEventListener('click', function(event) {[m
+[31m-    const popup = document.querySelector('.comment-popup');[m
+[31m-    const container = document.querySelector('.comment-container');[m
+[31m-    const isClickInsidePopup = popup.contains(event.target);[m
+[31m-    const isClickInsideContainer = container.contains(event.target);[m
+[31m-[m
+[31m-    if (isClickInsidePopup && !isClickInsideContainer) {[m
+[31m-        body.classList.remove("cmnt-visible")[m
+[31m-    }[m
+[31m-});[m
+[31m-popuppostBtn.addEventListener("click", () => {[m
+[31m-    // implement validation here[m
+[31m-    let validity = false[m
+[31m-    const addPostTitle = body.querySelector(".popup #add-post-title")[m
+[31m-    const addPostCaption = body.querySelector(".popup #add-post-caption")[m
+[31m-    if (addPostTitle.value && addPostCaption.value) {[m
+[31m-        validity = true[m
+[31m-    } else {[m
+[31m-        if (!addPostTitle.value) {[m
+[31m-            addPostTitle.parentElement.classList.add("error")[m
+[31m-        }[m
+[31m-        if (!addPostCaption.value) {[m
+[31m-            addPostCaption.parentElement.classList.add("error")[m
+[31m-        }[m
+[31m-        addPostTitle.addEventListener("input", () => {[m
+[31m-            addPostTitle.parentElement.classList.remove("error")[m
+[31m-        })[m
+[31m-        addPostCaption.addEventListener("input", () => {[m
+[31m-            addPostCaption.parentElement.classList.remove("error")[m
+[31m-        })[m
+[31m-    }[m
+[31m-    if (validity) {[m
+[31m-        notificationMsgContent = "Your post has been successfully added !"[m
+[31m-        body.classList.remove("overlay-active")[m
+[31m-        displayNotification(notificationMsgContent)[m
+[31m-    }[m
+[31m-})[m
+ headerBtns.forEach(selectedBtn => {[m
+     selectedBtn.addEventListener('change', function() {[m
+         if (this.checked) {[m
+[36m@@ -99,74 +32,3 @@[m [mheaderBtns.forEach(selectedBtn => {[m
+         }[m
+     });[m
+ });[m
+[31m-[m
+[31m-[m
+[31m-postLikeBtns.forEach(likeBtn => {[m
+[31m-    likeBtn.addEventListener("click", () => {[m
+[31m-        likeBtn.closest(".post").classList.toggle("reacted")[m
+[31m-    })[m
+[31m-})[m
+[31m-postCmntBtns.forEach(cmntBtn => {[m
+[31m-    cmntBtn.addEventListener("click", () => {[m
+[31m-        body.classList.add("cmnt-visible")[m
+[31m-    })[m
+[31m-})[m
+[31m-cmntVoteBtns.forEach(voteBtn => {[m
+[31m-    voteBtn.addEventListener("click", () => {[m
+[31m-        const currPost = voteBtn.closest(".cmnt")[m
+[31m-        const count = currPost.querySelector(".upvote span")[m
+[31m-        if(currPost.classList.contains("upvoted")){[m
+[31m-            voteBtn.querySelector("i").classList.remove("fa-solid")[m
+[31m-            voteBtn.querySelector("i").classList.add("fa-light")[m
+[31m-            count.innerHTML = parseInt(count.innerHTML) - 1[m
+[31m-        } else {[m
+[31m-            voteBtn.querySelector("i").classList.remove("fa-light")[m
+[31m-            voteBtn.querySelector("i").classList.add("fa-solid")[m
+[31m-            count.innerHTML = parseInt(count.innerHTML) + 1[m
+[31m-        }[m
+[31m-        currPost.classList.toggle("upvoted")[m
+[31m-    })[m
+[31m-    // increase/ decrease like count on click[m
+[31m-})[m
+[31m-[m
+[31m-voteSubmissionBtn.addEventListener("click", () => {[m
+[31m-    checkIfWeeklySurveyVoted()[m
+[31m-    // valaidation required here[m
+[31m-    if (!voteSubmissionBtn.classList.contains("submitted") && weeklySurveyVoted) {[m
+[31m-        voteSubmissionBtn.classList.add("submitted")[m
+[31m-        voteSubmissionBtn.innerHTML = `<i class="fa-duotone fa-solid fa-check"></i> Voted`[m
+[31m-        voteSubmissionBtn.closest(".votelist").classList.add("voted")[m
+[31m-        notificationMsgContent = "Your vote has been successfully added !"[m
+[31m-        displayNotification(notificationMsgContent, 2000)[m
+[31m-        disableRadioButtons(true)[m
+[31m-    } else {[m
+[31m-        voteSubmissionBtn.classList.remove("submitted")[m
+[31m-        voteSubmissionBtn.innerHTML = `submit my Vote`[m
+[31m-        voteSubmissionBtn.closest(".votelist").classList.remove("voted")[m
+[31m-        disableRadioButtons(false)[m
+[31m-    }[m
+[31m-[m
+[31m-})[m
+[31m-[m
+[31m-[m
+[31m-function checkIfWeeklySurveyVoted() {[m
+[31m-    weeklySirveyRadios.forEach(radio => {[m
+[31m-        if(radio.checked){[m
+[31m-            weeklySurveyVoted = true[m
+[31m-        }[m
+[31m-    })[m
+[31m-}[m
+[31m-function disableRadioButtons(bool) {[m
+[31m-    const radioButtons = document.querySelectorAll('input[name="week-survey"]');[m
+[31m-    radioButtons.forEach(radio => {[m
+[31m-        radio.disabled = bool;[m
+[31m-    });[m
+[31m-}[m
+[31m-[m
+[31m-function displayNotification(msg, timeout = 3000) {[m
+[31m-    notificationMsg.innerHTML = msg[m
+[31m-    body.classList.add("noti-active")[m
+[31m-    setTimeout(() => {[m
+[31m-        body.classList.remove("noti-active")[m
+[31m-    }, timeout)[m
+[31m-}[m
