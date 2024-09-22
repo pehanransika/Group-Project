@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Topbar Section -->
+        <div class="topbar">
+            <div class="logo">
+                <h2>Parlimate.</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="Search here">
+                <label for="search"><i class="fas fa-search"></i></label>
+            </div>
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="user">
+                <img src="user.png" alt="User">
+            </div>
+        </div>
+
+        <!-- Sidebar Section -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                <li><a href="#"><i class="fas fa-users"></i><span>User Management</span></a></li>
+                <li><a href="#"><i class="fas fa-hand-holding-usd"></i><span>Fundraising Approval</span></a></li>
+                <li><a href="#"><i class="fas fa-poll"></i><span>Survey Management</span></a></li>
+                <li><a href="#"><i class="fas fa-bullhorn"></i><span>Announcement</span></a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i><span>Platform Settings</span></a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i><span>Security</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">1217</div>
+                        <div class="card-name">Users</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">6</div>
+                        <div class="card-name">Upcoming Meetings</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">4</div>
+                        <div class="card-name">Pending Fundraising</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">2</div>
+                        <div class="card-name">Active Surveys</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-poll"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie Charts Section -->
+            <div class="chart-container">
+                <div class="chart">
+                    <canvas id="userPieChart"></canvas>
+                    <h2>Users Distribution</h2>
+                </div>
+                <div class="chart">
+                    <canvas id="partyPieChart"></canvas>
+                    <h2>Political Party Types</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
