@@ -25,7 +25,8 @@
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
 		/>
 	</head>
-	<body class="overlay-active">
+	<body class="">
+		<div class="notification-msg capitalize"></div>
 		<div class="sidebar pd-1">
 			<div class="searchBar">
 				<input
@@ -380,16 +381,12 @@
 										<i class="fa-brands fa-spotify"></i>
 										Listen on Spotify
 									</a>
-									<a
-										href="#"
-										target="_blank"
-										class="small-text item-live"
-									>
+									<span class="small-text item-live">
 										<i
 											class="fa-solid fa-signal-stream"
 										></i>
 										Request to Join
-									</a>
+									</span>
 								</div>
 							</div>
 							<div class="post-options col">
@@ -715,21 +712,29 @@
 					</div>
 					<div class="warning">
 						The invitation will be send via e-mail. You must obey
-						and respect 
-						<a href="#" target="_blank" class="rules" rel="noopener noreferrer">rules & regulations</a>
-						in the live meeting. Any
-						unnecessary behavior may lead to permanent/temporary
-						banned from this platform
+						and respect
+						<a
+							href="#"
+							target="_blank"
+							class="rules"
+							rel="noopener noreferrer"
+							>rules & regulations</a
+						>
+						in the live meeting. Any unnecessary behavior may lead
+						to permanent/temporary banned from this platform
 					</div>
 				</div>
 				<div class="btns row">
 					<button class="close">close</button>
-					<button class="confirm row">confirm <i class="fa-solid fa-check"></i></button>
+					<button class="confirm row">
+						confirm <i class="fa-solid fa-check"></i>
+					</button>
 				</div>
 			</div>
 		</div>
 	</body>
 	<script src="../script.js"></script>
+	<script src="./discussin.js"></script>
 	<script>
 		const navBtns = document.querySelectorAll(".nav-btn button");
 
