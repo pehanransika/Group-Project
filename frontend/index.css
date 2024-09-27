@@ -232,6 +232,9 @@ button{
 	display: flex;
 	flex-direction: column;
 }
+p{
+    font-size: 0.9rem;
+}
 @media screen and (max-width: 1349px) {
 	.col {
 		flex-direction: row;

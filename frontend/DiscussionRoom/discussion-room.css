@@ -31,12 +31,8 @@ button.nav-active {
 	width: 100%;
 	background: var(--main-color);
 	border-radius: 0.5rem;
-	padding: 2rem 3rem;
+	padding: 3rem;
 	gap: 1rem;
-}
-.body-top > .title {
-	font-weight: 600;
-	font-size: 1.3rem;
 }
 .nav-body .items{
     flex-wrap: wrap;
@@ -51,28 +47,56 @@ button.nav-active {
     display: flex;
 	align-items: flex-start;
 	border-radius: 0.5rem;
-    opacity: 0;
 	gap: 2rem;
+	position: relative;
 	transition: background 0.25s ease, border-color 0.25s ease;
-	animation: fade-in 1s ease-in-out forwards;
+    opacity: 0;
+	animation: fade-in 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 .item:hover {
 	border-color: rgb(200, 214, 255);
 	background: rgb(247, 249, 255);
 }
+.item.live{
+	border-left: 5px solid var(--primary-color);
+}
+.item.live::after{
+	content: '\f8dd';
+	font-family: FontAwesome;
+	position: absolute;
+	color: white;
+	background: var(--primary-color);
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	left: 0;
+	top: 50%;
+	padding: 0.25rem;
+	transform: translate(-50%, -50%);
+}
 .item .title{
     font-weight: 600;
-    max-width: 45rem;
+    max-width: 38rem;
+	position: relative;
+	width: fit-content;
 }
 .item .title::first-letter{
     text-transform: capitalize;
 }
+
 @keyframes fade-in {
 	from {
 		opacity: 0;
+		transform: translateY(1rem);
+		scale: 1.1;
 	}
 	to {
 		opacity: 1;
+		transform: translateY(0);
+		scale: 1;
 	}
 }
 .pImgs {
@@ -126,21 +150,28 @@ button.nav-active {
 .item-sp {
 	background: rgb(210, 255, 210);
 }
+.item-live{
+	background: rgb(210, 221, 255);
+}
 .body-top {
+	padding: 0 1rem;
 	justify-content: space-between;
+	align-self: flex-end;
 }
 .sort-btn {
 	gap: 0.5rem;
 	font-weight: 600;
 	font-size: 0.75rem;
 	padding: 0.25rem 1rem;
-	background: rgb(241, 241, 241);
+	background: rgb(24, 24, 24);
+	color: white;
 	border-radius: 0.25rem;
 	cursor: pointer;
+	text-align: right;
 	transition: background 0.25s ease;
 }
 .sort-btn:hover {
-	background: rgb(231, 231, 231);
+	background: rgb(66, 66, 66);
 }
 .items{
     padding: 1rem ;
@@ -174,4 +205,16 @@ button.nav-active {
     padding: 0.25rem 0.75rem;
     font-size: 0.75rem;
     border-radius: 0.5rem;
+}
+.live-meeting-popup{
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.205);
 }
