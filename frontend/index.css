@@ -219,14 +219,14 @@ button{
 	border-radius: 0.75rem;
 	opacity: 0;
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
-		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
 }
-.noti-active .notification-msg {
+body.noti-active .notification-msg {
 	z-index: 1002;
 	opacity: 1;
 	bottom: 2rem;
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
-		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
 }
 .col-u{
 	display: flex;

@@ -21,7 +21,7 @@ livePopup.addEventListener("click", () => {
 livePopConfirm.addEventListener("click", () => {
     notificationMsgContent = notifi
     body.classList.remove("overlay-active");
-    displayNotification(notificationMsgContent, 2000)
+    displayNotification(notificationMsgContent)
 })
 
 
