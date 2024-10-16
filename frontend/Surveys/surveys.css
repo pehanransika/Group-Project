@@ -131,7 +131,11 @@ body {
 }
 
 .current-results{
-    margin-top: 1%;
+    margin-top:1%;
+    display:grid;
+    grid-template-columns:  1fr 2fr;
+    grid-gap:1rem;
+    
 }
 
 
@@ -143,3 +147,44 @@ body {
 .total-votes{
     font-size:1.4rem;
 }
+
+
+
+.chart{
+    width:200px;
+    height:200px;
+    
+}
+
+.Analytics{
+    margin-top:3rem;
+    height:40px;
+    color:white;
+    background-color: rgba(106, 57, 185, 0.897);
+    border-color: white;
+    font-size: 17px;
+    border-radius: 10px;
+}
+.Analytics:hover{
+    background-color: white;
+    color:purple;
+    border-color: purple;
+    transition-delay: 0.3s;
+}
+.Analytics:active{
+    color:white;
+    background-color: rgba(106, 57, 185, 0.897);
+    border-color: white;
+}
+
+#vote-btn{
+    background-color: rgba(106, 57, 185, 0.897); 
+}
+
+#vote-btn:hover{
+    background-color: white;
+    color:purple;
+    border-color: purple;
+    
+}
+
