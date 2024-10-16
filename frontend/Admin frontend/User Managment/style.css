@@ -1,0 +1,264 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: #A020F0;
+    overflow-y: auto;
+    transition: width 0.3s;
+    z-index: 2;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    background-color:white;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.sidebar-header h2 {
+    color: blueviolet;
+    font-size: 24px;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li:hover {
+    background-color: #7A0ECC;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    font-size: 18px;
+}
+
+.sidebar ul li a span {
+    margin-left: 10px;
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.sidebar.collapsed ul li a span {
+    opacity: 0;
+}
+
+/* Sidebar Buttons (Action Buttons at the Bottom) */
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    margin-top: auto;
+}
+
+.sidebar-buttons button.sidebar-action {
+    padding: 30px;
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar-buttons button.sidebar-action:hover {
+    background-color: #4a148c;
+}
+
+/* Scroll buttons container */
+.scroll-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scroll-buttons button {
+    background-color: #7a00cc;
+    border: none;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.scroll-buttons button:hover {
+    background-color: #57009a;
+}
+
+.scroll-buttons i {
+    pointer-events: none;
+}
+
+.sidebar.collapsed + .main-content {
+    margin-left: 80px; /* Adjust for collapsed sidebar */
+}
+
+
+
+/* Main content */
+.main-content {
+    margin-left: 260px;
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.sidebar.collapsed + .main-content {
+    margin-left: 80px;
+}
+
+/* Header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Search bar */
+.search {
+    position: relative;
+    width: 40%;
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+}
+
+.search i {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Filter section */
+.filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters select {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #673ab7;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Action buttons in the table */
+.actions button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #4a148c;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+
+    .sidebar ul li a span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .main-content {
+        margin-left: 60px;
+    }
+}

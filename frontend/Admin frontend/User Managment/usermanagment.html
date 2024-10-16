@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <!-- Parlimate Title at the top -->
+            <div class="sidebar-header">
+                <h2>Parlimate.</h2>
+            </div>
+            <div class="scroll-buttons">
+                <button id="scroll-up"><i class="fas fa-arrow-up"></i></button>
+                <button id="scroll-down"><i class="fas fa-arrow-down"></i></button>
+            </div>
+            <!-- Sidebar Menu -->
+            <ul>
+                
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                <li><a href="usermanagment.html"><i class="fas fa-users"></i><span>User Management</span></a></li>
+                <li><a href="#"><i class="fas fa-hand-holding-usd"></i><span>Fundraising Approval</span></a></li>
+                <li><a href="#"><i class="fas fa-poll"></i><span>Survey Management</span></a></li>
+                <li><a href="#"><i class="fas fa-bullhorn"></i><span>Announcement</span></a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i><span>Platform Settings</span></a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i><span>Security</span></a></li>
+                
+            </ul>
+
+            
+            
+
+    
+           
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <div class="search">
+                    <!-- Add search icon inside the search bar -->
+                    <input type="text" id="search" placeholder="Search here">
+                    <label for="search"><i class="fas fa-search"></i></label>
+                </div>
+                <div class="filters">
+                    <select id="filter-role">
+                        <option value="">All Roles</option>
+                        <option value="Citizen">Citizen</option>
+                        <option value="Politician">Politician</option>
+                        <option value="Political Party">Political Party</option>
+                    </select>
+                    <select id="filter-status">
+                        <option value="">All Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                    <select id="filter-verification">
+                        <option value="">All Verification</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+            </header>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Verification Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table">
+                    <!-- Rows will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
