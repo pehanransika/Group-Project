@@ -3,16 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Announcements | Parlimate</title>
-		<link rel="stylesheet" href="../index.css" />
+		<title>Profile | Parlimate</title>
 		<link rel="stylesheet" href="../sidebar1.css" />
 		<link rel="stylesheet" href="../header.css" />
-		<link rel="stylesheet" href="../container.css" />
-		<link rel="stylesheet" href="./announcements.css" />
-		<!-- <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
-    /> -->
-
+		<link rel="stylesheet" href="../index.css" />
+		<link rel="stylesheet" href="./profile.css" />
 		<!-- icons -->
 		<link
 			rel="stylesheet"
@@ -25,33 +20,12 @@
 			rel="stylesheet"
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
 		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
-		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
-		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
-		/>
-
 		<link
 			rel="stylesheet"
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
 		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
-		/>
 	</head>
-	<body class="">
+	<body>
 		<div class="sidebar pd-1">
 			<div class="searchBar">
 				<input
@@ -82,8 +56,7 @@
 							type="radio"
 							name="nav"
 							id="nav-announcements"
-							value="./Announcement/announcements.html"
-							checked
+							value="../Announcements/announcements.html"
 						/>
 						<label for="nav-announcements"
 							><i class="fa-solid fa-bullhorn"></i
@@ -106,12 +79,11 @@
 							type="radio"
 							name="nav"
 							id="nav-noti"
-							value="../Notification/notification.html"
+							value="../notifications.html"
 						/>
-						<label for="nav-noti"
-							><i class="fa-solid fa-bell"></i
-							>Notifications</label
-						>
+						<label for="nav-noti">
+							<i class="fa-solid fa-bell"></i>Notifications
+						</label>
 					</li>
 					<li>
 						<input
@@ -141,7 +113,7 @@
 							type="radio"
 							name="nav"
 							id="nav-help"
-							value="../Help/help.html"
+							value="help.html"
 						/>
 						<label for="nav-help"
 							><i class="fa-solid fa-headset"></i
@@ -161,6 +133,7 @@
 					</li>
 				</ul>
 			</div>
+
 			<div class="logoutBtn capitalize">
 				<div class="cont">
 					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
@@ -176,16 +149,18 @@
 				<div class="sidebar-toggle-btn sideMenuBtn btn">
 					<i class="fa-sharp fa-solid fa-bars"></i>
 				</div>
-	
+
 				<div class="logo">
-					<a href="./index.html">
-						PARLIMATE
-					</a>
+					<a href="./index.html"> PARLIMATE </a>
 				</div>
 			</div>
 			<div class="headerSearchBar row">
-				<input type="search" name="mainSearch" id="headerSearchBar"
-					placeholder="Search politicians, Political parties...." />
+				<input
+					type="search"
+					name="mainSearch"
+					id="headerSearchBar"
+					placeholder="Search politicians, Political parties...."
+				/>
 				<label for="headerSearchBar">
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</label>
@@ -206,9 +181,11 @@
 										<div class="notification-from">
 											Ranil wickramasinghe
 										</div>
-										<span>Lorem, ipsum dolor sit amet
+										<span
+											>Lorem, ipsum dolor sit amet
 											consectetur adipisicing elit. Qui,
-											ullam. Quos aperiam in re</span>
+											ullam. Quos aperiam in re</span
+										>
 									</div>
 								</a>
 							</li>
@@ -219,9 +196,11 @@
 										<div class="notification-from">
 											Ranil wickramasinghe
 										</div>
-										<span>Lorem, ipsum dolor sit amet
+										<span
+											>Lorem, ipsum dolor sit amet
 											consectetur adipisicing elit. Qui,
-											ullam. Quos aperiam in re</span>
+											ullam. Quos aperiam in re</span
+										>
 									</div>
 								</a>
 							</li>
@@ -232,14 +211,19 @@
 										<div class="notification-from">
 											Ranil wickramasinghe
 										</div>
-										<span>Lorem, ipsum dolor sit amet
+										<span
+											>Lorem, ipsum dolor sit amet
 											consectetur adipisicing elit. Qui,
-											ullam. Quos aperiam in re</span>
+											ullam. Quos aperiam in re</span
+										>
 									</div>
 								</a>
 							</li>
 						</ul>
-						<a href="./Announcements/announcements.html" class="bottom-btn small-text capitalize">
+						<a
+							href="./Announcements/announcements.html"
+							class="bottom-btn small-text capitalize"
+						>
 							see all notifications
 						</a>
 					</div>
@@ -252,7 +236,7 @@
 					<span class="tip">profile</span>
 					<div class="dropDownMenu">
 						<div class="profile">
-							<a href="../Profile/profile.html">
+							<a href="#">
 								<div class="img"></div>
 								<div class="details">
 									<div class="name medium-text bold">
@@ -277,7 +261,9 @@
 							<li>
 								<a href="#">
 									<span>
-										<i class="fa-regular fa-circle-question"></i>
+										<i
+											class="fa-regular fa-circle-question"
+										></i>
 									</span>
 									<span> help center </span>
 								</a>
@@ -291,11 +277,15 @@
 								</a>
 							</li>
 							<div class="sep-line"></div>
-	
+
 							<li>
 								<div class="logoutBtn capitalize">
 									<div class="cont">
-										<input type="checkbox" name="logoutBtn" id="logoutBtn" />
+										<input
+											type="checkbox"
+											name="logoutBtn"
+											id="logoutBtn"
+										/>
 										<label for="logoutBtn">
 											<i class="fa-solid fa-sign-out"></i>
 											<span>logout</span>
@@ -308,158 +298,95 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="container col">
-			<div class="pageTitles">
-				<h2 class="title">Announcements</h2>
-				<div class="subTitle">
-					Politicians and political parties announcements
-				</div>
+			<div class="pro-imgs">
+				<div class="cover-bg"></div>
+				<div class="profile-pic"></div>
 			</div>
-			<div class="row">
-				<div class="announcements col">
-					<!-- Announcement Card 1 -->
-					<div class="post announcement-card">
-						<div class="post-head">
-							<div class="post-details row">
-								<div class="img"></div>
-								<div class="user-details col">
-									<div class="name">Himasha Chinthani</div>
-									<div class="posted-date row">
-										<span class="date"
-											>August 10, 2024</span
-										>
-										<span class="time">10:00 AM</span>
-									</div>
+			<div class="profile-container">
+				<div class="profile-details col">
+					<div class="user-ac row jc-sb">
+						<div class="content-1 col">
+							<div class="name capitalize">
+								Naleeka Kumarasinghe
+								<span class="verified">verified</span>
+							</div>
+							<div class="row">
+								<div class="uName">
+									<i class="fa-regular fa-at"></i>
+									itsNaleeka
+								</div>
+
+								<div class="city">
+									<i class="fa-solid fa-location-dot"></i>
+									Kandy
+								</div>
+								<div class="jDate">
+									<i class="fa-solid fa-calendar"></i>
+									Joined on<span>Aug 2024</span>
 								</div>
 							</div>
 						</div>
-						<div class="content col">
-							<h2 class="post-title">Team Meeting Update</h2>
-							<p>
-								There will be a team meeting next week to
-								discuss the project progress. Please be prepared
-								with your updates and reports.
-							</p>
-							<div class="location">
-								<span>Location: Conference Room 2</span>
+						<div class="content-2 row">
+							<div class="btn message capitalize row">
+								message
+							</div>
+							<div class="options btn">
+								<i class="fa-solid fa-ellipsis"></i>
 							</div>
 						</div>
 					</div>
-
-					<!-- Announcement Card 2 -->
-					<div class="post announcement-card">
-						<div class="post-head">
-							<div class="post-details row">
-								<div class="img"></div>
-								<div class="user-details col">
-									<div class="name">Naleeka Kumarasinghe</div>
-									<div class="posted-date row">
-										<span class="date"
-											>August 11, 2024</span
-										>
-										<span class="time">2:00 PM</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content col">
-							<h2 class="post-title">New Policy Announcement</h2>
-							<p>
-								A new company policy has been introduced
-								regarding remote work. All employees are
-								required to follow the new guidelines starting
-								from next month.
-							</p>
-							<div class="location">
-								<span>Location: HR Office</span>
-							</div>
-						</div>
+					<div class="profession row">
+						<i class="fa-solid fa-briefcase"></i>
+						<span>Software Engineer</span>
 					</div>
-
-					<!-- Add more cards as needed -->
-					<div class="post announcement-card">
-						<div class="post-head">
-							<div class="post-details">
-								<div class="img"></div>
-								<div>
-									<div class="name">Pehan Ransika</div>
-									<div class="posted-date">
-										<span>August 11, 2024</span>
-										<span>2:00 PM</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content">
-							<h2 class="post-title">New Policy Announcement</h2>
-							<p>
-								A new company policy has been introduced
-								regarding remote work. All employees are
-								required to follow the new guidelines starting
-								from next month. A new company policy has been
-								introduced regarding remote work. All employees
-								are required to follow the new guidelines
-								starting from next month. A new company policy
-								has been introduced regarding remote work. All
-								employees are required to follow the new
-								guidelines starting from next month. A new
-								company policy has been introduced regarding
-								remote work. All employees are required to
-								follow the new guidelines starting from next
-								month. A new company policy has been introduced
-								regarding remote work. All employees are
-								required to follow the new guidelines starting
-								from next month.
-							</p>
-							<div class="location">
-								<span>Location: HR Office</span>
-							</div>
+					<div class="bio col">
+						<div class="title">Bio :</div>
+						<span class="bio-content">
+							A passionate advocate for change, [Your Name]
+							believes in the power of informed and active
+							citizenship. With a keen interest in politics and
+							public policy, [he/she/they] is committed to staying
+							updated on current issues and engaging in meaningful
+							discussions. [Your Name] strives to bridge the gap
+							between citizens and policymakers, ensuring that
+							community voices are heard and represented. Whether
+							it’s through online debates, local meetings, or
+							volunteering, [he/she/they] is dedicated to making a
+							difference and fostering a more inclusive and
+							transparent political landscape.
+						</span>
+					</div>
+					<div class="pol-interest">
+						<div class="title">Political Interests</div>
+						<div class="tags capitalize">
+							<a href="#"
+								>anura kumara dissanayake<span> AKD </span></a
+							>
+							<a href="#"
+								>Sunil Hadunhetti<span>hadunhettiSunil</span></a
+							>
+							<a href="#"
+								>Vijitha rajapakse<span>vijithaR</span></a
+							>
+							<a href="#"
+								>Harini amarasuriya<span>HariniA</span></a
+							>
+							<a href="#"
+								>Mahinda Rajapakse<span>mahindaR</span></a
+							>
+							<a href="#"
+								>Ranil Wickramasinghe<span>RanilW</span></a
+							>
 						</div>
 					</div>
 				</div>
-
-				<!-- Politicians container -->
-				<div class="politician-container">
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-					<!-- More politician cards go here -->
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-
-					<div class="politician-card">
-						<img src="path/to/photo.jpg" alt="Politician Photo" />
-						<div class="politician-details">
-							<h3>Politician Name</h3>
-							<p>Political Party</p>
-							<p>District</p>
-						</div>
-					</div>
-				</div>
+				<a href="./editProfile/index.html" class="edit-btn btn row capitalize">
+					<i class="fa-solid fa-pen-to-square"></i>
+					edit profile
+				</a>
 			</div>
 		</div>
-
-		<script src="../script.js"></script>
 	</body>
+	<script src="../script.js"></script>
 </html>
