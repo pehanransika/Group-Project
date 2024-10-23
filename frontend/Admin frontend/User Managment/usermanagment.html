@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Management Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Admin Panel</title>
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
-            <!-- Parlimate Title at the top -->
-            <div class="sidebar-header">
+        <!-- Topbar Section -->
+        <div class="topbar">
+            <div class="logo">
                 <h2>Parlimate.</h2>
             </div>
-            <div class="scroll-buttons">
-                <button id="scroll-up"><i class="fas fa-arrow-up"></i></button>
-                <button id="scroll-down"><i class="fas fa-arrow-down"></i></button>
+            <div class="search">
+                <input type="text" id="search" placeholder="Search here">
+                <label for="search"><i class="fas fa-search"></i></label>
             </div>
-            <!-- Sidebar Menu -->
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="user">
+                <img src="user.png" alt="User">
+            </div>
+        </div>
+
+        <!-- Sidebar Section -->
+        <div class="sidebar" id="sidebar">
             <ul>
-                
                 <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                 <li><a href="usermanagment.html"><i class="fas fa-users"></i><span>User Management</span></a></li>
                 <li><a href="#"><i class="fas fa-hand-holding-usd"></i><span>Fundraising Approval</span></a></li>
@@ -30,24 +38,13 @@
                 <li><a href="#"><i class="fas fa-bullhorn"></i><span>Announcement</span></a></li>
                 <li><a href="#"><i class="fas fa-cogs"></i><span>Platform Settings</span></a></li>
                 <li><a href="#"><i class="fas fa-shield-alt"></i><span>Security</span></a></li>
-                
             </ul>
-
-            
-            
-
-    
-           
         </div>
 
-        <!-- Main Content -->
+        <!-- Main Content Section -->
         <div class="main-content">
             <header>
-                <div class="search">
-                    <!-- Add search icon inside the search bar -->
-                    <input type="text" id="search" placeholder="Search here">
-                    <label for="search"><i class="fas fa-search"></i></label>
-                </div>
+               
                 <div class="filters">
                     <select id="filter-role">
                         <option value="">All Roles</option>
@@ -73,6 +70,7 @@
                 <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Email</th>
                         <th>Role</th>
                         <th>Status</th>
                         <th>Verification Status</th>
@@ -89,7 +87,5 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
 
 

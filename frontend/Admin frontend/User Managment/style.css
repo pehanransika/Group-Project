@@ -1,148 +1,142 @@
-/* Basic styling */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    background-color: #f4f4f4;
+    background: #f5f5f5;
 }
 
-.container {
-    display: flex;
+.topbar {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.08);
     width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr 1fr;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    color: blueviolet;
+}
+
+.search {
+    position: relative;
+    width: 60%;
+    grid-column: 2 / 3; /* Center search bar in the second column */
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    padding: 0 4px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    background: #f5f5f5;
+}
+
+.search i {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.notifications {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.notifications .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.notifications i {
+    color: black; /* Change notification icon color to black */
+    font-size: 24px; /* Adjust icon size */
+    margin-left: 10px; /* Space between user photo and icon */
+}
+
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px; 
+    margin-left: auto; /* Align user picture to the right */
+}
+
+.user img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Ensure the image is circular */
 }
 
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 60px;
     width: 260px;
-    height: 100vh;
+    height: calc(100vh - 60px);
     background: #A020F0;
     overflow-y: auto;
     transition: width 0.3s;
     z-index: 2;
 }
 
-/* Sidebar Header */
-.sidebar-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 0;
-    background-color:white;
-    border-bottom: 1px solid #f4f4f4;
+.sidebar.collapsed {
+    width: 80px; /* Collapsed width */
 }
 
-.sidebar-header h2 {
-    color: blueviolet;
-    font-size: 24px;
-}
-
-/* Sidebar Menu */
 .sidebar ul {
-    list-style: none;
+    margin-top: 20px;
     padding: 0;
 }
 
 .sidebar ul li {
-    padding: 15px 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.sidebar ul li:hover {
-    background-color: #7A0ECC;
+    width: 100%;
+    list-style: none;
 }
 
 .sidebar ul li a {
+    width: 100%;
     text-decoration: none;
-    color: white;
+    color: #fff;
+    height: 60px;
     display: flex;
     align-items: center;
+    padding: 0 20px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+    background: #8A2BE2; /* Hover effect */
 }
 
 .sidebar ul li a i {
-    font-size: 18px;
+    min-width: 60px;
+    font-size: 24px;
 }
 
-.sidebar ul li a span {
-    margin-left: 10px;
-    display: inline-block;
-    transition: opacity 0.3s;
-}
-
-.sidebar.collapsed ul li a span {
-    opacity: 0;
-}
-
-/* Sidebar Buttons (Action Buttons at the Bottom) */
-.sidebar-buttons {
-    display: flex;
-    flex-direction: column;
-    padding: 35px;
-    margin-top: auto;
-}
-
-.sidebar-buttons button.sidebar-action {
-    padding: 30px;
-    background-color: #673ab7;
-    color: white;
-    border: none;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.sidebar-buttons button.sidebar-action:hover {
-    background-color: #4a148c;
-}
-
-/* Scroll buttons container */
-.scroll-buttons {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.scroll-buttons button {
-    background-color: #7a00cc;
-    border: none;
-    padding: 20px;
-    color: white;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-}
-
-.scroll-buttons button:hover {
-    background-color: #57009a;
-}
-
-.scroll-buttons i {
-    pointer-events: none;
-}
-
-.sidebar.collapsed + .main-content {
-    margin-left: 80px; /* Adjust for collapsed sidebar */
-}
-
-
-
-/* Main content */
 .main-content {
     margin-left: 260px;
     flex: 1;
-    padding: 20px;
+    padding: 70px;
     transition: margin-left 0.3s;
 }
 
@@ -150,39 +144,17 @@ body {
     margin-left: 80px;
 }
 
-/* Header section */
+
+.sidebar.collapsed + .main-content {
+    margin-left: 80px; /* Adjust for collapsed sidebar */
+}
+* Header section */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-
-/* Search bar */
-.search {
-    position: relative;
-    width: 40%;
-}
-
-.search input {
-    width: 100%;
-    height: 40px;
-    padding: 0 15px;
-    font-size: 16px;
-    outline: none;
-    border-radius: 10px;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-}
-
-.search i {
-    position: absolute;
-    right: 15px;
-    top: 12px;
-    cursor: pointer;
-    color: #666;
-}
-
 /* Filter section */
 .filters {
     display: flex;
@@ -203,7 +175,7 @@ header {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 table, th, td {
@@ -228,37 +200,36 @@ tbody tr:nth-child(odd) {
 .actions button {
     margin-right: 10px;
     padding: 5px 10px;
-    background-color: #673ab7;
-    color: white;
     border: none;
     cursor: pointer;
 }
 
-.actions button:hover {
-    background-color: #4a148c;
-}
 
-/* Responsive Sidebar */
-@media (max-width: 768px) {
+
+
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .topbar {
+        grid-template-columns: 1fr 3fr 1fr 1fr;
+    }
+    .search {
+        width: 50%;
+    }
     .sidebar {
         width: 80px;
     }
-
     .main-content {
         margin-left: 80px;
     }
-
-    .sidebar ul li a span {
-        display: none;
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 60px;
+    .chart-container {
+        flex-direction: column;
+        align-items: stretch;
     }
-
-    .main-content {
-        margin-left: 60px;
+    .chart {
+        width: 100%;
     }
 }

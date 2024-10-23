@@ -1,8 +1,8 @@
 const users = [
-    { name: 'John Doe', role: 'Citizen', status: 'Active', verification: 'Approved' },
-    { name: 'Jane Smith', role: 'Politician', status: 'Inactive', verification: 'Pending' },
-    { name: 'Party A', role: 'Political Party', status: 'Active', verification: 'Approved' },
-    { name: 'David King', role: 'Citizen', status: 'Active', verification: 'Rejected' }
+    { name: 'John Doe', email:'johndoe@gmail.com',role: 'Citizen', status: 'Active', verification: 'Approved' },
+    { name: 'Jane Smith', email:'janesmith@gmail.com',role: 'Politician', status: 'Inactive', verification: 'Pending' },
+    { name: 'Party A', email:'partyA@gmail.com',role: 'Political Party', status: 'Active', verification: 'Approved' },
+    { name: 'David King',email:'davidking@gmail.com', role: 'Citizen', status: 'Active', verification: 'Rejected' }
 ];
 
 // Function to render the table
@@ -15,13 +15,14 @@ function renderTable(usersList) {
 
         row.innerHTML = `
             <td>${user.name}</td>
+            <td>${user.email}</td>
             <td>${user.role}</td>
             <td>${user.status}</td>
             <td>${user.verification}</td>
             <td class="actions">
-                <button onclick="approveUser('${user.name}')">Approve</button>
-                <button onclick="suspendUser('${user.name}')">Suspend</button>
-                <button onclick="banUser('${user.name}')">Ban</button>
+              <button style="background-color: green; color: white;"onclick="editUser('${user.name}')">Edit</button>
+                <button style="background-color: red; color: white;"onclick="deleteUser('${user.name}')">Delete</button>
+                
             </td>
         `;
         userTable.appendChild(row);
@@ -29,17 +30,17 @@ function renderTable(usersList) {
 }
 
 // User actions
-function approveUser(name) {
-    alert(`User ${name} approved.`);
+function editUser(index) {
+    alert('You are about to edit user data.');
+    window.location.href = `edit.html?index=${index}`; // Redirect to edit page with user index
+}
+function deleteUser(index) {
+    
+        users.splice(index, 1); // Remove the user from the array
+        renderTable(users); // Re-render the table
+    
 }
 
-function suspendUser(name) {
-    alert(`User ${name} suspended.`);
-}
-
-function banUser(name) {
-    alert(`User ${name} banned.`);
-}
 
 // Search functionality
 document.getElementById('search').addEventListener('input', function() {
