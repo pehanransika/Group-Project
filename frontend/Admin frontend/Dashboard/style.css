@@ -215,8 +215,28 @@ body {
     height: 400px !important; /* Set fixed height for charts */
 }
 
-
-
-
-
-
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .topbar {
+        grid-template-columns: 1fr 3fr 1fr 1fr;
+    }
+    .search {
+        width: 50%;
+    }
+    .sidebar {
+        width: 80px;
+    }
+    .main-content {
+        margin-left: 80px;
+    }
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .chart-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .chart {
+        width: 100%;
+    }
+}
