@@ -222,14 +222,5 @@ tbody tr:nth-child(odd) {
     .main-content {
         margin-left: 80px;
     }
-    .cards {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-    .chart-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .chart {
-        width: 100%;
-    }
+  
 }
