@@ -83,6 +83,7 @@ label {
 	flex-wrap: wrap;
 }
 textarea {
+	font-family: inherit;
 	outline: 0;
 	border: 1px solid black;
 	border-radius: 0.25rem;
@@ -145,6 +146,9 @@ body {
 	gap: 1.5rem;
 	margin: 7rem 2rem 6rem 21rem;
 	transition: margin-left 0.35s ease;
+}
+.cap{
+	text-transform: capitalize;
 }
 h2.title {
 	font-weight: 600;
