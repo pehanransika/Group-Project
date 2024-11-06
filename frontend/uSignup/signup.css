@@ -1,3 +1,6 @@
+body{
+    padding: 3rem;
+}
 .signup-slider{
     justify-content: center;
     text-transform: capitalize;
@@ -47,6 +50,8 @@
     row-gap: 1rem;
 }
 select{
+    font-family: inherit;
+    cursor: pointer;
     text-transform: capitalize;
     padding: 1rem;
     background: #FAFAFA;
@@ -55,4 +60,50 @@ select{
 }
 select:not(:valid){
     color: #DCDCDC;
+}
+.img-view {
+    flex: 1;
+    height: 100%;
+    border-radius: 1rem;
+    border: 2px dashed #93a8ff;
+    padding: 1rem;
+    background: #F1FCFF;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 600;
+}
+.img-view i {
+    font-size: 2rem;
+}
+.nic-field{
+    display: flex;
+}
+.nic-field > label{
+    flex: 1;
+}
+
+.politician-inputs{
+    display: none;
+}
+.politician-inputs.pol-active{
+    display: inherit;
+}
+.hide{
+    display: none;
+}
+.polParty input,
+input.polParty,
+.polParty{
+    display: none;
+}
+.polParty input.party-active,
+input.polParty.party-active,
+.polParty.party-active{
+    display: flex;
+}
+.general-user.inactive {
+    display: none !important;
+}
+.party-imgs {
+    gap: 1rem;
 }
