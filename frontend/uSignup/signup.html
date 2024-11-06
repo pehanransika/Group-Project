@@ -76,9 +76,11 @@
 						>
 							citizen
 						</div>
-						<div id="politician-set" 
-						class="tab"
-						data-target="politician">
+						<div
+							id="politician-set"
+							class="tab"
+							data-target="politician"
+						>
 							politician
 						</div>
 						<div
@@ -90,7 +92,7 @@
 						</div>
 					</div>
 					<div class="signup-content col">
-						<div class=" row-fields row">
+						<div class="row-fields general-user row">
 							<input
 								type="text"
 								class="inp-field"
@@ -109,7 +111,7 @@
 							class="inp-field general-user"
 							placeholder="Email address"
 						/>
-						<div class="row-fields row">
+						<div class="general-user row-fields row">
 							<div class="pswrd">
 								<input
 									type="password"
@@ -137,12 +139,17 @@
 						</div>
 						<input
 							type="tel"
-							class="inp-field"
+							class="general-user inp-field"
 							placeholder="+94 12 3456 789"
 							name="telNumber-signup"
 							id="telNumber-signup"
 						/>
-						<select name="district" class="general-user" id="district" required="true">
+						<select
+							name="district"
+							class="general-user"
+							id="district"
+							required="true"
+						>
 							<option
 								value="invalid"
 								disabled="disabled"
@@ -157,7 +164,9 @@
 							<option value="jaffna">jaffna</option>
 							<option value="galle">galle</option>
 						</select>
-						<div class="nic-field row-fields politician-inputs">
+						<div
+							class="nic-field row-fields general-user politician-inputs"
+						>
 							<label for="nic-front">
 								<input
 									type="file"
@@ -183,8 +192,8 @@
 									class="image-upload-inp"
 									name="nic-back"
 									id="nic-back"
-									hidden
 									accept="image/png, image/jpg, image/jpeg"
+									hidden
 								/>
 								<div class="img-view row">
 									<i
@@ -194,6 +203,57 @@
 									<span id="nic-back-label"> NIC back </span>
 								</div>
 							</label>
+						</div>
+						<input
+							type="text"
+							class="inp-field polParty"
+							placeholder="National People's Power"
+							id="partyName-signup"
+						/>
+						<input
+							type="text"
+							class="inp-field polParty"
+							placeholder="Party Leader's Name"
+							id="partyLeader-signup"
+						/>
+						<div class="party-imgs col row-fields">
+							<label for="party-logo">
+								<input
+									type="file"
+									class="image-upload-inp"
+									accept="image/png, image/jpg, image/jpeg"
+									name="party-logo"
+									id="party-logo"
+									hidden
+								/>
+								<div class="img-view row polParty" id="party-logo-bg">
+									<i
+										class="fa-duotone fa-solid fa-cloud-arrow-up"
+										style="--fa-secondary-color: #a2aec3"
+									>
+								</i>
+									<span id="party-logo-name polParty">Party Logo </span>
+								</div>
+							</label>
+							<label for="party-banner">
+								<input
+									type="file"
+									class="image-upload-inp"
+									accept="image/png, image/jpg, image/jpeg"
+									name="party-banner"
+									id="party-banner"
+									hidden
+								/>
+								<div class="img-view row polParty" id="party-banner-bg">
+									<i
+										class="fa-duotone fa-solid fa-cloud-arrow-up"
+										style="--fa-secondary-color: #a2aec3"
+									>
+								</i>
+									<span id="party-banner-name polParty">Party banner </span>
+								</div>
+							</label>
+							
 						</div>
 					</div>
 					<div class="remember row">
@@ -221,11 +281,14 @@
 		document.addEventListener("DOMContentLoaded", () => {
 			const slider = document.querySelector(".signup-slider .slider");
 			const tabs = document.querySelectorAll(".signup-slider div");
-			const politicianInps = document.querySelectorAll(".politician-inputs")
-
+			const politicianInps =
+				document.querySelectorAll(".politician-inputs");
+			const partyFields = document.querySelectorAll(".polParty");
+			const generalUser = document.querySelectorAll(".general-user");
 
 			tabs.forEach((tab) => {
 				tab.addEventListener("click", () => {
+					clearAllFields();
 					// Remove active class from all tabs
 					tabs.forEach((t) => t.classList.remove("active"));
 					// Add active class to the clicked tab
@@ -242,17 +305,41 @@
 					const targetId = tab.getAttribute("data-target");
 
 					if (targetId === "politician") {
-						politicianInps.forEach((inp) => inp.classList.add("pol-active"));
-						politicianInps.querySelectorAll(input).forEach((inp) => {
+						addGeneralFields();
+						politicianInps.forEach((inp) =>
+							inp.classList.add("pol-active")
+						);
+					} else if (targetId === "politicalParty") {
+						clearGeneralFields();
+						partyFields.forEach((inp) => {
 							inp.required = true;
-						})
+							inp.classList.add("party-active");
+						});
 					} else {
-						politicianInps.forEach((inp) => inp.classList.remove("pol-active"));
+						addGeneralFields();
 					}
-
-
 				});
 			});
+
+			function clearAllFields() {
+				politicianInps.forEach((inp) =>
+					inp.classList.remove("pol-active")
+				);
+				partyFields.forEach((inp) => {
+					inp.required = false;
+					inp.classList.remove("party-active");
+				});
+			}
+			function clearGeneralFields() {
+				generalUser.forEach((inp) => {
+					inp.classList.add("inactive");
+				});
+			}
+			function addGeneralFields() {
+				generalUser.forEach((inp) => {
+					inp.classList.remove("inactive");
+				});
+			}
 
 			// Initialize slider position and width based on the active tab
 			const activeTab = document.querySelector(".signup-slider .active");
@@ -298,9 +385,19 @@
 			fileInput_back.addEventListener("change", (event) => {
 				const fileName = event.target.files[0]
 					? event.target.files[0].name
-					: "NIC front";
+					: "NIC back";
 				fileLabel_back.textContent = fileName;
 			});
+
+			const partyLogo = document.getElementById("party-logo");
+			const partyLogoLabel = document.getElementById("party-logo-name");
+
+			partyLogo.addEventListener("change", (event) => {
+				const fileName = event.target.files[0]
+					? event.target.files[0].name
+					: "NIC back";
+					partyLogoLabel.textContent = fileName;
+			}); 
 		});
 	</script>
 </html>
