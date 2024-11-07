@@ -83,6 +83,7 @@ label {
 	flex-wrap: wrap;
 }
 textarea {
+	font-family: inherit;
 	outline: 0;
 	border: 1px solid black;
 	border-radius: 0.25rem;
@@ -145,6 +146,9 @@ body {
 	gap: 1.5rem;
 	margin: 7rem 2rem 6rem 21rem;
 	transition: margin-left 0.35s ease;
+}
+.cap{
+	text-transform: capitalize;
 }
 h2.title {
 	font-weight: 600;
@@ -219,18 +223,21 @@ button{
 	border-radius: 0.75rem;
 	opacity: 0;
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
-		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
 }
-.noti-active .notification-msg {
+body.noti-active .notification-msg {
 	z-index: 1002;
 	opacity: 1;
 	bottom: 2rem;
 	transition: bottom 0.75s cubic-bezier(0.075, 0.82, 0.165, 1),
-		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+		opacity 0.75s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
 }
 .col-u{
 	display: flex;
 	flex-direction: column;
+}
+p{
+    font-size: 0.9rem;
 }
 @media screen and (max-width: 1349px) {
 	.col {

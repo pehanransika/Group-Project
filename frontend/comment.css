@@ -35,6 +35,7 @@ body.cmnt-visible > *:not(.comment-popup) {
 	justify-content: space-between;
 	position: relative;;
     max-height: 58rem;
+	border: 1px solid #bbbbbb;
 	min-height: 25rem;
 	animation: movein-bottom 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
