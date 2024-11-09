@@ -26,6 +26,7 @@ body {
 .announcements {
     gap: 1.5rem;
     width: 100%;
+    align-items: center;
 }
 .announcement-card {
     border-radius: 0.75rem;
@@ -186,5 +187,30 @@ body {
     color:purple;
     border-color: purple;
     
+}
+
+.navigations {
+    position: sticky;
+    top: 5rem;
+	margin-top: 2rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	background: var(--main-color);
+	width: fit-content;
+	gap: 0rem;
+    z-index: 1;
+    border: 1px solid rgb(231, 231, 231);
+}
+.nav-btn button {
+	border-radius: 0.5rem;
+	background: var(--main-color);
+	border: 0;
+    font-weight: 500;
+	padding-inline: 3rem;
+}
+button.nav-active {
+	background: var(--primary-color);
+	color: var(--main-color);
+	transition: background 0.25s ease;
 }
 
