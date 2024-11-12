@@ -3,16 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Notifications | Parlimate</title>
-		<link rel="stylesheet" href="../index.css" />
+		<title>Discussion Room | Parlimate</title>
 		<link rel="stylesheet" href="../sidebar1.css" />
 		<link rel="stylesheet" href="../header.css" />
-		<link rel="stylesheet" href="../container.css" /> 
-		<link rel="stylesheet" href="../notifications.css" />
-		<!-- <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css""
-    /> -->
-
+		<link rel="stylesheet" href="../index.css" />
+		<link rel="stylesheet" href="./politicians.css" />
 		<!-- icons -->
 		<link
 			rel="stylesheet"
@@ -25,33 +20,13 @@
 			rel="stylesheet"
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
 		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
-		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
-		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
-		/>
-
 		<link
 			rel="stylesheet"
 			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
 		/>
-
-		<link
-			rel="stylesheet"
-			href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
-		/>
 	</head>
 	<body class="">
+		<div class="notification-msg"></div>
 		<div class="sidebar pd-1">
 			
 			<div class="navs">
@@ -72,8 +47,7 @@
 							type="radio"
 							name="nav"
 							id="nav-announcements"
-							value="./Announcement/announcements.html"
-							
+							value="../Announcements/announcements.html"
 						/>
 						<label for="nav-announcements"
 							><i class="fa-solid fa-bullhorn"></i
@@ -97,12 +71,11 @@
 							name="nav"
 							id="nav-noti"
 							value="../Notification/notification.html"
-                            checked
+							checked
 						/>
-						<label for="nav-noti"
-							><i class="fa-solid fa-bell"></i
-							>Notifications</label
-						>
+						<label for="nav-noti">
+							<i class="fa-solid fa-bell"></i>Search and Compare
+						</label>
 					</li>
 					<li>
 						<input
@@ -121,9 +94,10 @@
 							name="nav"
 							id="nav-discusRoom"
 							value="../DiscussionRoom/discussion-room.html"
+							
 						/>
 						<label for="nav-discusRoom"
-							><i class="fa-solid fa-people-group"></i>Meeting
+							><i class="fa-solid fa-people-group"></i>Meetings
 							Room</label
 						>
 					</li>
@@ -132,7 +106,7 @@
 							type="radio"
 							name="nav"
 							id="nav-help"
-							value="../Help/help.html"
+							value="..\Help\help.html"
 						/>
 						<label for="nav-help"
 							><i class="fa-solid fa-headset"></i
@@ -142,6 +116,7 @@
 					
 				</ul>
 			</div>
+
 			<div class="logoutBtn capitalize">
 				<div class="cont">
 					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
@@ -292,51 +267,446 @@
 
 		<div class="container col">
 			<div class="pageTitles">
-				<h2 class="title">Notifications</h2>
+				<h2 class="title">Search and Compare</h2>
 				<div class="subTitle">
-					Reactions to your posts
+					Search politicians and political parties and compare them
 				</div>
 			</div>
-			<div class="row">
-				<div class="announcements col">
-					<!-- Announcement Card 1 -->
-					<div class="post announcement-card">
-						<div class="post-head">
-							<div class="post-details row">
-								<div class="img"></div>
-								<div class="user-details col">
-									<div class="name">Himasha Chinthani</div>
-									<div class="posted-date row">
-										<span class="date"
-											>August 10, 2024</span
-										>
-										<span class="time">10:00 AM</span>
+			<div class="discussions col">
+				<div class="navigations row">
+					<div class="nav-btn">
+						<button value="recent" class="capitalize nav-active">
+							 Politicians
+						</button>
+					</div>
+					<div class="nav-btn">
+						<button value="today" class="capitalize">
+							 Political Parties
+						</button>
+					</div>
+					<div class="nav-btn">
+						<button value="today" class="capitalize">
+							 Compare
+						</button>
+					</div>
+					<!-- only for politicians and political parties -->
+					<div class="nav-btn">
+						<button value="today" class="capitalize">
+							 Requests
+						</button>
+					</div>
+				</div>
+				<div class="nav-body col">
+					<!-- <div class="body-top row">
+						<div class="sort-btn row capitalize">
+							<i class="fa-regular fa-bars-filter"></i>
+							<span class="sort-type">newest first</span>
+						</div>
+					</div> -->
+					<div class="items col">
+						<div
+							class="item live row"
+							style="animation-delay: 0.25s"
+						>
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img src="../assets/ranil.jpg" alt="" />
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
 									</div>
 								</div>
 							</div>
+							<div class="item-content live col">
+								<div class="item-title">
+									<div class="title">
+										who is the best among two of us ?
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">7.00 PM</div>
+										>
+										<div class="end">9.00 PM</div>
+										<div class="date">Sept 14</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+									<span class="small-text item-live">
+										<i
+											class="fa-solid fa-signal-stream"
+										></i>
+										Request to Join
+									</span>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>ranil wickramasinghe</span>
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span> copy link </span>
+								</button>
+							</div>
 						</div>
-						<div class="content col">
-							<h2 class="post-title">Team Meeting Update</h2>
-							<p>
-								There will be a team meeting next week to
-								discuss the project progress. Please be prepared
-								with your updates and reports.
-							</p>
-							<div class="location">
-								<span>Location: Conference Room 2</span>
+						<div class="item row" style="animation-delay: 0.5s">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img src="../assets/AKD.jpg" alt="" />
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										Post-Presidential election
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Sept 15</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Anura kumara dissanayake</span>
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span> copy link </span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 0.75s">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img src="../assets/AKD.jpg" alt="" />
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+									<div class="prof-img">
+										<img src="../assets/ranil.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										Post-Presidential election
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Sept 16</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Anura kumara dissanayake</span>
+									<span>sajith premadasa</span>
+									<span>ranil wockramasinghe</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span> copy link </span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 1s">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										How to Improve the Education System with
+										the Help of Sajith Premadasa’s
+										‘Cake-Cutting’ Strategies!
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">1.00 AM</div>
+										>
+										<div class="end">5.00 AM</div>
+										<div class="date">Feb 30</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span> copy link </span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 1.25s">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img src="../assets/AKD.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										Why should we change the current
+										currupted political system ?
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Sept 16</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Anura kumara dissanayake</span>
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span> copy link </span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 1.5s">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img src="../assets/ranil.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										72 years in Politics
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">8.00 PM</div>
+										>
+										<div class="end">10.00 PM</div>
+										<div class="date">Oct 15</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>Ranil wickramasinghe</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span> copy link </span>
+								</button>
+							</div>
+						</div>
+						<div class="item row" style="animation-delay: 1.75s">
+							<div class="panelists">
+								<div class="pImgs row">
+									<div class="prof-img">
+										<img src="../assets/ranil.jpg" alt="" />
+									</div>
+									<div class="prof-img">
+										<img
+											src="../assets/images.jpeg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="item-content col">
+								<div class="item-title">
+									<div class="title">
+										who is the best among two of us ?
+									</div>
+									<div class="time-period small-text row">
+										<i class="fa-solid fa-clock"></i>
+										<div class="start">7.00 PM</div>
+										>
+										<div class="end">9.00 PM</div>
+										<div class="date">Sept 14</div>
+									</div>
+								</div>
+								<div class="item-interactive row">
+									<a href="#" class="small-text item-yt">
+										<i class="fa-brands fa-youtube"></i>
+										Watch on Youtube
+									</a>
+									<a href="#" class="small-text item-sp">
+										<i class="fa-brands fa-spotify"></i>
+										Listen on Spotify
+									</a>
+								</div>
+							</div>
+							<div class="post-options col">
+								<div class="status capitalize row">
+									<span>ranil wickramasinghe</span>
+									<span>sajith premadasa</span>
+								</div>
+								<button class="share raw capitalize">
+									<i class="fa-solid fa-link"></i>
+									<span> copy link </span>
+								</button>
 							</div>
 						</div>
 					</div>
-
-					
-
-	
 				</div>
-
-				
 			</div>
 		</div>
-
-		<script src="../script.js"></script>
+		<div class="live-meeting-popup">
+			<div class="popup-container">
+				<div class="head row">
+					<div class="title">Request to Join</div>
+					<div class="cls-btn btn">
+						<i class="fa-solid fa-x"></i>
+					</div>
+				</div>
+				<div class="content">
+					<div class="meeting-title">Post-presedential election</div>
+					<div class="date capitalize">september 24 2024</div>
+					<div class="profs row">
+						<div class="prof-img"></div>
+						<div class="prof-img"></div>
+					</div>
+					<div class="seats">
+						<span>12</span> more seats available
+					</div>
+					<div class="conf">
+						Are you sure you want to join the live meeting via Zoom
+						?
+					</div>
+					<div class="warning">
+						The invitation will be send via e-mail. You must obey
+						and respect
+						<a
+							href="#"
+							target="_blank"
+							class="rules"
+							rel="noopener noreferrer"
+							>rules & regulations</a
+						>
+						in the live meeting. Any unnecessary behavior may lead
+						to permanent/temporary banned from this platform
+					</div>
+				</div>
+				<div class="btns row">
+					<button class="close">close</button>
+					<button class="confirm row">
+						confirm <i class="fa-solid fa-check"></i>
+					</button>
+				</div>
+			</div>
+		</div>
 	</body>
+	<script src="../script.js"></script>
+	<script src="./discussin.js"></script>
+	<script>
+		const navBtns = document.querySelectorAll(".nav-btn button");
+
+		navBtns.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				navBtns.forEach((btn) => {
+					btn.classList.remove("nav-active");
+				});
+				btn.classList.add("nav-active");
+			});
+		});
+	</script>
 </html>
