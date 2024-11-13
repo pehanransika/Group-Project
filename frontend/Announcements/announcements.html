@@ -52,105 +52,7 @@
 		/>
 	</head>
 	<body class="">
-		<div class="sidebar pd-1">
-			
-			<div class="navs">
-				<ul>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-Home"
-							value="../index.html"
-						/>
-						<label for="nav-Home"
-							><i class="fa-solid fa-house"></i>Home</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-announcements"
-							value="./Announcement/announcements.html"
-							checked
-						/>
-						<label for="nav-announcements"
-							><i class="fa-solid fa-bullhorn"></i
-							>Announcements</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-fundraise"
-							value="../Fundraising/fundraising.html"
-						/>
-						<label for="nav-fundraise"
-							><i class="fa-solid fa-coins"></i>Fundraises</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-noti"
-							value="../Notification/notification.html"
-						/>
-						<label for="nav-noti"
-							><i class="fa-solid fa-bell"></i
-							>Search and Compare</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-survey"
-							value="../Surveys/surveys.html"
-						/>
-						<label for="nav-survey"
-							><i class="fa-solid fa-clipboard"></i>Surveys</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-discusRoom"
-							value="../DiscussionRoom/discussion-room.html"
-						/>
-						<label for="nav-discusRoom"
-							><i class="fa-solid fa-people-group"></i>Meeting
-							Room</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-help"
-							value="../Help/help.html"
-						/>
-						<label for="nav-help"
-							><i class="fa-solid fa-headset"></i
-							>Help/Support</label
-						>
-					</li>
-					
-				</ul>
-			</div>
-			<div class="logoutBtn capitalize">
-				<div class="cont">
-					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
-					<label for="logoutBtn">
-						<i class="fa-solid fa-sign-out"></i>
-						<span>logout</span>
-					</label>
-				</div>
-			</div>
-		</div>
+		<div id="sidebar-container"></div>
 		<div class="header pd-2">
 			<div class="start row">
 				<div class="sidebar-toggle-btn sideMenuBtn btn">
@@ -441,5 +343,6 @@
 		</div>
 
 		<script src="../script.js"></script>
+		<script src="../loadSidebar.js"></script>
 	</body>
 </html>
