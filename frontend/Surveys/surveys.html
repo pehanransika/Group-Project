@@ -91,128 +91,10 @@
 			chart.draw(data, options);
 		  };
 		</script>
+		<script src="surveys.js"></script>
 	</head>
 	<body class="">
-		<div class="sidebar pd-1">
-			<div class="searchBar">
-				<input
-					type="search"
-					name="sideBarSearch"
-					id="sideBarSearch"
-					placeholder="Search..."
-				/>
-				<label for="sideBarSearch">
-					<i class="fa-solid fa-magnifying-glass"></i>
-				</label>
-			</div>
-			<div class="navs">
-				<ul>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-Home"
-							value="../index.html"
-						/>
-						<label for="nav-Home"
-							><i class="fa-solid fa-house"></i>Home</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-announcements"
-							value="../Announcements/announcements.html"
-							
-						/>
-						<label for="nav-announcements"
-							><i class="fa-solid fa-bullhorn"></i
-							>Announcements</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-fundraise"
-							value="../Fundraising/fundraising.html"
-						/>
-						<label for="nav-fundraise"
-							><i class="fa-solid fa-coins"></i>Fundraises</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-noti"
-							value="../Notification/notifications.html"
-						/>
-						<label for="nav-noti"
-							><i class="fa-solid fa-bell"></i
-							>Notifications</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-survey"
-							value="../Surveys/surveys.html"
-                            checked
-						/>
-						<label for="nav-survey"
-							><i class="fa-solid fa-clipboard"></i>Surveys</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-discusRoom"
-							value="../DiscussionRoom/discussion-room.html"
-						/>
-						<label for="nav-discusRoom"
-							><i class="fa-solid fa-people-group"></i>Discussion
-							Room</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-help"
-							value="../Help/help.html"
-						/>
-						<label for="nav-help"
-							><i class="fa-solid fa-headset"></i
-							>Help/Support</label
-						>
-					</li>
-					<li>
-						<input
-							type="radio"
-							name="nav"
-							id="nav-settings"
-							value="../Settings/settings.html"
-						/>
-						<label for="nav-settings"
-							><i class="fa-solid fa-gear"></i>Settings</label
-						>
-					</li>
-				</ul>
-			</div>
-			<div class="logoutBtn capitalize">
-				<div class="cont">
-					<input type="checkbox" name="logoutBtn" id="logoutBtn" />
-					<label for="logoutBtn">
-						<i class="fa-solid fa-sign-out"></i>
-						<span>logout</span>
-					</label>
-				</div>
-			</div>
-		</div>
+		<div id="sidebar-container"></div>
 		<div class="header pd-2">
 			<div class="start row">
 				<div class="sidebar-toggle-btn sideMenuBtn btn">
@@ -362,9 +244,19 @@
                
 				<div class="announcements col"> 
                      <!-- this is the area where content are in  -->
-                     <div class="subTitle1">
-                         Ongoing Surveys
-                    </div>
+                     <div class="navigations row">
+						<div class="nav-btn">
+							<button value="recent" class="capitalize nav-active">
+								Ongoing Surveys
+							</button>
+						</div>
+						<div class="nav-btn">
+							<button value="today" class="capitalize">
+								Past Surveys
+							</button>
+						</div>
+						
+					</div>
                     <div class="survey">
 							<div style="display: flex; justify-content: space-between;margin-bottom: 4px;">
 								<span style="text-align: left;font-size: medium;">&nbsp;&nbsp;<strong>
@@ -483,5 +375,6 @@
 		</div>
 
 		<script src="../script.js"></script>
+		<script src="../loadSidebar.js"></script>
 	</body>
 </html>
