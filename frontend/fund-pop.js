@@ -3,11 +3,15 @@ let filesList = document.getElementById("att-list");
 const numOfFiles = document.querySelector("span.no-of-files");
 const fundBtn = document.querySelector(".req-fundraising");
 const fundCloseBtn = document.querySelector(".popup-f .head .close-btn");
+const fundCancelBtn = document.querySelector(".popup-f .cancel-btn")
 
 fundBtn.addEventListener("click", ()=> {
     body.classList.add("fund-active");
 })
 fundCloseBtn.addEventListener("click", () => {
+    body.classList.contains("fund-active") ? body.classList.remove("fund-active") : null;
+})
+fundCancelBtn.addEventListener("click", () => {
     body.classList.contains("fund-active") ? body.classList.remove("fund-active") : null;
 })
 

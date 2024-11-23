@@ -270,7 +270,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="popup-f">
+	<form action="" method="post" class="popup-f">
 		<div class="bg"></div>
 		<div class="fund-popup col">
 			<div class="head row">
@@ -286,16 +286,16 @@
 			<div class="body col">
 				<div class="fund-title field">
 					<label for="fundtitle" class="title">title</label>
-					<input type="text" placeholder="Fundraise for the senior care house" name="fundtitle" id="fundtitle">
+					<input type="text" required placeholder="Fundraise for the senior care house" name="fundtitle" id="fundtitle">
 				</div>
 				<div class="fund-decs field">
 					<label for="fund-desc" class="title">Description</label>
-					<textarea name="fund-desc" placeholder="Every elderly person deserves a life filled with dignity, care, and comfort. The Senior Care House is dedicated to providing a safe and nurturing environment for the senior citizens who need it the most. However, we cannot achieve this mission alone — we need your support." id="fund-desc"></textarea>
+					<textarea required name="fund-desc" placeholder="Every elderly person deserves a life filled with dignity, care, and comfort. The Senior Care House is dedicated to providing a safe and nurturing environment for the senior citizens who need it the most. However, we cannot achieve this mission alone — we need your support." id="fund-desc"></textarea>
 				</div>
 				<div class="multi-fields row">
 					<div class="fund-cat field">
 						<label for="fund-categ" class="title">category</label>
-						<select name="fund-categ" id="fund-categ">
+						<select required name="fund-categ" id="fund-categ">
 							<option value="educational">educational</option>
 							<option value="social">social</option>
 							<option value="community-se">community service</option>
@@ -305,13 +305,13 @@
 						<label class="title" for="fund-amount">Fund target</label>
 						<div class="content row">
 							<div class="curr">
-								<select name="fund-currency" id="fund-currency">
+								<select required name="fund-currency" id="fund-currency">
 									<option value="lkr">lkr</option>
 									<option value="usd">usd</option>
 								</select>
 							</div>
 							<div class="amount">
-								<input type="number" name="fund-amount" id="fund-amount" placeholder="1,000,000.00">
+								<input required type="number" name="fund-amount" id="fund-amount" placeholder="1,000,000.00">
 							</div>
 						</div>
 					</div>
@@ -347,13 +347,13 @@
 				</div>
 			</div>
 			<div class="bottom row">
-				<div class="cancel-btn form-btn">Cancel</div>
-				<div class="submit-btn form-btn row">
+				<button class="cancel-btn form-btn">Cancel</button>
+				<button type="submit" class="submit-btn form-btn row">
 					<i class="fa-duotone fa-solid fa-check"></i>
-					publish</div>
+					publish</button>
 			</div>
 		</div>
-	</div>
+	</form>
 
 	<div id="sidebar-container"></div>
 
