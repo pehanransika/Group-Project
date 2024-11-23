@@ -266,7 +266,7 @@
 							>I hereby agree to the policies of Parlimate</label
 						>
 					</div>
-					<button class="btn login-btn">Create account</button>
+					<button class="btn login-btn" id="signup-submit-btn">Create account</button>
 					<div class="signup-section col">
 						<div class="divider"></div>
 						<span>
@@ -285,6 +285,7 @@
 				document.querySelectorAll(".politician-inputs");
 			const partyFields = document.querySelectorAll(".polParty");
 			const generalUser = document.querySelectorAll(".general-user");
+			const signupBtn = document.getElementById("signup-submit-btn");
 
 			tabs.forEach((tab) => {
 				tab.addEventListener("click", () => {
@@ -309,14 +310,17 @@
 						politicianInps.forEach((inp) =>
 							inp.classList.add("pol-active")
 						);
+						signupBtn.textContent = "Create account";
 					} else if (targetId === "politicalParty") {
 						clearGeneralFields();
 						partyFields.forEach((inp) => {
 							inp.required = true;
 							inp.classList.add("party-active");
 						});
+						signupBtn.textContent = "Request Party Account";
 					} else {
 						addGeneralFields();
+						signupBtn.textContent = "Create account";
 					}
 				});
 			});
@@ -389,15 +393,6 @@
 				fileLabel_back.textContent = fileName;
 			});
 
-			const partyLogo = document.getElementById("party-logo");
-			const partyLogoLabel = document.getElementById("party-logo-name");
-
-			partyLogo.addEventListener("change", (event) => {
-				const fileName = event.target.files[0]
-					? event.target.files[0].name
-					: "NIC back";
-					partyLogoLabel.textContent = fileName;
-			}); 
 		});
 	</script>
 </html>

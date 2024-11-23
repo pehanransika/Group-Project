@@ -106,16 +106,6 @@
 		</div>
 	</body>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const togglePassword = document.querySelector('#toggle-password');
-            const passwordField = document.querySelector('#login-pswd');
         
-            togglePassword.addEventListener('click', () => {
-                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordField.setAttribute('type', type);
-                togglePassword.classList.toggle('fa-eye');
-                togglePassword.classList.toggle('fa-eye-slash');
-            });
-        });
     </script>
 </html>
