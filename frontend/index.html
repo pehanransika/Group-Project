@@ -31,6 +31,90 @@
 </head>
 
 <body class="">
+	<form action="" method="post" class="popup-f">
+		<div class="bg"></div>
+		<div class="fund-popup col">
+			<div class="head row">
+				<div class="close-btn">
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+				<div class="icon">
+					<i class="fa-regular fa-briefcase"></i>
+				</div>
+				<div class="title">Request a fundraise</div>
+				<div class="separator"></div>
+			</div>
+			<div class="body col">
+				<div class="fund-title field">
+					<label for="fundtitle" class="title">title</label>
+					<input type="text" required placeholder="Fundraise for the senior care house" name="fundtitle" id="fundtitle">
+				</div>
+				<div class="fund-decs field">
+					<label for="fund-desc" class="title">Description</label>
+					<textarea required name="fund-desc" placeholder="Every elderly person deserves a life filled with dignity, care, and comfort. The Senior Care House is dedicated to providing a safe and nurturing environment for the senior citizens who need it the most. However, we cannot achieve this mission alone — we need your support." id="fund-desc"></textarea>
+				</div>
+				<div class="multi-fields row">
+					<div class="fund-cat field">
+						<label for="fund-categ" class="title">category</label>
+						<select required name="fund-categ" id="fund-categ">
+							<option value="educational">educational</option>
+							<option value="social">social</option>
+							<option value="community-se">community service</option>
+						</select>
+					</div>
+					<div class="fund-amount field col">
+						<label class="title" for="fund-amount">Fund target</label>
+						<div class="content row">
+							<div class="curr">
+								<select required name="fund-currency" id="fund-currency">
+									<option value="lkr">lkr</option>
+									<option value="usd">usd</option>
+								</select>
+							</div>
+							<div class="amount">
+								<input required type="number" name="fund-amount" id="fund-amount" placeholder="1,000,000.00">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fund-attach field">
+					<span for="" class="title">upload attachments</span>
+					<div class="att-container">
+						<div class="action row">
+							<label for="fund-att" class="att-btn">select file</label>
+							<input type="file" name="fund-att" id="fund-att" multiple>
+							<div class="sep"></div>
+						</div>
+						<div class="att-content">
+							<span class="no-of-files">No file attached</span>
+							<ul id="att-list" class="col">
+								<!-- each uploaded file -->
+	
+								<!-- <li class="att-item row">
+									<span class="row">
+										<i class="fa-duotone fa-solid fa-check"></i>
+										<div class="file-name">
+											Fundraise presentation.pptx
+										</div>
+									</span>
+									<div class="f-size">1.2<span class="unit">MB</span> </div>
+									<div class="delete-item">
+										<i class="fa-solid fa-trash"></i>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom row">
+				<button class="cancel-btn form-btn">Cancel</button>
+				<button type="submit" class="submit-btn form-btn row">
+					<i class="fa-duotone fa-solid fa-check"></i>
+					publish</button>
+			</div>
+		</div>
+	</form>
 	<div class="notification-msg capitalize"></div>
 	<div class="popup-modal">
 		<div class="popup">
@@ -270,90 +354,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="" method="post" class="popup-f">
-		<div class="bg"></div>
-		<div class="fund-popup col">
-			<div class="head row">
-				<div class="close-btn">
-					<i class="fa-solid fa-xmark"></i>
-				</div>
-				<div class="icon">
-					<i class="fa-regular fa-briefcase"></i>
-				</div>
-				<div class="title">Request a fundraise</div>
-				<div class="separator"></div>
-			</div>
-			<div class="body col">
-				<div class="fund-title field">
-					<label for="fundtitle" class="title">title</label>
-					<input type="text" required placeholder="Fundraise for the senior care house" name="fundtitle" id="fundtitle">
-				</div>
-				<div class="fund-decs field">
-					<label for="fund-desc" class="title">Description</label>
-					<textarea required name="fund-desc" placeholder="Every elderly person deserves a life filled with dignity, care, and comfort. The Senior Care House is dedicated to providing a safe and nurturing environment for the senior citizens who need it the most. However, we cannot achieve this mission alone — we need your support." id="fund-desc"></textarea>
-				</div>
-				<div class="multi-fields row">
-					<div class="fund-cat field">
-						<label for="fund-categ" class="title">category</label>
-						<select required name="fund-categ" id="fund-categ">
-							<option value="educational">educational</option>
-							<option value="social">social</option>
-							<option value="community-se">community service</option>
-						</select>
-					</div>
-					<div class="fund-amount field col">
-						<label class="title" for="fund-amount">Fund target</label>
-						<div class="content row">
-							<div class="curr">
-								<select required name="fund-currency" id="fund-currency">
-									<option value="lkr">lkr</option>
-									<option value="usd">usd</option>
-								</select>
-							</div>
-							<div class="amount">
-								<input required type="number" name="fund-amount" id="fund-amount" placeholder="1,000,000.00">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="fund-attach field">
-					<span for="" class="title">upload attachments</span>
-					<div class="att-container">
-						<div class="action row">
-							<label for="fund-att" class="att-btn">select file</label>
-							<input type="file" name="fund-att" id="fund-att" multiple>
-							<div class="sep"></div>
-						</div>
-						<div class="att-content">
-							<span class="no-of-files">No file attached</span>
-							<ul id="att-list" class="col">
-								<!-- each uploaded file -->
 	
-								<!-- <li class="att-item row">
-									<span class="row">
-										<i class="fa-duotone fa-solid fa-check"></i>
-										<div class="file-name">
-											Fundraise presentation.pptx
-										</div>
-									</span>
-									<div class="f-size">1.2<span class="unit">MB</span> </div>
-									<div class="delete-item">
-										<i class="fa-solid fa-trash"></i>
-									</div>
-								</li> -->
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="bottom row">
-				<button class="cancel-btn form-btn">Cancel</button>
-				<button type="submit" class="submit-btn form-btn row">
-					<i class="fa-duotone fa-solid fa-check"></i>
-					publish</button>
-			</div>
-		</div>
-	</form>
 
 	<div id="sidebar-container"></div>
 
